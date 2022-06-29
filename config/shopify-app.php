@@ -56,13 +56,13 @@ return [
     */
 
     'route_names' => [
-        'home'                 => env('SHOPIFY_ROUTE_NAME_HOME', 'home'),
-        'authenticate'         => env('SHOPIFY_ROUTE_NAME_AUTHENTICATE', 'authenticate'),
-        'authenticate.token'   => env('SHOPIFY_ROUTE_NAME_AUTHENTICATE_TOKEN', 'authenticate.token'),
-        'billing'              => env('SHOPIFY_ROUTE_NAME_BILLING', 'billing'),
-        'billing.process'      => env('SHOPIFY_ROUTE_NAME_BILLING_PROCESS', 'billing.process'),
+        'home' => env('SHOPIFY_ROUTE_NAME_HOME', 'home'),
+        'authenticate' => env('SHOPIFY_ROUTE_NAME_AUTHENTICATE', 'authenticate'),
+        'authenticate.token' => env('SHOPIFY_ROUTE_NAME_AUTHENTICATE_TOKEN', 'authenticate.token'),
+        'billing' => env('SHOPIFY_ROUTE_NAME_BILLING', 'billing'),
+        'billing.process' => env('SHOPIFY_ROUTE_NAME_BILLING_PROCESS', 'billing.process'),
         'billing.usage_charge' => env('SHOPIFY_ROUTE_NAME_BILLING_USAGE_CHARGE', 'billing.usage_charge'),
-        'webhook'              => env('SHOPIFY_ROUTE_NAME_WEBHOOK', 'webhook'),
+        'webhook' => env('SHOPIFY_ROUTE_NAME_WEBHOOK', 'webhook'),
     ],
 
     /*
@@ -175,7 +175,7 @@ return [
     |
     */
 
-    'api_key' => env('SHOPIFY_API_KEY', ''),
+    'api_key' => env('SHOPIFY_KEY', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -186,7 +186,7 @@ return [
     |
     */
 
-    'api_secret' => env('SHOPIFY_API_SECRET', ''),
+    'api_secret' => env('SHOPIFY_SECRET', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -197,7 +197,7 @@ return [
     |
     */
 
-    'api_scopes' => env('SHOPIFY_API_SCOPES', 'read_products,write_products'),
+    'api_scopes' => env('SHOPIFY_API_SCOPES', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -340,8 +340,7 @@ return [
     |
     */
 
-    'webhooks' => [
-        /*
+    'webhooks' => [/*
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
                 'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/orders-create')
@@ -362,8 +361,7 @@ return [
     |
     */
 
-    'scripttags' => [
-        /*
+    'scripttags' => [/*
             [
                 'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://some-app.com/some-controller/js-method-response'),
                 'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
@@ -384,8 +382,7 @@ return [
     |
     */
 
-    'after_authenticate_job' => [
-        /*
+    'after_authenticate_job' => [/*
             [
                 'job' => env('AFTER_AUTHENTICATE_JOB'), // example: \App\Jobs\AfterAuthorizeJob::class
                 'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
@@ -404,8 +401,8 @@ return [
     */
 
     'job_queues' => [
-        'webhooks'           => env('WEBHOOKS_JOB_QUEUE', null),
-        'scripttags'         => env('SCRIPTTAGS_JOB_QUEUE', null),
+        'webhooks' => env('WEBHOOKS_JOB_QUEUE', null),
+        'scripttags' => env('SCRIPTTAGS_JOB_QUEUE', null),
         'after_authenticate' => env('AFTER_AUTHENTICATE_JOB_QUEUE', null),
     ],
 
@@ -470,5 +467,5 @@ return [
         * The table name for Plan model.
         */
         'plans' => 'plans',
-    ]
+    ],
 ];

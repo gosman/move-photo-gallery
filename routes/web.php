@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/gallery-app', function () {
+
+    return view('shopify');
+})->middleware(['verify.shopify'])->name('home');
