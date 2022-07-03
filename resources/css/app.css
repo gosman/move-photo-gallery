@@ -324,3 +324,7 @@ element.style {
 .pswp {
     z-index: 1000000 !important;
 }
+
+.pswp__button--arrow--left:before, .pswp__button--arrow--right:before, .pswp__counter, .pswp__button {
+    background-color: #26a69a !important;
+}
