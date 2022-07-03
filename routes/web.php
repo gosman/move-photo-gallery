@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClientGalleryController;
+use App\Http\Controllers\ShopifyHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +15,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/gallery-app', function () {
+Route::get('/client-gallery', [
+    ClientGalleryController::class,
+    'index',
+]);
 
-    return view('shopify');
-})->middleware(['verify.shopify'])->name('home');
+Route::get('/client-gallery/{make}', [
+    ClientGalleryController::class,
+    'index',
+]);
+
+Route::get('/client-gallery/{make}/{model}', [
+    ClientGalleryController::class,
+    'index',
+]);
+
+Route::get('/client-gallery/{make}/{model}/{year}', [
+    ClientGalleryController::class,
+    'index',
+]);
+
+Route::post('/client-gallery', [
+    ClientGalleryController::class,
+    'store',
+]);
+
+
+Route::get('gallery-app', [
+    ShopifyHomeController::class,
+    'index',
+])->middleware(['verify.shopify'])->name('home');

@@ -55,7 +55,6 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 .gallery-submit-button {
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
     display: inline-block;
@@ -108,7 +107,8 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
     float: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .gallery .btn-check:active + .btn-success, .gallery .btn-check:checked + .btn-success, .gallery .btn-success.active, .gallery .btn-success:active, .show > .btn-success.dropdown-toggle,
@@ -145,7 +145,14 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
     max-width: 7em;
     white-space: nowrap;
     color: #ee7623;
-    animation: loading 2s linear;
+    -webkit-animation: loading 2s linear;
+            animation: loading 2s linear;
+}
+
+@-webkit-keyframes loading {
+    0% {
+        max-width: 0;
+    }
 }
 
 @keyframes loading {
@@ -280,8 +287,6 @@ element.style {
     bottom: -20px;
     right: 0;
     opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
     box-sizing: border-box;
 }
@@ -299,11 +304,7 @@ element.style {
     top: 50%;
     left: 50%;
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
 
@@ -324,3 +325,4 @@ element.style {
 .pswp {
     z-index: 1000000 !important;
 }
+
