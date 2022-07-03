@@ -624,14 +624,9 @@
             });
             gallery.init();
 
-            gallery.listen('init', () => {
+            gallery.listen('afterInit', () => {
                 $('#yotpo_testimonials_btn').css('visibility', 'hidden');
             });
-
-            gallery.listen('close', () => {
-                $('#yotpo_testimonials_btn').css('visibility', 'visible');
-            });
-
         });
     }
 
