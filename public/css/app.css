@@ -8,12 +8,12 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
     height: 1em;
 }
 
-.form-check-input:focus {
+.gallery-app .form-check-input:focus {
     border-color: #009482 !important;
     box-shadow: none !important;
 }
 
-.form-check-input:checked {
+.gallery-app .form-check-input:checked {
     background-color: #009482;
     border-color: #009482;
 }
