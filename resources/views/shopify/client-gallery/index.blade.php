@@ -417,7 +417,7 @@
                                         <div class="col-sm-11 p-0">
                                             <div id="progress1" class="progressbar"></div>
                                         </div>
-                                        <div class="col-sm-1 p-0 progress-delete"></div>
+                                        <div data-delete-id="${ imageIndex }" class="col-sm-1 progress-delete"></div>
                                     </div>
                                 </div>
                             </div>`;
