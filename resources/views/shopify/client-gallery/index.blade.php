@@ -414,10 +414,10 @@
                                 <div class="preview">
                                     <div class="row">
                                         <div class="col-sm-12 p-0"><small>${ file.name }</small></div>
-                                        <div class="col-sm-10 p-0">
+                                        <div class="col-sm-11 p-0">
                                             <div id="progress1" class="progressbar"></div>
                                         </div>
-                                        <div class="col-sm-2 p-0 progress-delete"></div>
+                                        <div class="col-sm-1 p-0 progress-delete"></div>
                                     </div>
                                 </div>
                             </div>`;
