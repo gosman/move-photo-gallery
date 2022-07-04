@@ -416,7 +416,7 @@
                                     <div class="row">
                                         <div class="col-sm-12 p-0"><small>${ file.name }</small></div>
                                         <div class="col-sm-11 p-0">
-                                            <div id="progress1" class="progress"></div>
+                                            <div id="progress1" class="progressbar"></div>
                                         </div>
                                         <div data-delete-id="${ imageIndex }" class="col-sm-1 progress-delete"></div>
                                     </div>
