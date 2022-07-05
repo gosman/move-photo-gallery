@@ -18,6 +18,11 @@ class ClientGalleryController extends Controller
     public function index($make = null, $model = null, $year = null)
     {
 
+        $image = Image::make("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+            ->encode('jpg', 100);
+        dd($image);
+
+        exit;
         $images = SubmissionImage::where('approved', 1)
             ->with('details')
             ->whereHas('details', function ($query) use ($make, $model, $year) {
