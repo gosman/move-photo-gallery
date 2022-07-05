@@ -75,7 +75,7 @@
                 </div>
             @endif
 
-            @if($images-count())
+            @if($images)
                 <div id="gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     @foreach($images as $image)
                         <div class="col">
