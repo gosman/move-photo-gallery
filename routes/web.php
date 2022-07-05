@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Frontend gallery proxy app routes */
 Route::get('/client-gallery', [
     ClientGalleryController::class,
     'index',
@@ -40,6 +41,7 @@ Route::get('/client-gallery/{make}/{model}/{year}', [
     'index',
 ]);
 
+/* Gallery admin app routes */
 Route::get('gallery-app', [
     ShopifyHomeController::class,
     'index',
