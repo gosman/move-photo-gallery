@@ -343,7 +343,7 @@
             images: images,
         }
 
-        $.post('/community/client-gallery', data, function (response) {
+        $.post('{{config("app.url")}}/client-gallery', data, function (response) {
 
             if ( response.success ) {
 
