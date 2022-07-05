@@ -18,7 +18,7 @@ class ClientGalleryController extends Controller
     public function index($make = null, $model = null, $year = null)
     {
 
-        $image = Image::make("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+        $image = Image::make("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
             ->encode('jpg', 100);
         dd($image);
 
