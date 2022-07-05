@@ -23,6 +23,7 @@ class ClientGalleryController extends Controller
         dd($image);
 
         exit;
+        exit;
         $images = SubmissionImage::where('approved', 1)
             ->with('details')
             ->whereHas('details', function ($query) use ($make, $model, $year) {
