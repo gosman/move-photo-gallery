@@ -328,14 +328,14 @@ element.style {
     background-color: #26a69a !important;
 }
 
-.gallery h2 {
+.no-images h2 {
     color: #009482;
     font-size: 42px;
     margin-bottom: 20px;
     margin-top: 0;
 }
 
-.gallery h2 span {
+.no-images h2 span {
     display: block;
     color: #666;
     font-size: 28px;
