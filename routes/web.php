@@ -24,7 +24,7 @@ Route::get('/client-gallery', [
 Route::post('/client-gallery', [
     ClientGalleryController::class,
     'store',
-])->middleware(['verify.shopify']);
+])->middleware(['cors']);
 
 Route::get('/client-gallery/{make}', [
     ClientGalleryController::class,
