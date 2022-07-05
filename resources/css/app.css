@@ -126,7 +126,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 }
 
 .gallery h2 {
-    color: black
+    color: #666
 }
 
 /* LOADER */
