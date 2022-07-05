@@ -20,6 +20,11 @@ Route::get('/client-gallery', [
     'index',
 ]);
 
+Route::post('/client-gallery', [
+    ClientGalleryController::class,
+    'store',
+])->middleware(['verify.shopify']);
+
 Route::get('/client-gallery/{make}', [
     ClientGalleryController::class,
     'index',
@@ -34,12 +39,6 @@ Route::get('/client-gallery/{make}/{model}/{year}', [
     ClientGalleryController::class,
     'index',
 ]);
-
-Route::post('/client-gallery', [
-    ClientGalleryController::class,
-    'store',
-]);
-
 
 Route::get('gallery-app', [
     ShopifyHomeController::class,
