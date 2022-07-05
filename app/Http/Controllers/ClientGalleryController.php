@@ -18,9 +18,6 @@ class ClientGalleryController extends Controller
     public function index($make = null, $model = null, $year = null)
     {
 
-        phpinfo();
-        exit;
-
         $images = SubmissionImage::where('approved', 1)
             ->with('details')
             ->whereHas('details', function ($query) use ($make, $model, $year) {
