@@ -46,45 +46,11 @@ class ClientGalleryController extends Controller
     }
 
 
-    private function makeImagestemp($data)
-    {
-
-        foreach ($data['images'] as $image) {
-
-            $make = $image[0];
-            $model = $image[1];
-            $year = $image[2];
-            $engineType = $image[3];
-            $imageFile = $image[4];
-
-            $s = Submission::create([
-                'name' => 'John Doe',
-                'email' => 'graham@edm.ie',
-                'make' => $make,
-                'model' => $model,
-                'year' => $year,
-                'bumper_type' => 'Standard',
-                'bumper_position' => 'Front',
-                'engine_type' => $engineType,
-            ]);
-
-            $fileName = Str::lower($s->id.'-'.$make.'-'.$model.'-'.$year.'-'.$engineType).'-0.jpg';
-            $path = Storage::disk('images')->path($fileName);
-
-            $image = Image::make($imageFile);
-            $image->save($path, 100);
-
-            $s->images()->create([
-                'image_name' => $fileName,
-                'approved' => 0,
-            ]);
-        }
-    }
-
-
     public function store(Request $request)
     {
 
+        print_r($request->all());
+        exit;
         $submission = $request->except([
             'timestamp',
             'signature',
