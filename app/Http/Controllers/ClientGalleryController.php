@@ -49,8 +49,6 @@ class ClientGalleryController extends Controller
     public function store(Request $request)
     {
 
-        print_r($request->all());
-        exit;
         $submission = $request->except([
             'timestamp',
             'signature',
