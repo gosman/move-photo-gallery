@@ -343,7 +343,7 @@
             images: images,
         }
 
-        $.post(`${{{config('app.url')}}}/client-gallery`, data, function (response) {
+        $.post('{{config('app.url')}}/client-gallery', data, function (response) {
 
             if ( response.success ) {
 
@@ -463,14 +463,21 @@
         $.each(makes, function (key, val) {
 
             if ( val.toLowerCase() === '{{$make}}' ) {
-                $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckMake');
-            } else {
-                $('<option/>').val(val).html(val).appendTo('#truckMake');
-            }
-        });
+                    $('<option/>').val(val).html
+            (val).attr('selecte
+            d', true).
+            app
+        M ke')
 
-        $('#truckMake').trigger('change');
-    }
+
+                e {
+                $('<option/>').val(val).html(val).app
+            M
+
+               });
+
+        $('#truckMake'
+    g
 
 
     //Get user model by make
