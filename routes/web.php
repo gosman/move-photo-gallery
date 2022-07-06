@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientGalleryController;
-use App\Http\Controllers\ShopifyHomeController;
+use App\Http\Controllers\GalleryManagementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +43,6 @@ Route::get('/client-gallery/{make}/{model}/{year}', [
 
 /* Gallery admin app routes */
 Route::get('gallery-app', [
-    ShopifyHomeController::class,
+    GalleryManagementController::class,
     'index',
 ])->middleware(['verify.shopify'])->name('home');

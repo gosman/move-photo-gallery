@@ -124,7 +124,7 @@
 </div>
 
 
-@include('shopify.client-gallery.photoswipe')
+@include('shopify-gallery.gallery-app.photoswipe')
 
 
 <script>
@@ -253,7 +253,7 @@
 
         Swal.fire({
             title: 'Submit Your MOVE Photos',
-            html: `@include('shopify.client-gallery.submit-photos-form')`,
+            html: `@include('shopify-gallery.gallery-app.submit-photos-form')`,
             confirmButtonText: 'Submit Photos',
             confirmButtonColor: '#009482',
             showCancelButton: true,
