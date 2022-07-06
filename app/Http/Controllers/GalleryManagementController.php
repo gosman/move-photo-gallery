@@ -18,4 +18,12 @@ class GalleryManagementController extends Controller
         return view('shopify-gallery.gallery-app-admin.index')->with(['submissions' => $submissions]);
     }
 
+
+    public function edit($submissionId)
+    {
+
+        echo $submissionId;
+    }
+
+
 }
