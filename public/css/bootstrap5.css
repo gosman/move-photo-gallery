@@ -3223,8 +3223,6 @@ a > .gallery-app code {
   margin-left: 0.255em;
   vertical-align: 0.255em;
   content: "";
-}
-.gallery-app .dropstart .dropdown-toggle::after {
   display: none;
 }
 .gallery-app .dropstart .dropdown-toggle::before {
