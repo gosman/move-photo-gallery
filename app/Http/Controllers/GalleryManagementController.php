@@ -10,11 +10,11 @@ class GalleryManagementController extends Controller
     public function index()
     {
 
-        $submissions = Submission::with('images')
-            //->join('submission_images', 'submission_images.id', 'submission_id')
-            //->orderBy('submission_images.approved')
-            //->orderBy('submission_images.created_at')
-            ->get();
+        $submissions = Submission::count();
+        //->join('submission_images', 'submission_images.id', 'submission_id')
+        //->orderBy('submission_images.approved')
+        //->orderBy('submission_images.created_at')
+        //->get();
 
         print_r($submissions);
 
