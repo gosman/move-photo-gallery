@@ -36,7 +36,7 @@
                                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                                         <div class="flex items-center">
                                             <div class="h-10 w-10 flex-shrink-0">
-                                                <img class="h-10 w-10 rounded-full" src="" alt="{{$submission->images[0]}}">
+                                                <img class="h-10 w-10 rounded-full" src="" alt="{{config('filesystems.disks.images.cdn')}}{{$submission->images[0]}}">
                                             </div>
                                             <div class="ml-4">
                                                 <div class="font-medium text-gray-900">Lindsay Walton</div>
