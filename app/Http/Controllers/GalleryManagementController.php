@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Submission;
+use Illuminate\Support\Facades\Auth;
 
 class GalleryManagementController extends Controller
 {
@@ -22,6 +23,11 @@ class GalleryManagementController extends Controller
     public function edit($submissionId)
     {
 
+        $shop = Auth::user();
+        $shopApi = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes'];
+        print_r($shopApi);
+
+        exit;
         $submission = Submission::with('images')->find($submissionId);
 
         return view('shopify-gallery.gallery-app-admin.edit')->with(['submission' => $submission]);
