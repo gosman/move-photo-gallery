@@ -1021,6 +1021,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(0 108 90 / var(--tw-bg-opacity));
 }
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+.bg-yellow-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 63 18 / var(--tw-bg-opacity));
+}
 .p-6 {
   padding: 1.5rem;
 }
