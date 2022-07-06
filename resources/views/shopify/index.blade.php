@@ -8,9 +8,8 @@
                 <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
             </div>
             <div class="sm:mt-0 sm:ml-16 sm:flex-none">
-                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <div class="mt-1">
-                    <input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">
+                    <input type="text" name="name" id="name" class="shadow-sm focus:ring-move-500 focus:border-move-500 block w-full sm:text-sm border-gray-300 px-4 rounded-full" placeholder="Search">
                 </div>
             </div>
         </div>
