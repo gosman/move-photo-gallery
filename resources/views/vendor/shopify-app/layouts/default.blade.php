@@ -21,11 +21,7 @@
         @if(\Osiset\ShopifyApp\Util::getShopifyConfig('appbridge_enabled'))
             <script src="https://unpkg.com/@shopify/app-bridge{{ \Osiset\ShopifyApp\Util::getShopifyConfig('appbridge_version') ? '@'.config('shopify-app.appbridge_version') : '' }}"></script>
             <script src="https://unpkg.com/@shopify/app-bridge-utils{{ \Osiset\ShopifyApp\Util::getShopifyConfig('appbridge_version') ? '@'.config('shopify-app.appbridge_version') : '' }}"></script>
-            <script
-                    @if(\Osiset\ShopifyApp\Util::getShopifyConfig('turbo_enabled'))
-                    data-turbolinks-eval="false"
-                    @endif
-            >
+            <script @if(\Osiset\ShopifyApp\Util::getShopifyConfig('turbo_enabled')) data-turbolinks-eval="false"@endif>
                 var AppBridge = window['app-bridge'];
                 var actions = AppBridge.actions;
                 var utils = window['app-bridge-utils'];
@@ -36,7 +32,14 @@
                     host: "{{ \Request::get('host') }}",
                     forceRedirect: true,
                 });
+
             </script>
+
+            <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+
+            <script src="{{ mix('js/app.js') }}"></script>
+
 
             @include('shopify-app::partials.token_handler')
             @include('shopify-app::partials.flash_messages')
