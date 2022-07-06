@@ -42,14 +42,14 @@ Route::get('/client-gallery/{make}/{model}/{year}', [
 ]);
 
 /* Gallery admin app routes */
-Route::middleware(['verify.shopify'])->group(function () {
+Route::middleware()->group(function () {
 
     Route::get('/gallery-admin', [
         GalleryManagementController::class,
         'index',
     ])->name('home');
 
-    Route::get('/gallery-admin/{submissionId}', [
+    Route::get('/gallery-admin/{submissionId}/edit', [
         GalleryManagementController::class,
         'edit',
     ])->name('show');
