@@ -24,7 +24,7 @@ class GalleryManagementController extends Controller
     {
 
         $shop = Auth::user();
-        $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes']['id'];
+        $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes'];
         print_r($themeId);
 
         exit;
