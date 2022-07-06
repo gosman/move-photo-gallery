@@ -49,9 +49,15 @@
                                         <div class="text-gray-500">{{$submission->year}} {{$submission->model}} - {{$submission->engine_type}}</div>
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$submission->bumper_position}} {{$submission->bumper_type}} </td>
+
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                        <span class="inline-flex rounded-full bg-move-900 px-2 text-xs font-semibold leading-5 text-white">Active</span>
+                                        @if($submission->images->where('approved',1))
+                                            <span class="inline-flex rounded-full bg-yellow-900 px-2 text-xs font-semibold leading-5 text-white">{{$submission->images->where('approved',1)->count()}} Approved</span>
+                                        @else
+                                            <span class="inline-flex rounded-full bg-red-900 px-2 text-xs font-semibold leading-5 text-white">Unapproved</span>
+                                        @endif
                                     </td>
+
                                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                         <a href="#" class="text-move-500 hover:text-move-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
                                     </td>
