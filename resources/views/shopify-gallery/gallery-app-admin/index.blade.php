@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-2 flex flex-col">
+        <div class="mt-4 flex flex-col">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -41,6 +41,7 @@
                                             <div class="ml-4">
                                                 <div class="font-medium text-gray-900">{{$submission->name}}</div>
                                                 <div class="text-gray-500">{{$submission->email}}</div>
+                                                <div class="text-gray-500">{{$submission->images->count()}} Images</div>
                                             </div>
                                         </div>
                                     </td>
