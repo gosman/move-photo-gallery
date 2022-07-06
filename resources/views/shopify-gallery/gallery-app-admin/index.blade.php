@@ -78,6 +78,6 @@
 @section('scripts')
     @parent
     <script>
-        actions.TitleBar.create(app, { title: 'Gallery Management' });
+        actions.TitleBar.create(app, { title: 'Gallery Submissions' });
     </script>
 @endsection

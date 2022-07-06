@@ -22,7 +22,9 @@ class GalleryManagementController extends Controller
     public function edit($submissionId)
     {
 
-        echo $submissionId;
+        $submission = Submission::with('images')->find($submissionId);
+
+        return view('shopify-gallery.gallery-app-admin.index')->with(['submission' => $submission]);
     }
 
 
