@@ -7,7 +7,7 @@
             <div class="sm:flex-auto ml-1">
                 <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
             </div>
-            <div class="sm:mt-0 sm:ml-16 sm:flex-none">
+            <div class="sm:flex-none">
                 <div class="mt-1">
                     <input type="text" name="name" id="name" class="shadow-sm focus:ring-move-500 focus:border-move-500 block w-full sm:text-sm border-gray-300 px-4 rounded-full" placeholder="Search">
                 </div>
