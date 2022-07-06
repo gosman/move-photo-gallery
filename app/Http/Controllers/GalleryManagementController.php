@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Submission;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class GalleryManagementController extends Controller
 {
@@ -25,11 +26,13 @@ class GalleryManagementController extends Controller
 
         $shop = Auth::user();
         $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes'][0]['id'];
-        $assets = $shop->api()
+        $assetUrl = $shop->api()
             ->rest('GET', "/admin/themes/{$themeId}/assets.json",
                 ['key' => 'assets/make-model-year.json'])['body']['assets'][0]['public_url'];
+        $makeModelYear = Http::get($assetUrl)->json();
 
-        print_r($assets);
+
+        print_r($makeModelYear);
 
         exit;
         $submission = Submission::with('images')->find($submissionId);
