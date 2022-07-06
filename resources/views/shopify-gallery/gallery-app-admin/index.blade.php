@@ -46,9 +46,9 @@
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         <div class="text-gray-900">{{$submission->make}}</div>
-                                        <div class="text-gray-500">{{$submission->year}} {{$submission->model}}</div>
+                                        <div class="text-gray-500">{{$submission->year}} {{$submission->model}} - {{$submission->engine}}</div>
                                     </td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$submission->bumper_position}} {{$submission->bumper_type}} </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         <span class="inline-flex rounded-full bg-move-900 px-2 text-xs font-semibold leading-5 text-white">Active</span>
                                     </td>
