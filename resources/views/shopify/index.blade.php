@@ -4,11 +4,11 @@
 
     <div class="px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center">
-            <div class="sm:flex-auto">
-                <h1 class="text-xl font-semibold text-gray-900">Submissions</h1>
+            <div class="sm:flex-auto ml-2">
+                <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
             </div>
         </div>
-        <div class="mt-8 flex flex-col">
+        <div class="mt-1 flex flex-col">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -46,7 +46,7 @@
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
                                 <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                    <a href="#" class="text-move-600 hover:text-move-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
+                                    <a href="#" class="text-move-500 hover:text-move-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
                                 </td>
                             </tr>
 
