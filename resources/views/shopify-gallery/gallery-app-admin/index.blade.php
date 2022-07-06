@@ -46,7 +46,7 @@
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         <div class="text-gray-900">{{$submission->make}}</div>
-                                        <div class="text-gray-500">{{$submission->year}} {{$submission->model}} - {{$submission->engine}}</div>
+                                        <div class="text-gray-500">{{$submission->year}} {{$submission->model}} - {{$submission->engine_type}}</div>
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$submission->bumper_position}} {{$submission->bumper_type}} </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
