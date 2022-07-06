@@ -1,7 +1,7 @@
 @extends('shopify-app::layouts.default')
 
 @section('content')
-    <div class="mt-2 px-4 sm:px-6 lg:px-8">
+    <div class="px-4 sm:px-6 lg:px-8">
 
         <div class="mt-4 flex flex-col">
             <form class="space-y-8 divide-y divide-gray-200">
