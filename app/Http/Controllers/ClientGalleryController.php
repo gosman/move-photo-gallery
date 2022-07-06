@@ -40,7 +40,7 @@ class ClientGalleryController extends Controller
             'year' => $year,
         ];
 
-        $gallery = view('shopify.client-gallery.index')->with($data)->render();
+        $gallery = view('shopify-gallery.gallery-app.index')->with($data)->render();
 
         return response($gallery)->header('Content-Type', 'application/liquid');
     }
