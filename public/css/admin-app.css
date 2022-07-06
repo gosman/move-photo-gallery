@@ -1619,6 +1619,10 @@ select {
     padding-top: 1rem;
   }
 
+  .sm\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
