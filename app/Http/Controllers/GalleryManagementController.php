@@ -12,10 +12,10 @@ class GalleryManagementController extends Controller
 
         $submissions = Submission::with('images')->orderBy('created_at')->whereHas('images', function ($query) {
 
-                $query->where('approved', 0);
-            })->get();
+            $query->where('approved', 0);
+        })->get();
 
-        return view('shopify-gallery.gallery-app-admin.index')->with($submissions);
+        return view('shopify-gallery.gallery-app-admin.index')->with([$submissions]);
     }
 
 }
