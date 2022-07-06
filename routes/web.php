@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ClientGalleryController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryManagementController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,27 +17,27 @@ use Illuminate\Support\Facades\Route;
 
 /* Frontend gallery proxy app routes */
 Route::get('/client-gallery', [
-    ClientGalleryController::class,
+    GalleryController::class,
     'index',
 ]);
 
 Route::post('/client-gallery', [
-    ClientGalleryController::class,
+    GalleryController::class,
     'store',
 ])->middleware(['cors']);
 
 Route::get('/client-gallery/{make}', [
-    ClientGalleryController::class,
+    GalleryController::class,
     'index',
 ]);
 
 Route::get('/client-gallery/{make}/{model}', [
-    ClientGalleryController::class,
+    GalleryController::class,
     'index',
 ]);
 
 Route::get('/client-gallery/{make}/{model}/{year}', [
-    ClientGalleryController::class,
+    GalleryController::class,
     'index',
 ]);
 

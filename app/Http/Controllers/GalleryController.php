@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
-class ClientGalleryController extends Controller
+class GalleryController extends Controller
 {
 
     private $submission;
