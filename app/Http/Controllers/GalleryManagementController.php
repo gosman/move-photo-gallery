@@ -10,9 +10,14 @@ class GalleryManagementController extends Controller
     public function index()
     {
 
-        $submissions = Submission::count();
+        $submissionsApproved = Submission::with('images')->orderBy('created_at')->wherHas([
+            'images' => function ($query) {
 
-        print_r($submissions);
+                $query->where('approved', 1);
+            },
+        ]);
+
+        print_r($submissionsApproved->toArray());
         exit;
 
         return view('shopify-gallery.gallery-app-admin.index');
