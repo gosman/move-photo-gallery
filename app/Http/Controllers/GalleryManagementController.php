@@ -10,7 +10,7 @@ class GalleryManagementController extends Controller
     public function index()
     {
 
-        $submissionsApproved = Submission::with('images')->orderBy('created_at')->wherHas([
+        $submissionsApproved = Submission::with('images')->orderBy('created_at')->whereHas([
             'images' => function ($query) {
 
                 $query->where('approved', 1);
