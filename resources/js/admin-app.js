@@ -14,6 +14,7 @@ $(document).ready(function () {
     $('.app-link').on('click', function (e) {
         e.preventDefault();
         var url = $(this).attr('href');
+        console.log(url);
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     })
 
