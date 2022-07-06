@@ -10,27 +10,19 @@
                     <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
                         <div>
                             <h3 class="text-lg leading-6 font-medium text-move-500">{{$submission->make}} {{$submission->model}} | {{$submission->year}}</h3>
-                            <p class="mt-1 max-w-2xl text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
                         </div>
                         <div class="space-y-6 sm:space-y-5">
                             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="first-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> First name </label>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Name</label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                </div>
-                            </div>
-
-                            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="last-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Last name </label>
-                                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                    <input type="text" name="name" value="{{$submission->name}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>
 
                             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                                 <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Email address </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input id="email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:text-sm border-gray-300 rounded-md">
+                                    <input name="email" type="email" value="{{$submission->email}}" class="block max-w-lg w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>
 
