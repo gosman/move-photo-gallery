@@ -52,5 +52,5 @@ Route::middleware(['verify.shopify'])->group(function () {
     Route::get('/gallery-admin/{submissionId}', [
         GalleryManagementController::class,
         'edit',
-    ]);
+    ])->name('show');
 });
