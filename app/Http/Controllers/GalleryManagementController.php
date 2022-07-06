@@ -26,13 +26,13 @@ class GalleryManagementController extends Controller
 
         $shop = Auth::user();
         $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes'][0]['id'];
-        $assetUrl = $shop->api()
+        $asset = $shop->api()
             ->rest('GET', "/admin/themes/{$themeId}/assets.json",
-                ['asset[key]' => 'assets/make-model-year.json'])['body'];
-        //$makeModelYear = Http::get($assetUrl)->body();
+                ['asset[key]' => 'assets/make-model-year.json'])['body']['asset']['value'];
+        $makeModelYear = json_decode($asset);
 
 
-        print_r($assetUrl);
+        print_r($makeModelYear);
 
         exit;
         $submission = Submission::with('images')->find($submissionId);
