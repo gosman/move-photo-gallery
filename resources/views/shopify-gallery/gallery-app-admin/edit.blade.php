@@ -7,7 +7,7 @@
             <form class="space-y-8 divide-y divide-gray-200">
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
 
-                    <div class="space-y-6 sm:pt-3 sm:space-y-5">
+                    <div class="space-y-6 sm:pt-4 sm:space-y-5">
                         <div>
                             <h3 class="text-2xl leading-6 font-medium text-move-500">{{$submission->make}} {{$submission->model}} </h3>
                         </div>
