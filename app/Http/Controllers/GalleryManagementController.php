@@ -24,8 +24,8 @@ class GalleryManagementController extends Controller
     {
 
         $shop = Auth::user();
-        $shopApi = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body'];
-        print_r($shopApi);
+        $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes']['id'];
+        print_r($themeId);
 
         exit;
         $submission = Submission::with('images')->find($submissionId);
