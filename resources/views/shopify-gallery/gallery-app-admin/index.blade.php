@@ -54,7 +54,7 @@
                                         @if($submission->images->where('approved',1)->count() > 0)
                                             <span class="inline-flex rounded-full bg-yellow-500 px-2 text-xs font-semibold leading-5 text-white">{{$submission->images->where('approved',1)->count()}} Approved</span>
                                         @else
-                                            <span class="inline-flex rounded-full bg-red-900 px-2 text-xs font-semibold leading-5 text-white">Unapproved</span>
+                                            <span class="inline-flex rounded-full bg-red-500 px-2 text-xs font-semibold leading-5 text-white">Unapproved</span>
                                         @endif
                                     </td>
 
