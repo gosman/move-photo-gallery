@@ -42,7 +42,7 @@
                                     <div class="text-gray-500">Optimization</div>
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    <span class="inline-flex rounded-full bg-move-800 px-2 text-xs font-semibold leading-5 text-white">Active</span>
+                                    <span class="inline-flex rounded-full bg-move-900 px-2 text-xs font-semibold leading-5 text-white">Active</span>
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
                                 <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
