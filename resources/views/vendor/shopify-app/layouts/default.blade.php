@@ -5,7 +5,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ \Osiset\ShopifyApp\Util::getShopifyConfig('app_name') }}</title>
-        @vite('resources/css/app.css')
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         @yield('styles')
     </head>
 
