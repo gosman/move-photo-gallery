@@ -29,7 +29,7 @@ class GalleryManagementController extends Controller
         $asset = $shop->api()
             ->rest('GET', "/admin/themes/{$themeId}/assets.json",
                 ['asset[key]' => 'assets/make-model-year.json'])['body']['asset']['value'];
-        $makeModelYear = json_decode($asset);
+        $makeModelYear = json_decode($asset, true);
 
 
         print_r($makeModelYear);
