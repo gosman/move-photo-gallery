@@ -3,7 +3,7 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
-        <div class="mt-4 flex flex-col">
+        <div class="flex flex-col">
             <form class="space-y-8 divide-y divide-gray-200">
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
 
