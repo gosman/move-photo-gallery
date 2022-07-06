@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="mt-2 px-4 sm:px-6 lg:px-8">
-        <div class="sm:flex sm:items-center">
+        <div class="columns-2">
             <div class="sm:flex-auto ml-1">
                 <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
             </div>
