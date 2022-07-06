@@ -11,9 +11,9 @@ class GalleryManagementController extends Controller
     {
 
         $submissions = Submission::with('images')
-            ->join('submission_images', 'submission_images.id', 'submission_id')
-            ->orderBy('submission_images.approved')
-            ->orderBy('submission_images.created_at')
+            //->join('submission_images', 'submission_images.id', 'submission_id')
+            //->orderBy('submission_images.approved')
+            //->orderBy('submission_images.created_at')
             ->get();
 
         print_r($submissions);
