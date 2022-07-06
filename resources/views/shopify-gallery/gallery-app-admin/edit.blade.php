@@ -9,7 +9,7 @@
 
                     <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
                         <div>
-                            <h3 class="text-xl leading-6 font-medium text-move-500">{{$submission->make}} {{$submission->model}} </h3>
+                            <h3 class="text-xxl leading-6 font-medium text-move-500">{{$submission->make}} {{$submission->model}} </h3>
                         </div>
                         <div class="space-y-6 sm:space-y-5">
                             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
