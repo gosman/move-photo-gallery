@@ -1,13 +1,13 @@
 @extends('shopify-app::layouts.default')
 
 @section('content')
-    <div class="px-2 py-0">
+    <div class="px-4 sm:px-6 lg:px-8">
 
         <div class="flex flex-col">
             <form class="space-y-8 divide-y divide-gray-200">
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
 
-                    <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+                    <div class="pt-2 space-y-6 sm:pt-10 sm:space-y-5">
                         <div>
                             <h3 class="text-2xl leading-6 font-medium text-move-500">{{$submission->make}} {{$submission->model}} </h3>
                         </div>
