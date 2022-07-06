@@ -8,7 +8,7 @@
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
                     <div>
                         <div>
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">{{$submission->make}} {{$submission->make}} | {{$submission->year}}</h3>
+                            <h3 class="text-lg leading-6 font-medium text-move-500">{{$submission->make}} {{$submission->model}} | {{$submission->year}}</h3>
                         </div>
 
                         <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
