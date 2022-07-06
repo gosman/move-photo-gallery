@@ -7,8 +7,8 @@
             <div class="sm:flex-auto ml-1">
                 <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
             </div>
-            <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                Test
+            <div class="sm:mt-0 sm:ml-16 sm:flex-none">
+                <input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">
             </div>
         </div>
         <div class="mt-2 flex flex-col">
