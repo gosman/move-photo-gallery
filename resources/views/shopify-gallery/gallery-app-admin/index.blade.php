@@ -20,10 +20,10 @@
                         <table class="min-w-full divide-y divide-gray-300">
                             <thead class="bg-gray-50">
                             <tr>
-                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-move-500 sm:pl-6">Name</th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Title</th>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-move-500 sm:pl-6">Submitter</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Vehicle</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Bumper</th>
                                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Status</th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Role</th>
                                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                                     <span class="sr-only">Edit</span>
                                 </th>
@@ -39,19 +39,19 @@
                                                 <img class="w-20" src="{{config('filesystems.disks.images.cdn')}}{{$submission->images[0]->image_name}}" alt="">
                                             </div>
                                             <div class="ml-4">
-                                                <div class="font-medium text-gray-900">Lindsay Walton</div>
-                                                <div class="text-gray-500">lindsay.walton@example.com</div>
+                                                <div class="font-medium text-gray-900">{{$submission->name}}</div>
+                                                <div class="text-gray-500">{{$submission->email}}</div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                        <div class="text-gray-900">Front-end Developer</div>
-                                        <div class="text-gray-500">Optimization</div>
+                                        <div class="text-gray-900">{{$submission->make}}</div>
+                                        <div class="text-gray-500">{{$submission->year}} {{$submission->model}}</div>
                                     </td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         <span class="inline-flex rounded-full bg-move-900 px-2 text-xs font-semibold leading-5 text-white">Active</span>
                                     </td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
                                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                         <a href="#" class="text-move-500 hover:text-move-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
                                     </td>
