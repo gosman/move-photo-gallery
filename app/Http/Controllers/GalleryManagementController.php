@@ -28,7 +28,7 @@ class GalleryManagementController extends Controller
         $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes'][0]['id'];
         $assetUrl = $shop->api()
             ->rest('GET', "/admin/themes/{$themeId}/assets.json",
-                ['asset["key"]' => 'assets/make-model-year.json'])['body'];
+                ['assets["key"]' => 'assets/make-model-year.json'])['body'];
         //$makeModelYear = Http::get($assetUrl)->body();
 
 
