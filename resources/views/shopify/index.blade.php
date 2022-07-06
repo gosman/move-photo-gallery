@@ -2,13 +2,13 @@
 
 @section('content')
 
-    <div class="px-4 sm:px-6 lg:px-8">
+    <div class="mt-2 px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center">
-            <div class="sm:flex-auto ml-2">
+            <div class="sm:flex-auto ml-1">
                 <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
             </div>
         </div>
-        <div class="mt-1 flex flex-col">
+        <div class="mt-2 flex flex-col">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">

@@ -628,6 +628,9 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -952,6 +955,10 @@ video {
 .text-move-600 {
   --tw-text-opacity: 1;
   color: rgb(0 138 120 / var(--tw-text-opacity));
+}
+.text-move-500 {
+  --tw-text-opacity: 1;
+  color: rgb(0 148 130 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
