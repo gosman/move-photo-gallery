@@ -45,4 +45,4 @@ Route::get('/client-gallery/{make}/{model}/{year}', [
 Route::get('gallery-admin', [
     GalleryManagementController::class,
     'index',
-]);//->middleware(['verify.shopify'])->name('home');
+])->middleware(['verify.shopify'])->name('home');
