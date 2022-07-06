@@ -23,7 +23,7 @@
                                 <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-move-500 sm:pl-6">Submitter</th>
                                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Vehicle</th>
                                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Bumper</th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Status</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Image Status</th>
                                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                                     <span class="sr-only">Edit</span>
                                 </th>
@@ -52,7 +52,7 @@
 
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         @if($submission->images->where('approved',1))
-                                            <span class="inline-flex rounded-full bg-yellow-500 px-2 text-xs font-semibold leading-5 text-white">{{$submission->images->where('approved',1)->count()}} Approved</span>
+                                            <span class="inline-flex rounded-full bg-yellow-600 px-2 text-xs font-semibold leading-5 text-white">{{$submission->images->where('approved',1)->count()}} Approved</span>
                                         @else
                                             <span class="inline-flex rounded-full bg-red-900 px-2 text-xs font-semibold leading-5 text-white">Unapproved</span>
                                         @endif
