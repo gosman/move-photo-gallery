@@ -59,7 +59,7 @@
                                     </td>
 
                                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                        <a href="#" class="text-move-500 hover:text-move-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
+                                        <a href="{{$submission->id}}" class="text-move-500 hover:text-move-900">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
