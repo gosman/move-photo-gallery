@@ -5,7 +5,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ \Osiset\ShopifyApp\Util::getShopifyConfig('app_name') }}</title>
-        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        <link href="{{ mix('css/admin-app.css') }}" rel="stylesheet">
         @yield('styles')
     </head>
 
@@ -42,6 +42,7 @@
             @include('shopify-app::partials.flash_messages')
         @endif
 
+        <script src="{{ mix('js/admin-app.js') }}"></script>
         @yield('scripts')
     </body>
 </html>
