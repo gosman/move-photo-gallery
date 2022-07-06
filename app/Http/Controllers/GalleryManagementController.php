@@ -28,7 +28,7 @@ class GalleryManagementController extends Controller
         $themeId = $shop->api()->rest('GET', '/admin/themes.json', ['role' => 'main'])['body']['themes'][0]['id'];
         $assetUrl = $shop->api()
             ->rest('GET', "/admin/themes/{$themeId}/assets.json",
-                ['asset%5Bkey%5D' => 'assets/make-model-year.json'])['body']['assets'];
+                ['asset' => ['key' => 'assets/make-model-year.json']])['body']['assets'];
         //$makeModelYear = Http::get($assetUrl)->body();
 
 
@@ -37,7 +37,7 @@ class GalleryManagementController extends Controller
         exit;
         $submission = Submission::with('images')->find($submissionId);
 
-        return view('shopify-gallery.gallery-app-admin.edit')->with(['submission' => $submission]);
+        return view('shopify - gallery.gallery - app - admin.edit')->with(['submission' => $submission]);
     }
 
 
