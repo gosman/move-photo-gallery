@@ -2,9 +2,6 @@
 
 @section('content')
     <div class="mt-2 px-4 sm:px-6 lg:px-8">
-        <div class="col-span-2">
-            <h1 class="text-xl font-semibold text-move-500">Submissions</h1>
-        </div>
 
         <div class="mt-4 flex flex-col">
             <form class="space-y-8 divide-y divide-gray-200">
