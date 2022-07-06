@@ -35,12 +35,6 @@
 
             </script>
 
-            <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-
-
-            <script src="{{ mix('js/app.js') }}"></script>
-
-
             @include('shopify-app::partials.token_handler')
             @include('shopify-app::partials.flash_messages')
         @endif
