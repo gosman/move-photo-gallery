@@ -259,12 +259,12 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 }
 
 .gallery-app .page-item.active .page-link {
-    background-color: #26a69a;
-    border-color: #26a69a;
+    background-color: #a7b7b4;
+    border-color: #a7b7b4;
 }
 
 .gallery-app .page-link {
-    color: #26a69a;
+    color: #a7b7b4;
 }
 
 .gallery-app .page-link:hover {
