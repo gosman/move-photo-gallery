@@ -635,7 +635,8 @@
             gallery.init();
 
             gallery.listen('afterInit', () => {
-                $('#yotpo_testimonials_btn').css('visibility', 'hidden');
+                $('#yotpo_testimonials_btn').hide();
+                console.log("here");
             });
         });
     }
