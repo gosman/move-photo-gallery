@@ -37,7 +37,6 @@ $(document).ready(function () {
         getYears($(this).val());
     });
 
-
     //Get makes
     function getMakes(selectedMake) {
 
