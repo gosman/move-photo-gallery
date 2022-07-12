@@ -42,7 +42,7 @@ $(document).ready(function () {
       });
       makes.sort();
       $.each(makes, function (key, val) {
-        if (val.toLowerCase() === selectedMake) {
+        if (val.toLowerCase() === make) {
           $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckMake');
         } else {
           $('<option/>').val(val).html(val).appendTo('#truckMake');
@@ -53,8 +53,7 @@ $(document).ready(function () {
   } //Get model by make
 
 
-  function getModels() {
-    var selectedModel = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  function getModels(selectedModel) {
     model = selectedModel;
     var models = [];
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
@@ -68,7 +67,7 @@ $(document).ready(function () {
     });
     models.sort();
     $.each(models, function (key, val) {
-      if (val.toLowerCase() == selectedModel) {
+      if (val.toLowerCase() == model) {
         $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
       } else {
         $('<option/>').val(val).html(val).appendTo('#truckModel');
@@ -77,9 +76,9 @@ $(document).ready(function () {
   } //Get year by model by make
 
 
-  function getYears() {
-    var selectedYear = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  function getYears(selectedYear) {
     year = selectedYear;
+    console.log(year);
     var years = [];
     $('#truckYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
@@ -90,8 +89,9 @@ $(document).ready(function () {
       }
     });
     years.sort();
+    console.log(years);
     $.each(years, function (key, val) {
-      if (val.toLowerCase() === selectedYear) {
+      if (val.toLowerCase() == year) {
         $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckYear');
       } else {
         $('<option/>').val(val).html(val).appendTo('#truckYear');
