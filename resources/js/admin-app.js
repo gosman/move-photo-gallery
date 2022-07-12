@@ -102,7 +102,7 @@ $(document).ready(function () {
         years.sort();
         $.each(years, function (key, val) {
 
-            if ( val.toLowerCase() === 'selectedYear' ) {
+            if ( val.toLowerCase() === selectedYear ) {
                 $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckYear');
             } else {
                 $('<option/>').val(val).html(val).appendTo('#truckYear');
