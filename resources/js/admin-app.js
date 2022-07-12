@@ -69,16 +69,13 @@ $(document).ready(function () {
 
         models.sort();
 
-        if ( val.toLowerCase() === selectedMake ) {
-            $('<option/>').val(val).html(val).attr('selected', true).appendTo('#ruckModel');
-        } else {
-            $('<option/>').val(val).html(val).appendTo('#ruckModel');
-        }
-
         $.each(models, function (key, val) {
-            $('<option/>').val(val).html(val).appendTo('#ruckModel');
+            if ( val.toLowerCase() === selectedMake ) {
+                $('<option/>').val(val).html(val).attr('selected', true).appendTo('#ruckModel');
+            } else {
+                $('<option/>').val(val).html(val).appendTo('#ruckModel');
+            }
         });
     }
 
-    /**/
 });
