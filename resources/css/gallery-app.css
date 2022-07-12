@@ -1,3 +1,18 @@
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: Galano;
+    src: url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/08c8ef24676e5d08fe268184dad3d94c.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/83b6999992e8d884835fbb4a24579893.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Gothic CG No1;
+    src: url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/e65022047cd36d7d1ceab0aceebdccc9.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/e8997400a9db8bedd2952f18dd0ba611.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
     position: static !important;
     left: 0 !important;
@@ -406,19 +421,4 @@ element.style {
     .born-to-build__text a {
         width: auto;
     }
-}
-
-/*! CSS Used fontfaces */
-@font-face {
-    font-family: Galano;
-    src: url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/08c8ef24676e5d08fe268184dad3d94c.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/83b6999992e8d884835fbb4a24579893.woff) format("woff");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Gothic CG No1;
-    src: url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/e65022047cd36d7d1ceab0aceebdccc9.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/e8997400a9db8bedd2952f18dd0ba611.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
 }
