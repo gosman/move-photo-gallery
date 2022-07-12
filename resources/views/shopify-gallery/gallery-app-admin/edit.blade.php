@@ -16,7 +16,9 @@
                     </div>
                 </div>
 
-                <img style="max-height: 150px!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <div class="relative flex items-start mt-2">
+                    <img style="max-height: 150px!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                </div>
 
                 <div class="relative flex items-start mt-2">
                     <div class="flex items-center h-5">
