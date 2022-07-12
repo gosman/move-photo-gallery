@@ -101,7 +101,7 @@
                 <div class="container d-flex align-items-center justify-content-center pt-2">
                     <div class="col-sm-12 text-center no-images">
                         <h2>Sorry! <span>We don't have any photos of this truck, but we do sell it!</span></h2>
-                        <p>Check out our <a href="/pages/buy-diy-bumper-kits">build your bumper page</a> for full options and pricing.</p>
+                        <p>Check out our <a href="/pages/buy-diy-bumper-kits">BUILD YOUR BUMPER PAGE</a> for full options and pricing.</p>
                     </div>
                 </div>
             @endif
