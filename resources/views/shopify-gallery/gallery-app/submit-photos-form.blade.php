@@ -5,21 +5,21 @@
             <div class="col-lg-4">
                 <div class="input-group has-validation mt-2">
                     <span class="input-group-text">Name</span>
-                    <input type="text" class="form-control required" id="uName" placeholder="Your Name" autocomplete="false">
+                    <input type="text" class="form-control required" id="uName" placeholder="YOUR NAME" autocomplete="false">
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="input-group has-validation mt-2">
                     <span class="input-group-text">E-Mail</span>
-                    <input type="email" class="form-control required" id="uEmail" placeholder="Your E-Mail Address">
+                    <input type="email" class="form-control required" id="uEmail" placeholder="YOUR E-MAIL ADDRESS">
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="input-group has-validation mt-2">
                     <span class="input-group-text">Instagram</span>
-                    <input type="text" class="form-control" id="uInstagram" placeholder="Your Instagram @ (Optional)">
+                    <input type="text" class="form-control" id="uInstagram" placeholder="YOUR INSTAGRAM @ (OPTIONAL)">
                 </div>
             </div>
         </div>
