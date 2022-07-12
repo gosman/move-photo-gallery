@@ -6,7 +6,7 @@
         <div class="columns-4">
 
             @foreach($submission->images as $image)
-                <img class="h-50" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <img class="h-50 w-auto" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
             @endforeach
 
         </div>
