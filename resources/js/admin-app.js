@@ -76,8 +76,8 @@ $(document).ready(function () {
         model = selectedModel;
 
         var models = [];
-        $('#makeModel').html(`<option value="" disabled selected>Select a model </option>`);
-        $('#makeYear').html(`<option value="" disabled selected>Select a year</option>`);
+        $('#truckModel').html(`<option value="" disabled selected>Select a model </option>`);
+        $('#truckYear').html(`<option value="" disabled selected>Select a year</option>`);
 
         makeModelYear.filter(function (item) {
             if ( item.make == make ) {
@@ -89,10 +89,6 @@ $(document).ready(function () {
         });
 
         models.sort();
-
-
-        console.log(models);
-
 
         $.each(models, function (key, val) {
             if ( val.toLowerCase() == model ) {

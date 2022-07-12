@@ -67,8 +67,8 @@ $(document).ready(function () {
     var selectedModel = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
     model = selectedModel;
     var models = [];
-    $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
-    $('#makeYear').html("<option value=\"\" disabled selected>Select a year</option>");
+    $('#truckModel').html("<option value=\"\" disabled selected>Select a model </option>");
+    $('#truckYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
       if (item.make == make) {
         if (!models.includes(item.model)) {
@@ -77,7 +77,6 @@ $(document).ready(function () {
       }
     });
     models.sort();
-    console.log(models);
     $.each(models, function (key, val) {
       if (val.toLowerCase() == model) {
         $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
