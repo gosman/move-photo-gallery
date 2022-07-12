@@ -370,7 +370,7 @@ element.style {
        -moz-user-select: none;
             user-select: none;
     display: inline-block;
-    padding: 13px 25px;
+    padding: 13px 50px;
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
@@ -382,6 +382,7 @@ element.style {
     color: #fff;
     transition: all .3s ease-in-out;
     transition-property: background-color, color, border-color;
+    font-size: 18px;
     font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
 }
 
