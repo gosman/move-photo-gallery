@@ -89,12 +89,15 @@ $(document).ready(function () {
 
         year = selectedYear;
         console.log(year)
+        console.log(make)
+        console.log(model)
 
         var years = [];
         $('#truckYear').html(`<option value="" disabled selected>Select a year</option>`);
 
         makeModelYear.filter(function (item) {
             if ( item.make == make && item.model == model ) {
+
 
                 if ( !years.includes(item.year) ) {
                     years.push(item.year);
