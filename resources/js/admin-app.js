@@ -29,6 +29,7 @@ $(document).ready(function () {
 
         make = selectedMake;
 
+        var makes = [];
         if ( $("#makeModelYear").length ) {
             let jsonData = $("#makeModelYear").val();
             makeModelYear = JSON.parse(jsonData.trim());

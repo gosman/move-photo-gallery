@@ -30,6 +30,7 @@ $(document).ready(function () {
 
   function getMakes(selectedMake) {
     make = selectedMake;
+    var makes = [];
 
     if ($("#makeModelYear").length) {
       var jsonData = $("#makeModelYear").val();
