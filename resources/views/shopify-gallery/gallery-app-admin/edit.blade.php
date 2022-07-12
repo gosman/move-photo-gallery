@@ -159,7 +159,7 @@
         </div>
     </div>
 
-    <input id="makeModelyear" type="hidden" value="{{json_encode($makeModelYear}}">
+    <input id="makeModelyear" type="hidden" value="{!! json_encode($makeModelYear) !!}">
 
 @endsection
 
