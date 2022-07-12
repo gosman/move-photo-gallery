@@ -46,7 +46,7 @@
                             </select>
                         </li>
                         <li>
-                            <button type="submit" class="btn--primary-gallery">View Truck Images</button>
+                            <span type="submit" class="btn--primary-gallery">View Truck Images</span>
                         </li>
                     </ul>
                 </div>
