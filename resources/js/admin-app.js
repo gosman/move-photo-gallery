@@ -1,6 +1,6 @@
 require('./bootstrap');
 
-let makeModelYear, makes = [];
+let makeModelYear, make, model, year;
 
 $(document).ready(function () {
 
@@ -23,10 +23,11 @@ $(document).ready(function () {
     //Initialise makes dropdown
     getMakes($("#truckMake").data('selected'));
     getModels($("#truckModel").data('selected'));
+    getYears($("#truckYear").data('selected'));
 
-    //getYears($("#truckYear").data('selected'));
+    function getMakes(selectedMake) {
 
-    function getMakes(selectedMake = null) {
+        make = selectedMake;
 
         if ( $("#makeModelYear").length ) {
             let jsonData = $("#makeModelYear").val();
@@ -53,17 +54,21 @@ $(document).ready(function () {
         }
     }
 
-    //Get user model by make
-    function getModels(selectedModel) {
+    //Get model by make
+    function getModels(selectedModel = null) {
+
+        model = selectedModel;
 
         var models = [];
         $('#makeModel').html(`<option value="" disabled selected>Select a model </option>`);
         $('#makeYear').html(`<option value="" disabled selected>Select a year</option>`);
 
         makeModelYear.filter(function (item) {
+            if ( item.make === make ) {
 
-            if ( !models.includes(item.model) ) {
-                models.push(item.model);
+                if ( !models.includes(item.model) ) {
+                    models.push(item.model);
+                }
             }
         });
 
@@ -74,6 +79,32 @@ $(document).ready(function () {
                 $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
             } else {
                 $('<option/>').val(val).html(val).appendTo('#truckModel');
+            }
+        });
+    }
+
+    //Get year by model by make
+    function getYears(selectedYear = null) {
+
+        var years = [];
+        $('#truckYear').html(`<option value="" disabled selected>Select a year</option>`);
+
+        makeModelYear.filter(function (item) {
+            if ( item.make === make && item.model === model ) {
+
+                if ( !years.includes(item.year) ) {
+                    years.push(item.year);
+                }
+            }
+        });
+
+        years.sort();
+        $.each(years, function (key, val) {
+
+            if ( val.toLowerCase() === 'selectedYear' ) {
+                $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckYear');
+            } else {
+                $('<option/>').val(val).html(val).appendTo('#truckYear');
             }
         });
     }

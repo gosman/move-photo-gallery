@@ -9,8 +9,7 @@
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var makeModelYear,
-    makes = [];
+var makeModelYear, make, model, year;
 $(document).ready(function () {
   var redirect = actions.Redirect.create(app);
   $('.app-link').on('click', function (e) {
@@ -26,10 +25,11 @@ $(document).ready(function () {
   }); //Initialise makes dropdown
 
   getMakes($("#truckMake").data('selected'));
-  getModels($("#truckModel").data('selected')); //getYears($("#truckYear").data('selected'));
+  getModels($("#truckModel").data('selected'));
+  getYears($("#truckYear").data('selected'));
 
-  function getMakes() {
-    var selectedMake = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  function getMakes(selectedMake) {
+    make = selectedMake;
 
     if ($("#makeModelYear").length) {
       var jsonData = $("#makeModelYear").val();
@@ -49,16 +49,20 @@ $(document).ready(function () {
       });
       $('#truckMake').trigger('change');
     }
-  } //Get user model by make
+  } //Get model by make
 
 
-  function getModels(selectedModel) {
+  function getModels() {
+    var selectedModel = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    model = selectedModel;
     var models = [];
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
     $('#makeYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
-      if (!models.includes(item.model)) {
-        models.push(item.model);
+      if (item.make === make) {
+        if (!models.includes(item.model)) {
+          models.push(item.model);
+        }
       }
     });
     models.sort();
@@ -67,6 +71,28 @@ $(document).ready(function () {
         $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
       } else {
         $('<option/>').val(val).html(val).appendTo('#truckModel');
+      }
+    });
+  } //Get year by model by make
+
+
+  function getYears() {
+    var selectedYear = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var years = [];
+    $('#truckYear').html("<option value=\"\" disabled selected>Select a year</option>");
+    makeModelYear.filter(function (item) {
+      if (item.make === make && item.model === model) {
+        if (!years.includes(item.year)) {
+          years.push(item.year);
+        }
+      }
+    });
+    years.sort();
+    $.each(years, function (key, val) {
+      if (val.toLowerCase() === 'selectedYear') {
+        $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckYear');
+      } else {
+        $('<option/>').val(val).html(val).appendTo('#truckYear');
       }
     });
   }
