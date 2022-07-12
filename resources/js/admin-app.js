@@ -75,6 +75,9 @@ $(document).ready(function () {
 
         model = selectedModel;
 
+        console.log(model);
+        console.log(make);
+
         var models = [];
         $('#makeModel').html(`<option value="" disabled selected>Select a model </option>`);
         $('#makeYear').html(`<option value="" disabled selected>Select a year</option>`);
