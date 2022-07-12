@@ -384,7 +384,7 @@ element.style {
     width: 100%;
     padding: 10px 40px;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 .btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
