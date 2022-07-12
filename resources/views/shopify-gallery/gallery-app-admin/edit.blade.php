@@ -3,21 +3,11 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
-        <div class="columns-4 gap-2 mt-4" style="max-height:150px!important">
 
-            @foreach($submission->images as $image)
-                <img style="max-width: none; width:auto;" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
-                <div class="relative flex items-start">
-                    <div class="flex items-center h-5">
-                        <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                    </div>
-                    <div class="ml-1 text-xs">
-                        <label for="comments" class="text-gray-700">Approve</label>
-                    </div>
-                </div>
-            @endforeach
+        @foreach($submission->images as $image)
+            <img style="max-height:100%; width:auto;" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+        @endforeach
 
-        </div>
 
         <div class="flex flex-col">
             <form class="space-y-8 divide-y divide-gray-200">
