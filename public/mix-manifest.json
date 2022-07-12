@@ -1,6 +1,6 @@
 {
     "/js/admin-app.js": "/js/admin-app.js",
+    "/css/admin-app.css": "/css/admin-app.css",
     "/css/gallery-app.css": "/css/gallery-app.css",
-    "/css/bootstrap5.css": "/css/bootstrap5.css",
-    "/css/admin-app.css": "/css/admin-app.css"
+    "/css/bootstrap5.css": "/css/bootstrap5.css"
 }

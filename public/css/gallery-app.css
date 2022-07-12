@@ -350,3 +350,109 @@ element.style {
     letter-spacing: normal;
 }
 
+
+/*! CSS Used from: https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/layout.theme.css?v=132177402693690861081656000550 */
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+:active, :focus {
+    outline: none;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    color: #4b4e53;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:focus, a:hover {
+    color: #6f747b;
+}
+
+.btn, .btn--primary-new {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 25px;
+    width: auto;
+    margin: 0;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    background-color: #009482;
+    color: #fff;
+    font-family: Galano, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.btn--primary-new:active, .btn--primary-new:focus, .btn--primary-new:hover, .btn:active, .btn:focus, .btn:hover {
+    background-color: #00ae98;
+    color: #fff;
+}
+
+.btn--primary-new {
+    border-color: #1b1c1c;
+    text-transform: uppercase;
+    background-color: #1b1c1c;
+    padding: 16px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    transition-property: background-color, color, border-color;
+}
+
+.btn--primary-new:focus, .btn--primary-new:hover {
+    border-color: #3f4141;
+    background-color: #3f4141 !important;
+}
+
+.btn--primary-new:active {
+    border-color: #ec7732;
+    background-color: #ec7732 !important;
+}
+
+/*! CSS Used from: https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/template.index.css?v=164764844934086434251656000276 */
+.born-to-build__text a {
+    font-size: 18px;
+    font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    padding: 16px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1025px) {
+    .born-to-build__text a {
+        width: auto;
+    }
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: Galano;
+    src: url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/08c8ef24676e5d08fe268184dad3d94c.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/83b6999992e8d884835fbb4a24579893.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Gothic CG No1;
+    src: url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/e65022047cd36d7d1ceab0aceebdccc9.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/e8997400a9db8bedd2952f18dd0ba611.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
