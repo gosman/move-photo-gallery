@@ -70,7 +70,7 @@ $(document).ready(function () {
         models.sort();
 
         $.each(models, function (key, val) {
-            if ( val.toLowerCase() === selectedMake ) {
+            if ( val.toLowerCase() == selectedMake ) {
                 $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
             } else {
                 $('<option/>').val(val).html(val).appendTo('#truckModel');
