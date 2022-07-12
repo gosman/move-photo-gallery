@@ -26,6 +26,7 @@ $(document).ready(function () {
 
         let jsonData = $("#makeModelYear").val();
         makeModelYear = JSON.parse(jsonData.trim());
+        console.log(makeModelYear);
 
         $.each(makeModelYear, function (key, val) {
             if ( !makes.includes(val.make) ) {
