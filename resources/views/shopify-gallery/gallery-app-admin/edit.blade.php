@@ -166,7 +166,7 @@
     <script>
         actions.TitleBar.create(app, { title: 'Edit Submission' });
         const makeModelYear = {{ Illuminate\Support\Js::from($makeModelYear) }};
-        console.log(makeModelYear);
+        //console.log(makeModelYear);
 
     </script>
 @endsection
