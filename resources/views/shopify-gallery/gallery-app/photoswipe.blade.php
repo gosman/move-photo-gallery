@@ -7,6 +7,7 @@
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
         </div>
+        <div>XX</div>
         <div class="pswp__ui pswp__ui--hidden">
             <div class="pswp__top-bar">
                 <div class="pswp__counter"></div>
