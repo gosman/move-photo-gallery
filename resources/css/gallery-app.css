@@ -379,7 +379,6 @@ element.style {
     transition-property: background-color, color, border-color;
     font-size: 18px !important;
     font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif !important;
-    margin: 0;
     width: 100%;
     padding: 12px 40px;
     letter-spacing: 1px;
