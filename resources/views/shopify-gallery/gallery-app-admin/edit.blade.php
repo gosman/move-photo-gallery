@@ -3,7 +3,7 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
-        <div class="columns-4">
+        <div class="columns-4 m-4">
 
             @foreach($submission->images as $image)
                 <img style="max-height: 150px!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
@@ -11,7 +11,7 @@
                     <div class="flex items-center h-5">
                         <input id="comments" name="comments" type="checkbox" class="focus:ring-move-500 h-4 w-4 text-move-600 border-gray-300 rounded">
                     </div>
-                    <div class="ml-3 text-sm">
+                    <div class="ml-3 text-sm mt-1">
                         <label for="comments" class="font-medium text-gray-700">Approve</label>
                     </div>
                 </div>
