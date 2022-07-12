@@ -165,5 +165,8 @@
     @parent
     <script>
         actions.TitleBar.create(app, { title: 'Edit Submission' });
+
+        const makeModelYear = {{$makeModelYear}};
+
     </script>
 @endsection
