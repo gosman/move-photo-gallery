@@ -3,6 +3,14 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
+        <div class="gap-8 columns-4">
+
+            @foreach($submission->imags as $image)
+                <img class="w-full aspect-video" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+            @endforeach
+
+        </div>
+
         <div class="flex flex-col">
             <form class="space-y-8 divide-y divide-gray-200">
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
