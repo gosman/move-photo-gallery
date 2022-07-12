@@ -7,6 +7,15 @@
 
             @foreach($submission->images as $image)
                 <img style="max-height: 150px!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <div class="relative flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="comments" class="font-medium text-gray-700">Comments</label>
+                        <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                    </div>
+                </div>
             @endforeach
 
         </div>
