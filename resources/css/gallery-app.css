@@ -365,9 +365,6 @@ element.style {
 }
 
 .btn--primary-gallery {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
     display: inline-block;
@@ -378,17 +375,13 @@ element.style {
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     border: 1px solid transparent;
     border-color: #1b1c1c;
     text-transform: uppercase;
     background-color: #1b1c1c;
-    padding: 16px;
     color: #fff;
     transition: all .3s ease-in-out;
     transition-property: background-color, color, border-color;
-    font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif !important;
 }
 
 .btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
