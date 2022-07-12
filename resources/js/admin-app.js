@@ -24,23 +24,32 @@ $(document).ready(function () {
     //Initialise makes dropdown
     function initialiseMakes() {
 
-        if ( $("#makeModelYear").val().length ) {
+        if ( $("#makeModelYear").length ) {
             let jsonData = $("#makeModelYear").val();
             makeModelYear = JSON.parse(jsonData.trim());
             console.log(makeModelYear);
 
             $.each(makeModelYear, function (key, val) {
+
+                console.log(val);
+
+                /*
                 if ( !makes.includes(val.make) ) {
                     makes.push(val.make);
                 }
+
+                 */
             });
 
+            /*
             makes.sort();
             $.each(makes, function (key, val) {
                 $('<option/>').val(val).html(val).appendTo('#truckMake');
             });
 
             $('#truckMake').trigger('change');
+
+             */
         }
     }
 
