@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
   var jsonData = $("#makeModelYear").val();
   makeModelYear = JSON.parse(jsonData.trim());
-  console.log(makeModelYear); //Initialise makes dropdown
+  initialiseMakes(); //Initialise makes dropdown
 
   function initialiseMakes() {
     $.each(makeModelYear, function (key, val) {

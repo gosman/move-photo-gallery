@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     let jsonData = $("#makeModelYear").val();
     makeModelYear = JSON.parse(jsonData.trim());
-    console.log(makeModelYear);
+    initialiseMakes();
 
     //Initialise makes dropdown
     function initialiseMakes() {
