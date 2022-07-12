@@ -66,8 +66,6 @@ $(document).ready(function () {
   function getModels() {
     var selectedModel = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
     model = selectedModel;
-    console.log(model);
-    console.log(make);
     var models = [];
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
     $('#makeYear').html("<option value=\"\" disabled selected>Select a year</option>");
@@ -79,6 +77,7 @@ $(document).ready(function () {
       }
     });
     models.sort();
+    console.log(models);
     $.each(models, function (key, val) {
       if (val.toLowerCase() == model) {
         $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
