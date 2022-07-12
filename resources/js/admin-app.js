@@ -18,7 +18,7 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
-    const makeModelYear = $("#makeModelYear").val();
+    const makeModelYear = JSON.parse($("#makeModelYear").val());
 
     console.log(makeModelYear);
 
