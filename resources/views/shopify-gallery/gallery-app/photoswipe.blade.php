@@ -5,10 +5,8 @@
         <div class="pswp__container">
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
-            <div>YYY</div>
             <div class="pswp__item"></div>
         </div>
-
         <div class="pswp__ui pswp__ui--hidden">
             <div class="pswp__top-bar">
                 <div class="pswp__counter"></div>
