@@ -387,6 +387,7 @@ element.style {
     color: #fff;
     transition: all .3s ease-in-out;
     transition-property: background-color, color, border-color;
+    font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
 }
 
 .btn--primary-gallery:focus, .btn--primary-gallery:hover {
