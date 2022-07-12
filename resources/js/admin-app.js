@@ -71,6 +71,8 @@ $(document).ready(function () {
     //Get models by make
     function getModels(selectedModel) {
 
+        console.log(selectedModel);
+
         model = selectedModel;
 
         var models = [];

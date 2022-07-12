@@ -62,6 +62,7 @@ $(document).ready(function () {
 
 
   function getModels(selectedModel) {
+    console.log(selectedModel);
     model = selectedModel;
     var models = [];
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
