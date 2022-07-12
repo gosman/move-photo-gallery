@@ -6,13 +6,13 @@
         <div class="columns-4 gap-2 mt-4">
 
             @foreach($submission->images as $image)
-                <img style="max-width: none; width:auto; max-height: 100px;" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <img style="max-width: none; width:auto; max-height: 75px;" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
                 <div class="relative flex items-start">
                     <div class="flex items-center h-5">
                         <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                     </div>
-                    <div class="ml-3 text-xs">
-                        <label for="comments" class="text-gray-700">Comments</label>
+                    <div class="ml-1 text-xs">
+                        <label for="comments" class="text-gray-700">Approve</label>
                     </div>
                 </div>
             @endforeach
