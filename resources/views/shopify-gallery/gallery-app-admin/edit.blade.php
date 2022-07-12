@@ -5,7 +5,7 @@
 
 
         @foreach($submission->images as $image)
-            <img style="max-height:150px; width:auto;" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+            <img class="inline-block" style="max-height:150px; width:auto;" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
         @endforeach
 
 
