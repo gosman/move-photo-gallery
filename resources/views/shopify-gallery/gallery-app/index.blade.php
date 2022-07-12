@@ -611,7 +611,7 @@
         $(document).on('click', '.g-image', function (event) {
 
             $('#yotpo_testimonials_btn').hide();
-            console.log("here");
+
             event.preventDefault();
 
             var $pswp = $('.pswp')[0],
@@ -635,11 +635,6 @@
                 }
             });
             gallery.init();
-
-            gallery.listen('afterInit', () => {
-                $('#yotpo_testimonials_btn').hide();
-                console.log("here");
-            });
         });
     }
 
