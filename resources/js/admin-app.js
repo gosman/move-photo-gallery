@@ -1,6 +1,6 @@
 require('./bootstrap');
 
-let makeModelYear, makes
+let makeModelYear, makes = [];
 
 $(document).ready(function () {
 
@@ -31,14 +31,9 @@ $(document).ready(function () {
 
             $.each(makeModelYear, function (key, val) {
 
-                console.log(val);
-
-                /*
                 if ( !makes.includes(val.make) ) {
                     makes.push(val.make);
                 }
-
-                 */
             });
 
             /*

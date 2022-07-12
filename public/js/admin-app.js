@@ -9,7 +9,8 @@
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var makeModelYear, makes;
+var makeModelYear,
+    makes = [];
 $(document).ready(function () {
   var redirect = actions.Redirect.create(app);
   $('.app-link').on('click', function (e) {
@@ -31,12 +32,9 @@ $(document).ready(function () {
       makeModelYear = JSON.parse(jsonData.trim());
       console.log(makeModelYear);
       $.each(makeModelYear, function (key, val) {
-        console.log(val);
-        /*
-        if ( !makes.includes(val.make) ) {
-            makes.push(val.make);
+        if (!makes.includes(val.make)) {
+          makes.push(val.make);
         }
-          */
       });
       /*
       makes.sort();
