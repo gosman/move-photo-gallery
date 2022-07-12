@@ -350,32 +350,7 @@ element.style {
     letter-spacing: normal;
 }
 
-
-/*! CSS Used from: https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/layout.theme.css?v=132177402693690861081656000550 */
-*, :after, :before {
-    box-sizing: border-box;
-}
-
-:active, :focus {
-    outline: none;
-}
-
-*, :after, :before {
-    box-sizing: border-box;
-}
-
-a {
-    display: inline-block;
-    color: #4b4e53;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-a:focus, a:hover {
-    color: #6f747b;
-}
-
-.btn, .btn--primary-new {
+.btn--primary-gallery {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -399,12 +374,12 @@ a:focus, a:hover {
     text-transform: uppercase;
 }
 
-.btn--primary-new:active, .btn--primary-new:focus, .btn--primary-new:hover, .btn:active, .btn:focus, .btn:hover {
+.btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
     background-color: #00ae98;
     color: #fff;
 }
 
-.btn--primary-new {
+.btn--primary-gallery {
     border-color: #1b1c1c;
     text-transform: uppercase;
     background-color: #1b1c1c;
@@ -414,12 +389,12 @@ a:focus, a:hover {
     transition-property: background-color, color, border-color;
 }
 
-.btn--primary-new:focus, .btn--primary-new:hover {
+.btn--primary-gallery:focus, .btn--primary-gallery:hover {
     border-color: #3f4141;
     background-color: #3f4141 !important;
 }
 
-.btn--primary-new:active {
+.btn--primary-gallery:active {
     border-color: #ec7732;
     background-color: #ec7732 !important;
 }
