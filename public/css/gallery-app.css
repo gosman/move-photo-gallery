@@ -403,9 +403,7 @@ element.style {
 }
 
 
-@media screen and (min-width: 1025px) {
-    .born-to-build__text a {
-        width: auto;
-    }
+.gallery-app select {
+    text-transform: uppercase;
 }
 
