@@ -24,13 +24,13 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 }
 
 .gallery-app .form-check-input:focus {
-    border-color: #009482 !important;
+    border-color: #ee7623 !important;
     box-shadow: none !important;
 }
 
 .gallery-app .form-check-input:checked {
-    background-color: #009482;
-    border-color: #009482;
+    background-color: #ee7623;
+    border-color: #ee7623;
 }
 
 .submit-photo-text {
@@ -84,7 +84,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
     -moz-appearance: none;
     border: 1px solid transparent;
     border-radius: 0;
-    background-color: #009482;
+    background-color: #ee7623;
     color: #fff;
     font-family: Galano, Helvetica Neue, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -97,7 +97,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 }
 
 .gallery-submit-button:hover {
-    background-color: #00ae98;
+    background-color: #ee7623;
     color: #fff;
 }
 
@@ -190,7 +190,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 
 .form-control:focus, .form-select:focus {
     box-shadow: none !important;
-    border-color: #009482 !important;
+    border-color: #ee7623 !important;
 }
 
 .input-group-text {
@@ -202,7 +202,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 .fileuploader {
     width: 100%;
     padding: 20px;
-    border: 2px dashed #009482;
+    border: 2px dashed #ee7623;
     background: #f6f6f6;
     margin-top: 20px;
 }
@@ -228,7 +228,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 
 .progressbar {
     width: 100%;
-    background-color: #26a69a;
+    background-color: #ee7623;
     height: 4px;
     margin-top: 9px;
 }
@@ -388,7 +388,7 @@ element.style {
 }
 
 .btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
-    background-color: #00ae98;
+    background-color: #ee7623;
     color: #fff;
 }
 
