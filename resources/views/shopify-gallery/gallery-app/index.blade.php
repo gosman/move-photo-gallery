@@ -610,6 +610,8 @@
         // Define click event on gallery item
         $(document).on('click', '.g-image', function (event) {
 
+            $('#yotpo_testimonials_btn').hide();
+            console.log("here");
             event.preventDefault();
 
             var $pswp = $('.pswp')[0],
