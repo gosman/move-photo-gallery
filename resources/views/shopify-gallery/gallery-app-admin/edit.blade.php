@@ -20,7 +20,7 @@
                 <img style="max-height: 150px!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
 
 
-                <div class="flex items-start mt-2">
+                <div class="mt-2">
                     <div class="flex items-center h-5">
                         <input id="comments" name="comments" type="checkbox" class="focus:ring-move-500 h-4 w-4 text-move-600 border-gray-300 rounded">
                     </div>
