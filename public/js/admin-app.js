@@ -22,7 +22,9 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
-  var makeModelYear = JSON.parse($("#makeModelYear").val().trim());
+  var jsonData = $("#makeModelYear").val();
+  jsonData = jsonData.trim();
+  var makeModelYear = JSON.parse(jsonData);
   console.log(makeModelYear);
 });
 

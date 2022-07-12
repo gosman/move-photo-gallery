@@ -18,8 +18,9 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
-    const makeModelYear = JSON.parse($("#makeModelYear").val().trim());
-
+    let jsonData = $("#makeModelYear").val();
+    jsonData = jsonData.trim();
+    const makeModelYear = JSON.parse(jsonData);
     console.log(makeModelYear);
 
 });
