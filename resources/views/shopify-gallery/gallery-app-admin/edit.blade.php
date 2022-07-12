@@ -7,7 +7,7 @@
 
             @foreach($submission->images as $image)
 
-                <img style="object-fit: cover!important; max-width:none!important; width:100%!important; height:100%!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <img style="object-fit: cover!important; max-width:none!important; height:100%!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
                 <input id="comments" name="comments" type="checkbox" class="focus:ring-move-500 h-4 w-4 text-move-600 border-gray-300 rounded">
 
             @endforeach
