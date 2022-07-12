@@ -413,3 +413,7 @@ element.style {
     border-radius: 0 !important;
 }
 
+.gallery-app .btn-success:active:focus {
+    box-shadow: none;
+}
+
