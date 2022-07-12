@@ -7,6 +7,8 @@
 
             @foreach($submission->images as $image)
                 <img style="max-width: none; width:auto; max-height: 150px; object-fit: cover" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+                <label for="subscribeNews">Subscribe to newsletter?</label>
             @endforeach
 
         </div>
