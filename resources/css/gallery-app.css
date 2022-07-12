@@ -367,13 +367,11 @@ element.style {
 .btn--primary-gallery {
     user-select: none;
     display: inline-block;
-    padding: 13px 50px;
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    border: 1px solid transparent;
-    border-color: #1b1c1c;
+    border: 1px solid #1b1c1c;
     text-transform: uppercase;
     background-color: #1b1c1c;
     color: #fff;
@@ -381,6 +379,11 @@ element.style {
     transition-property: background-color, color, border-color;
     font-size: 18px;
     font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    padding: 16px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
@@ -399,14 +402,8 @@ element.style {
 }
 
 /*! CSS Used from: https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/template.index.css?v=164764844934086434251656000276 */
-.btn--primary-gallery a {
-    font-size: 18px;
-    font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
-    margin: 0;
-    width: 100%;
-    padding: 16px 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.btn--primary-gallery {
+
 }
 
 @media screen and (min-width: 1025px) {
