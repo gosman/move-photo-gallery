@@ -368,8 +368,7 @@ element.style {
     user-select: none;
     cursor: pointer;
     display: inline-block;
-    padding: 15px 25px;
-    width: auto;
+    padding: 13px 25px;
     line-height: 1;
     text-decoration: none;
     text-align: center;
