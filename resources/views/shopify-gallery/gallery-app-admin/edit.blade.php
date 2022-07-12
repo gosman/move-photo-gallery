@@ -5,7 +5,7 @@
 
         <div class="gap-8 columns-4">
 
-            @foreach($submission->imags as $image)
+            @foreach($submission->images as $image)
                 <img class="w-full aspect-video" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
             @endforeach
 
