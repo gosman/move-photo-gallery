@@ -87,6 +87,8 @@ $(document).ready(function () {
     //Get year by model by make
     function getYears(selectedYear = null) {
 
+        year = selectedYear;
+
         var years = [];
         $('#truckYear').html(`<option value="" disabled selected>Select a year</option>`);
 

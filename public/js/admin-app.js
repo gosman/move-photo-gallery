@@ -79,6 +79,7 @@ $(document).ready(function () {
 
   function getYears() {
     var selectedYear = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    year = selectedYear;
     var years = [];
     $('#truckYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
