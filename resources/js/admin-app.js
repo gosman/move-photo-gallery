@@ -19,12 +19,13 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
-    let jsonData = $("#makeModelYear").val();
-    makeModelYear = JSON.parse(jsonData.trim());
     initialiseMakes();
 
     //Initialise makes dropdown
     function initialiseMakes() {
+
+        let jsonData = $("#makeModelYear").val();
+        makeModelYear = JSON.parse(jsonData.trim());
 
         $.each(makeModelYear, function (key, val) {
             if ( !makes.includes(val.make) ) {

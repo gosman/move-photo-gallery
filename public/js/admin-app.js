@@ -23,11 +23,11 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
-  var jsonData = $("#makeModelYear").val();
-  makeModelYear = JSON.parse(jsonData.trim());
   initialiseMakes(); //Initialise makes dropdown
 
   function initialiseMakes() {
+    var jsonData = $("#makeModelYear").val();
+    makeModelYear = JSON.parse(jsonData.trim());
     $.each(makeModelYear, function (key, val) {
       if (!makes.includes(val.make)) {
         makes.push(val.make);
