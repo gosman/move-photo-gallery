@@ -42,7 +42,7 @@ $(document).ready(function () {
       });
       makes.sort();
       $.each(makes, function (key, val) {
-        if (val.toLowerCase() === make) {
+        if (val.toLowerCase() == make) {
           $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckMake');
         } else {
           $('<option/>').val(val).html(val).appendTo('#truckMake');
@@ -59,7 +59,7 @@ $(document).ready(function () {
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
     $('#makeYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
-      if (item.make === make) {
+      if (item.make == make) {
         if (!models.includes(item.model)) {
           models.push(item.model);
         }
@@ -78,9 +78,6 @@ $(document).ready(function () {
 
   function getYears(selectedYear) {
     year = selectedYear;
-    console.log(year);
-    console.log(make);
-    console.log(model);
     var years = [];
     $('#truckYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
