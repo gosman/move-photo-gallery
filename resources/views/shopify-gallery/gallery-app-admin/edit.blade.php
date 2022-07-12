@@ -3,10 +3,10 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
-        <div class="columns-4">
+        <div class="columns-4 h-100">
 
             @foreach($submission->images as $image)
-                <img style="max-height: 150px!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <img style="max-height: 100%!important" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
             @endforeach
 
         </div>
