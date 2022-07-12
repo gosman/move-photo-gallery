@@ -132,6 +132,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
     background-color: #ee7623;
     border-color: #ee7623;
     box-shadow: none;
+    border-radius: 0;
 }
 
 .gallery .btn-success:hover, .gallery .btn-success:focus {
