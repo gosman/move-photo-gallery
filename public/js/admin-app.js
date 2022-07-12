@@ -22,6 +22,7 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
+  var makeModelyear = $("#makeModelyear").val();
   console.log(makeModelyear);
 });
 

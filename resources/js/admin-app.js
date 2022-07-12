@@ -18,6 +18,7 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
+    const makeModelyear = $("#makeModelyear").val();
 
     console.log(makeModelyear);
 
