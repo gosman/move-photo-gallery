@@ -28,13 +28,15 @@ $(document).ready(function () {
     //Truck make changed
     $('#truckMake').on('change', function () {
 
-        getModels($(this).val());
+        make = $(this).val();
+        getModels();
     });
 
     //Truck model changed
     $('#truckModel').on('change', function () {
 
-        getYears($(this).val());
+        model = $(this).val();
+        getYears();
     });
 
     //Get makes
@@ -69,9 +71,7 @@ $(document).ready(function () {
     }
 
     //Get models by make
-    function getModels(selectedModel) {
-
-        console.log(selectedModel);
+    function getModels(selectedModel = null) {
 
         model = selectedModel;
 
@@ -100,7 +100,7 @@ $(document).ready(function () {
     }
 
     //Get years by model by make
-    function getYears(selectedYear) {
+    function getYears(selectedYear = null) {
 
         year = selectedYear;
         var years = [];

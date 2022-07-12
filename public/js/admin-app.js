@@ -29,11 +29,13 @@ $(document).ready(function () {
   getYears($("#truckYear").data('selected')); //Truck make changed
 
   $('#truckMake').on('change', function () {
-    getModels($(this).val());
+    make = $(this).val();
+    getModels();
   }); //Truck model changed
 
   $('#truckModel').on('change', function () {
-    getYears($(this).val());
+    model = $(this).val();
+    getYears();
   }); //Get makes
 
   function getMakes(selectedMake) {
@@ -61,8 +63,8 @@ $(document).ready(function () {
   } //Get models by make
 
 
-  function getModels(selectedModel) {
-    console.log(selectedModel);
+  function getModels() {
+    var selectedModel = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
     model = selectedModel;
     var models = [];
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
@@ -85,7 +87,8 @@ $(document).ready(function () {
   } //Get years by model by make
 
 
-  function getYears(selectedYear) {
+  function getYears() {
+    var selectedYear = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
     year = selectedYear;
     var years = [];
     $('#truckYear').html("<option value=\"\" disabled selected>Select a year</option>");
