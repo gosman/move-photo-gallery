@@ -1,5 +1,6 @@
 require('./bootstrap');
 
+let makeModelYear, makes
 
 $(document).ready(function () {
 
@@ -19,8 +20,25 @@ $(document).ready(function () {
     });
 
     let jsonData = $("#makeModelYear").val();
-    jsonData = jsonData.trim();
-    const makeModelYear = JSON.parse(jsonData);
+    makeModelYear = JSON.parse(jsonData.trim());
     console.log(makeModelYear);
+
+    //Initialise makes dropdown
+    function initialiseMakes() {
+
+        $.each(makeModelYear, function (key, val) {
+            if ( !makes.includes(val.make) ) {
+                makes.push(val.make);
+            }
+        });
+
+        makes.sort();
+        $.each(makes, function (key, val) {
+            $('<option/>').val(val).html(val).appendTo('#truckMake');
+        });
+
+        $('#truckMake').trigger('change');
+    }
+
 
 });

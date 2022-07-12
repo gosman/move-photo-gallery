@@ -9,6 +9,7 @@
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var makeModelYear, makes;
 $(document).ready(function () {
   var redirect = actions.Redirect.create(app);
   $('.app-link').on('click', function (e) {
@@ -23,9 +24,21 @@ $(document).ready(function () {
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
   var jsonData = $("#makeModelYear").val();
-  jsonData = jsonData.trim();
-  var makeModelYear = JSON.parse(jsonData);
-  console.log(makeModelYear);
+  makeModelYear = JSON.parse(jsonData.trim());
+  console.log(makeModelYear); //Initialise makes dropdown
+
+  function initialiseMakes() {
+    $.each(makeModelYear, function (key, val) {
+      if (!makes.includes(val.make)) {
+        makes.push(val.make);
+      }
+    });
+    makes.sort();
+    $.each(makes, function (key, val) {
+      $('<option/>').val(val).html(val).appendTo('#truckMake');
+    });
+    $('#truckMake').trigger('change');
+  }
 });
 
 /***/ }),
