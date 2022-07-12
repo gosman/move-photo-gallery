@@ -21,9 +21,12 @@ $(document).ready(function () {
 
 
     //Initialise makes dropdown
-    initialiseMakes($("#truckMake").data('selected'));
+    getMakes($("#truckMake").data('selected'));
+    getModels($("#truckModel").data('selected'));
 
-    function initialiseMakes(selectedMake = null) {
+    //getYears($("#truckYear").data('selected'));
+
+    function getMakes(selectedMake = null) {
 
         if ( $("#makeModelYear").length ) {
             let jsonData = $("#makeModelYear").val();
@@ -48,6 +51,33 @@ $(document).ready(function () {
 
             $('#truckMake').trigger('change');
         }
+    }
+
+    //Get user model by make
+    function getModels() {
+
+        var umodels = [];
+        $('#makeModel').html(`<option value="" disabled selected>Select a model </option>`);
+        $('#makeYear').html(`<option value="" disabled selected>Select a year</option>`);
+
+        makeModelYear.filter(function (item) {
+
+            if ( !umodels.includes(item.model) ) {
+                umodels.push(item.model);
+            }
+        });
+
+        umodels.sort();
+
+        if ( val.toLowerCase() === selectedMake ) {
+            $('<option/>').val(val).html(val).attr('selected', true).appendTo('#ruckModel');
+        } else {
+            $('<option/>').val(val).html(val).appendTo('#ruckModel');
+        }
+
+        $.each(umodels, function (key, val) {
+            $('<option/>').val(val).html(val).appendTo('#ruckModel');
+        });
     }
 
 
