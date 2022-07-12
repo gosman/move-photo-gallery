@@ -52,16 +52,16 @@ $(document).ready(function () {
   } //Get user model by make
 
 
-  function getModels() {
-    var umodels = [];
+  function getModels(selectedMake) {
+    var models = [];
     $('#makeModel').html("<option value=\"\" disabled selected>Select a model </option>");
     $('#makeYear').html("<option value=\"\" disabled selected>Select a year</option>");
     makeModelYear.filter(function (item) {
-      if (!umodels.includes(item.model)) {
-        umodels.push(item.model);
+      if (!models.includes(item.model)) {
+        models.push(item.model);
       }
     });
-    umodels.sort();
+    models.sort();
 
     if (val.toLowerCase() === selectedMake) {
       $('<option/>').val(val).html(val).attr('selected', true).appendTo('#ruckModel');
@@ -69,7 +69,7 @@ $(document).ready(function () {
       $('<option/>').val(val).html(val).appendTo('#ruckModel');
     }
 
-    $.each(umodels, function (key, val) {
+    $.each(models, function (key, val) {
       $('<option/>').val(val).html(val).appendTo('#ruckModel');
     });
   }
