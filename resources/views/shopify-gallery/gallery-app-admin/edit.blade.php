@@ -6,7 +6,7 @@
         <div class="columns-4 flex relative">
 
             @foreach($submission->images as $image)
-                <img style="max-width: none; width:100%; height: 100%; object-fit: cover" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <img style="max-width: none; width:auto; height: 150px; object-fit: cover" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
             @endforeach
 
         </div>
