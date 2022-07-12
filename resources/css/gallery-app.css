@@ -378,7 +378,7 @@ element.style {
     transition: all .3s ease-in-out;
     transition-property: background-color, color, border-color;
     font-size: 18px;
-    font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
+    font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif !important;
     margin: 0;
     width: 100%;
     padding: 16px 40px;
@@ -401,10 +401,6 @@ element.style {
     background-color: #ec7732 !important;
 }
 
-/*! CSS Used from: https://cdn.shopify.com/s/files/1/0159/5552/5686/t/157/assets/template.index.css?v=164764844934086434251656000276 */
-.btn--primary-gallery {
-
-}
 
 @media screen and (min-width: 1025px) {
     .born-to-build__text a {
