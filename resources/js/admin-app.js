@@ -19,14 +19,4 @@ $(document).ready(function () {
     });
 
 
-    $.get("@{{'make-model-year.json' | asset_url}}", function (response) {
-
-        if ( response ) {
-            makeModelYear = response;
-            initialiseMakes();
-        }
-    });
-
-
-
 });

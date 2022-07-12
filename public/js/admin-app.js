@@ -22,12 +22,6 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
-  $.get("@{{'make-model-year.json' | asset_url}}", function (response) {
-    if (response) {
-      makeModelYear = response;
-      initialiseMakes();
-    }
-  });
 });
 
 /***/ }),
