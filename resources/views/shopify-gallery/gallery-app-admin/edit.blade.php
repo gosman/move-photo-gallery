@@ -3,7 +3,7 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
-        <div class="columns-4 flex relative gap-2">
+        <div class="columns-4 flex relative gap-2 mt-4">
 
             @foreach($submission->images as $image)
                 <img style="max-width: none; width:auto; max-height: 150px; object-fit: cover" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
