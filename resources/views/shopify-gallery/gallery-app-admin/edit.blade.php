@@ -159,14 +159,14 @@
         </div>
     </div>
 
+    <input id="makeModelyear" type="hidden" value="{{json_encode($makeModelYear}}">
+
 @endsection
 
 @section('scripts')
     @parent
     <script>
         actions.TitleBar.create(app, { title: 'Edit Submission' });
-        window.makeModelYear = {{ Illuminate\Support\Js::from($makeModelYear) }};
-        //console.log(makeModelYear);
 
     </script>
 @endsection
