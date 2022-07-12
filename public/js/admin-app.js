@@ -25,9 +25,11 @@ $(document).ready(function () {
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   }); //Initialise makes dropdown
 
-  initialiseMakes();
+  initialiseMakes($("#truckMake").data('selected'));
 
   function initialiseMakes() {
+    var selectedMake = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
     if ($("#makeModelYear").length) {
       var jsonData = $("#makeModelYear").val();
       makeModelYear = JSON.parse(jsonData.trim());
@@ -38,7 +40,11 @@ $(document).ready(function () {
       });
       makes.sort();
       $.each(makes, function (key, val) {
-        $('<option/>').val(val).html(val).appendTo('#truckMake');
+        if (val.toLowerCase() === selectedMake) {
+          $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckMake');
+        } else {
+          $('<option/>').val(val).html(val).appendTo('#truckMake');
+        }
       });
       $('#truckMake').trigger('change');
     }

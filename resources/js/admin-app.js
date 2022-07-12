@@ -21,9 +21,9 @@ $(document).ready(function () {
 
 
     //Initialise makes dropdown
-    initialiseMakes();
+    initialiseMakes($("#truckMake").data('selected'));
 
-    function initialiseMakes() {
+    function initialiseMakes(selectedMake = null) {
 
         if ( $("#makeModelYear").length ) {
             let jsonData = $("#makeModelYear").val();
@@ -38,7 +38,12 @@ $(document).ready(function () {
 
             makes.sort();
             $.each(makes, function (key, val) {
-                $('<option/>').val(val).html(val).appendTo('#truckMake');
+
+                if ( val.toLowerCase() === selectedMake ) {
+                    $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckMake');
+                } else {
+                    $('<option/>').val(val).html(val).appendTo('#truckMake');
+                }
             });
 
             $('#truckMake').trigger('change');
