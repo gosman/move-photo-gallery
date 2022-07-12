@@ -358,7 +358,6 @@ element.style {
     display: inline-block;
     padding: 15px 25px;
     width: auto;
-    margin: 0;
     line-height: 1;
     text-decoration: none;
     text-align: center;
@@ -367,19 +366,6 @@ element.style {
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 1px solid transparent;
-    border-radius: 0;
-    background-color: #009482;
-    color: #fff;
-    font-family: Galano, Helvetica Neue, Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-}
-
-.btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
-    background-color: #00ae98;
-    color: #fff;
-}
-
-.btn--primary-gallery {
     border-color: #1b1c1c;
     text-transform: uppercase;
     background-color: #1b1c1c;
@@ -388,6 +374,11 @@ element.style {
     transition: all .3s ease-in-out;
     transition-property: background-color, color, border-color;
     font-family: Gothic CG No1, Arial Narrow, Arial, sans-serif;
+}
+
+.btn--primary-gallery:active, .btn--primary-gallery:focus, .btn--primary-gallery:hover, .btn:active, .btn:focus, .btn:hover {
+    background-color: #00ae98;
+    color: #fff;
 }
 
 .btn--primary-gallery:focus, .btn--primary-gallery:hover {
