@@ -3,10 +3,10 @@
 @section('content')
     <div class="px-4 sm:px-6 lg:px-8">
 
-        <div class="gap-8 columns-4">
+        <div class="columns-4">
 
             @foreach($submission->images as $image)
-                <img class="h-8" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
+                <img class="h-50" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}"/>
             @endforeach
 
         </div>
