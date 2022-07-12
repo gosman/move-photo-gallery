@@ -6,7 +6,6 @@
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
-
         </div>
         <div class="pswp__ui pswp__ui--hidden">
             <div class="pswp__top-bar">
@@ -30,7 +29,9 @@
             </button>
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
-
+            <div class="pswp__caption">
+                <div class="pswp__caption__center text-center"></div>
+            </div>
         </div>
     </div>
 </div>
