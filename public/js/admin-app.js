@@ -73,6 +73,8 @@ $(document).ready(function () {
       $('<option/>').val(val).html(val).appendTo('#ruckModel');
     });
   }
+  /**/
+
 });
 
 /***/ }),
