@@ -71,7 +71,7 @@
 
             @if($make)
                 <div class="container d-flex align-items-center justify-content-center">
-                    <small><a href="/community/client-gallery">RESET FILTERS</a></small>
+                    <small><b><a href="/community/client-gallery">RESET FILTERS</a></b></small>
                 </div>
             @endif
 
