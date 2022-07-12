@@ -34,9 +34,6 @@ class GalleryManagementController extends Controller
 
         $submission = Submission::with('images')->find($submissionId);
 
-        print_r($submission->toArray());
-        exit;
-
         return view('shopify-gallery.gallery-app-admin.edit')->with([
             'submission' => $submission,
             'makeModelYear' => $makeModelYear,
