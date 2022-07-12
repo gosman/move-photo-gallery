@@ -157,7 +157,7 @@
         </div>
     </div>
 
-    <input id="makeModelYear" type="hidden" value='{!! json_encode($makeModelYear) !!}'>
+    <input data-make="" data-model="" data-year="" id="makeModelYear" type="hidden" value='{!! json_encode($makeModelYear) !!}'>
 @endsection
 
 @section('scripts')

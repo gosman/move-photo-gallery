@@ -19,9 +19,10 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
-    initialiseMakes();
 
     //Initialise makes dropdown
+    initialiseMakes();
+
     function initialiseMakes() {
 
         if ( $("#makeModelYear").length ) {

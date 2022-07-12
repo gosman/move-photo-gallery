@@ -23,8 +23,9 @@ $(document).ready(function () {
     e.preventDefault();
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
-  });
-  initialiseMakes(); //Initialise makes dropdown
+  }); //Initialise makes dropdown
+
+  initialiseMakes();
 
   function initialiseMakes() {
     if ($("#makeModelYear").length) {
