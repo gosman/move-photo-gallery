@@ -20,11 +20,25 @@ $(document).ready(function () {
     });
 
 
-    //Initialise makes dropdown
+    //Initialise dropdowns
     getMakes($("#truckMake").data('selected'));
     getModels($("#truckModel").data('selected'));
     getYears($("#truckYear").data('selected'));
 
+    //Truck make changed
+    $('#truckMake').on('change', function () {
+
+        getModels($(this).val());
+    });
+
+    //Truck model changed
+    $('#truckModel').on('change', function () {
+
+        getYears($(this).val());
+    });
+
+
+    //Get makes
     function getMakes(selectedMake) {
 
         make = selectedMake;
@@ -55,7 +69,7 @@ $(document).ready(function () {
         }
     }
 
-    //Get model by make
+    //Get models by make
     function getModels(selectedModel) {
 
         model = selectedModel;
@@ -84,7 +98,7 @@ $(document).ready(function () {
         });
     }
 
-    //Get year by model by make
+    //Get years by model by make
     function getYears(selectedYear) {
 
         year = selectedYear;
@@ -101,8 +115,6 @@ $(document).ready(function () {
         });
 
         years.sort();
-
-        console.log(years)
 
         $.each(years, function (key, val) {
 
