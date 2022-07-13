@@ -60,6 +60,7 @@ $(document).ready(function () {
       allowOutsideClick: false,
       allowEscapeKey: false,
       allowEnterKey: false,
+      showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
         Swal.showLoading();
         return false;
