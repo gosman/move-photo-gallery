@@ -30,7 +30,9 @@ $(document).ready(function () {
             showConfirmButton: false,
             showCloseButton: true,
             didOpen: () => {
-                $(".swal2-popup").css("background-color", "transparent")
+                $(".swal2-popup").css("background-color", "transparent");
+                $(".swal2-close").css("background-color", "black");
+                $(".swal2-close:focus").css("box-shadow", "none");
             }
         })
     });
