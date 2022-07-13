@@ -64,8 +64,13 @@ $(document).ready(function () {
       preConfirm: function preConfirm() {
         var response = $.post("/gallery-admin/image/".concat(id), {
           '_method': 'delete'
-        }, function (response) {});
-        console.log(response);
+        }, function (response) {
+          return false;
+        });
+
+        if (response.status === 200) {
+          return false;
+        }
       }
     });
   }); //Initialise dropdowns
