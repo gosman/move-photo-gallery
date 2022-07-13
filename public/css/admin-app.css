@@ -1146,6 +1146,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(0 148 130 / var(--tw-bg-opacity));
 }
+.bg-move-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 178 160 / var(--tw-bg-opacity));
+}
 .fill-current {
   fill: currentColor;
 }
