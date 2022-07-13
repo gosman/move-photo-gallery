@@ -30,10 +30,14 @@ $(document).ready(function () {
             data[attr.name] = attr.value;
         });
 
-        console.log(action);
-        console.log(method);
-        console.log(data);
-
+        $.ajax({
+            type: method,
+            url: action,
+            data: data,
+            success: function (response) {
+                console.log(response);
+            }
+        });
     });
 
 

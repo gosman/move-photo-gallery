@@ -32,9 +32,14 @@ $(document).ready(function () {
     $(this).serializeArray().map(function (attr) {
       data[attr.name] = attr.value;
     });
-    console.log(action);
-    console.log(method);
-    console.log(data);
+    $.ajax({
+      type: method,
+      url: action,
+      data: data,
+      success: function success(response) {
+        console.log(response);
+      }
+    });
   }); //Image preview
 
   $(".image-preview").on('click', function () {
