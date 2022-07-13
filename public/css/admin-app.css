@@ -911,6 +911,11 @@ select {
 .min-w-full {
   min-width: 100%;
 }
+.min-w-fit {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
 .max-w-xl {
   max-width: 36rem;
 }
