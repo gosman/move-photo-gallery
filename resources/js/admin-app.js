@@ -44,7 +44,7 @@ $(document).ready(function () {
 
         e.preventDefault();
         let id = $(this).data('id');
-        let imageUrl = $(this).attr('src');
+        let imageUrl = $(this).data('image');
 
         Swal.fire({
             imageUrl: imageUrl,

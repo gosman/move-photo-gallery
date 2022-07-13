@@ -43,7 +43,10 @@ $(document).ready(function () {
   $(".image-delete").on('click', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
+    var imageUrl = $(this).data('image');
     Swal.fire({
+      imageUrl: imageUrl,
+      imageWidth: 200,
       title: 'Delete Image',
       text: "Are you sure?",
       icon: 'warning',
