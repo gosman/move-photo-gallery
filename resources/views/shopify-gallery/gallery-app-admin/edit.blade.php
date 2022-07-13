@@ -22,6 +22,17 @@
                                 <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
                                     <div class="flex-1 flex flex-col p-8">
                                         <img class="h-32 flex-shrink-0 mx-auto" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}" alt="">
+                                        <dl class="mt-1 flex-grow flex flex-col justify-between">
+                                            @if($image->approved)
+                                                <dd class="mt-3">
+                                                    <span class="px-2 py-1 text-gray-800 text-xs font-medium bg-green-100 rounded-full">Approved</span>
+                                                </dd>
+                                            @else
+                                                <dd class="mt-3">
+                                                    <span class="px-2 py-1 text-gray-800 text-xs font-medium bg-red-100 rounded-full">Unapproved</span>
+                                                </dd>
+                                            @endif
+                                        </dl>
                                     </div>
                                     <div>
                                         <div class="-mt-px flex divide-x divide-gray-200">
