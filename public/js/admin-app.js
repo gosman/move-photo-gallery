@@ -62,15 +62,12 @@ $(document).ready(function () {
       allowEnterKey: false,
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
-        var response = $.post("/gallery-admin/image/".concat(id), {
+        $.post("/gallery-admin/image/".concat(id), {
           '_method': 'delete'
-        }, function (response) {
+        }, function (response) {}).done(function () {
+          console.log();
           return false;
         });
-
-        if (response.status === 200) {
-          return false;
-        }
       }
     });
   }); //Initialise dropdowns

@@ -65,15 +65,12 @@ $(document).ready(function () {
             showLoaderOnConfirm: true,
             preConfirm: () => {
 
-                let response = $.post(`/gallery-admin/image/${ id }`, { '_method': 'delete' }, function (response) {
+                $.post(`/gallery-admin/image/${ id }`, { '_method': 'delete' }, function (response) {
 
+                }).done(function () {
+                    console.log()
                     return false;
                 });
-
-                if ( response.status === 200 ) {
-
-                    return false;
-                }
             }
         });
     });
