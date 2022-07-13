@@ -63,7 +63,6 @@ $(document).ready(function () {
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
         Swal.showLoading();
-        return false;
       }
     });
   }); //Initialise dropdowns

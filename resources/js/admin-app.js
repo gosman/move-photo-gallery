@@ -65,7 +65,6 @@ $(document).ready(function () {
             showLoaderOnConfirm: true,
             preConfirm: () => {
                 Swal.showLoading();
-                return false;
             }
         });
     });
