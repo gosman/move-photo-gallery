@@ -976,6 +976,9 @@ select {
 .cursor-default {
   cursor: default;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .columns-4 {
   -moz-columns: 4;
        columns: 4;
