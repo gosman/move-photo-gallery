@@ -10,6 +10,7 @@
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var makeModelYear, make, model, year;
+var spinner = "<svg class=\"animate-spin -ml-1 mr-3 h-5 w-5\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\">\n                    <circle class=\"opacity-25\" cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"4\"></circle>\n                    <path class=\"opacity-75\" fill=\"currentColor\" d=\"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z\"></path>\n               </svg>";
 $(document).ready(function () {
   //App link redirecion
   var redirect = actions.Redirect.create(app);
@@ -30,8 +31,7 @@ $(document).ready(function () {
     var method = $(this).attr('method');
     var data = {};
     var button = e.originalEvent.submitter;
-    console.log(button);
-    $(button).html("Test");
+    $(button).html(spinner);
     $(this).serializeArray().map(function (attr) {
       data[attr.name] = attr.value;
     });
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
   $(".image-approve").on('click', function (e) {
     e.preventDefault();
-    $(this).html("<svg class=\"animate-spin -ml-1 mr-3 h-5 w-5\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\">\n                                                        <circle class=\"opacity-25\" cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"4\"></circle>\n                                                        <path class=\"opacity-75\" fill=\"currentColor\" d=\"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z\"></path>\n                                                    </svg>");
+    $(this).html(spinner);
     var id = $(this).data('id');
     var approve = $(this).data('approve');
     $.ajax({
@@ -105,7 +105,7 @@ $(document).ready(function () {
       allowEnterKey: false,
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
-        $(_this).html("<svg class=\"animate-spin -ml-1 mr-3 h-5 w-5\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\">\n                                                        <circle class=\"opacity-25\" cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"4\"></circle>\n                                                        <path class=\"opacity-75\" fill=\"currentColor\" d=\"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z\"></path>\n                                                    </svg>");
+        $(_this).html(spinner);
         return fetch("/gallery-admin/image/".concat(id), {
           'method': 'DELETE'
         }).then(function (response) {
