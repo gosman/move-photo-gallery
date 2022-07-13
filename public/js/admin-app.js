@@ -29,7 +29,8 @@ $(document).ready(function () {
     Swal.fire({
       imageUrl: imageUrl,
       imageHeight: 700,
-      position: 'top'
+      position: 'top',
+      showConfirmButton: false
     });
   }); //Initialise dropdowns
 

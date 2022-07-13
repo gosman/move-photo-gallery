@@ -1313,7 +1313,7 @@ select {
 
 .swal2-container.swal2-top > .swal2-popup {
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .hover\:bg-move-700:hover {
