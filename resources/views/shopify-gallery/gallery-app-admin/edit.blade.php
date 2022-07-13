@@ -25,11 +25,11 @@
                                         <dl class="mt-1 flex-grow flex flex-col justify-between">
                                             @if($image->approved)
                                                 <dd class="mt-3">
-                                                    <span class="px-2 py-1 text-gray-800 text-xs font-medium bg-green-100 rounded-full">Approved</span>
+                                                    <span class="px-2 py-1 text-gray-600 text-xs font-medium bg-green-100 rounded-full">Approved</span>
                                                 </dd>
                                             @else
                                                 <dd class="mt-3">
-                                                    <span class="px-2 py-1 text-gray-800 text-xs font-medium bg-red-100 rounded-full">Unapproved</span>
+                                                    <span class="px-2 py-1 text-gray-600 text-xs font-medium bg-red-100 rounded-full">Unapproved</span>
                                                 </dd>
                                             @endif
                                         </dl>
