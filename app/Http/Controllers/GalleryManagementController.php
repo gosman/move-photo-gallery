@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Submission;
+use App\Models\SubmissionImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
@@ -46,17 +47,15 @@ class GalleryManagementController extends Controller
 
         if ($this->isAllowed()) {
 
-            echo $imageId;
+            SubmissionImage::find($imageId)->delete();
+
+            return response()->json(['success' => true]);
         }
     }
 
 
     private function isAllowed()
     {
-
-        echo request()->header('origin');
-        echo "\n";
-        echo config('app.url');
 
         if (request()->header('origin') === config('app.url')) {
 
