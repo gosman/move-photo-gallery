@@ -44,8 +44,11 @@ $(document).ready(function () {
 
         e.preventDefault();
         let id = $(this).data('id');
+        let imageUrl = $(this).attr('src');
 
         Swal.fire({
+            imageUrl: imageUrl,
+            imageWidth: 200,
             title: 'Delete Image',
             text: "Are you sure?",
             icon: 'warning',
