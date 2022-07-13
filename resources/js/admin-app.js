@@ -26,7 +26,6 @@ $(document).ready(function () {
 
         Swal.fire({
             imageUrl: imageUrl,
-            imageHeight: 700,
             position: 'top',
             showConfirmButton: false,
             showCloseButton: true,
