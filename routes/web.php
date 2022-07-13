@@ -53,9 +53,10 @@ Route::middleware(['verify.shopify'])->group(function () {
         GalleryManagementController::class,
         'edit',
     ])->name('show');
-
-    Route::delete('/gallery-admin/image/{imageId}', [
-        GalleryManagementController::class,
-        'deleteImage',
-    ]);
 });
+
+
+Route::delete('/gallery-admin/image/{imageId}', [
+    GalleryManagementController::class,
+    'deleteImage',
+]);
