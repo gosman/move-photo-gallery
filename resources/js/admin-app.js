@@ -50,6 +50,9 @@ $(document).ready(function () {
         let id = $(this).data('id');
         let approve = $(this).data('approve');
 
+        console.log(approve)
+
+        /*
         $.ajax({
             type: 'PATCH',
             url: `/gallery-admin/image/${ id }/approval`,
@@ -60,6 +63,8 @@ $(document).ready(function () {
                 }
             }
         });
+
+         */
     });
 
 
