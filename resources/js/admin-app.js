@@ -26,8 +26,8 @@ $(document).ready(function () {
 
         Swal.fire({
             imageUrl: imageUrl,
-            imageWidth: 800,
-            width: 800,
+            imageWidth: 700,
+            width: 700,
             position: 'top'
         })
     });
