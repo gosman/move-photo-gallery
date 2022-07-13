@@ -31,7 +31,10 @@ $(document).ready(function () {
       imageHeight: 700,
       position: 'top',
       showConfirmButton: false,
-      showCloseButton: true
+      showCloseButton: true,
+      didOpen: function didOpen() {
+        $(".swal2-popup").css("background-color", "transparent");
+      }
     });
   }); //Initialise dropdowns
 
