@@ -54,6 +54,21 @@ class GalleryManagementController extends Controller
     }
 
 
+    public function updateApproval($imageId)
+    {
+
+        if ($this->isAllowed()) {
+
+            echo $imageId;
+            print_r(request()->all());
+
+            //SubmissionImage::find($imageId)->delete();
+
+            //return response()->json(['success' => true]);
+        }
+    }
+
+
     private function isAllowed()
     {
 

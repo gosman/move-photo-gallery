@@ -60,3 +60,9 @@ Route::delete('/gallery-admin/image/{imageId}', [
     GalleryManagementController::class,
     'deleteImage',
 ]);
+
+
+Route::patch('/gallery-admin/image/{imageId}/approval', [
+    GalleryManagementController::class,
+    'updateApproval',
+]);
