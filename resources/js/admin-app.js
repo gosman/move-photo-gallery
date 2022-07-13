@@ -55,7 +55,9 @@ $(document).ready(function () {
             url: `/gallery-admin/image/${ id }/approval`,
             data: { approved: approved },
             success: function (response) {
-                console.log(response);
+                if ( response.success ) {
+                    window.location.reload();
+                }
             }
         });
 
