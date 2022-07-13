@@ -48,6 +48,8 @@ $(document).ready(function () {
         e.preventDefault();
 
         let className = $(this).attr('class');
+        console.log(className);
+
         let id = $(this).data('id');
         let status;
 
