@@ -11,6 +11,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var makeModelYear, make, model, year;
 $(document).ready(function () {
+  //App link redirecion
   var redirect = actions.Redirect.create(app);
   $('.app-link').on('click', function (e) {
     e.preventDefault();
@@ -22,7 +23,8 @@ $(document).ready(function () {
     e.preventDefault();
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
-  }); //Initialise dropdowns
+  });
+  $(); //Initialise dropdowns
 
   getMakes($("#truckMake").data('selected'));
   getModels($("#truckModel").data('selected'));

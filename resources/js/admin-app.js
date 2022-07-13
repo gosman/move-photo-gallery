@@ -4,6 +4,7 @@ let makeModelYear, make, model, year;
 
 $(document).ready(function () {
 
+    //App link redirecion
     const redirect = actions.Redirect.create(app);
 
     $('.app-link').on('click', function (e) {
@@ -18,6 +19,8 @@ $(document).ready(function () {
         let url = $(this).attr('href');
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
+
+    $()
 
 
     //Initialise dropdowns
