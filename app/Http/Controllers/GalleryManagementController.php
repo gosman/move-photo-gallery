@@ -41,13 +41,21 @@ class GalleryManagementController extends Controller
         ]);
     }
 
+    public function update($imageId){
+
+        if ($this->isAllowed()) {
+
+
+        }
+    }
+
 
     public function deleteImage($imageId)
     {
 
         if ($this->isAllowed()) {
 
-            //SubmissionImage::find($imageId)->delete();
+            SubmissionImage::find($imageId)->delete();
 
             return response()->json(['success' => true]);
         }

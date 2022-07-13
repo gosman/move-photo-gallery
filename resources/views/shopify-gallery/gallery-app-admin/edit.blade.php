@@ -6,7 +6,7 @@
     <div class="px-4 sm:px-6 lg:px-8">
 
         <div class="flex flex-col">
-            <form class="space-y-8 divide-y divide-gray-200">
+            <form class="space-y-8 divide-y divide-gray-200" action="/gallery-admin/submission/{{$submission->id}}">
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
 
                     <div class="space-y-6 sm:pt-6 sm:space-y-5">
@@ -145,7 +145,7 @@
 
                 <div class="pt-5">
                     <div class="flex justify-start">
-                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-move-600 hover:bg-move-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-move-500">Save</button>
+                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-move-600 hover:bg-move-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-move-500">Update</button>
                     </div>
                 </div>
             </form>

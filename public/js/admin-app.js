@@ -23,6 +23,13 @@ $(document).ready(function () {
     e.preventDefault();
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
+  });
+  $("form").on('submit', function (e) {
+    e.preventDefault();
+    var action = $(this).attr('action');
+    var method = $(this).attr('method');
+    console.log(action);
+    console.log(method);
   }); //Image preview
 
   $(".image-preview").on('click', function () {
@@ -41,7 +48,7 @@ $(document).ready(function () {
         $(".swal2-close:focus").css("box-shadow", "none");
       }
     });
-  }); //Image preview
+  }); //Image approved/unapproved
 
   $(".image-approve").on('click', function (e) {
     e.preventDefault();
@@ -60,10 +67,7 @@ $(document).ready(function () {
         }
       }
     });
-  });
-
-  function updateApproval(id, status) {} //Image preview
-
+  }); //Image preview
 
   $(".image-delete").on('click', function (e) {
     var _this = this;

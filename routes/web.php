@@ -52,7 +52,7 @@ Route::middleware(['verify.shopify'])->group(function () {
     Route::get('/gallery-admin/{submissionId}/edit', [
         GalleryManagementController::class,
         'edit',
-    ])->name('show');
+    ]);
 });
 
 
@@ -60,7 +60,6 @@ Route::delete('/gallery-admin/image/{imageId}', [
     GalleryManagementController::class,
     'deleteImage',
 ]);
-
 
 Route::patch('/gallery-admin/image/{imageId}/approval', [
     GalleryManagementController::class,
