@@ -62,7 +62,7 @@ $(document).ready(function () {
       allowEnterKey: false,
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
-        var response = $.post("/gallery-admin/image/".concat(ids), {
+        var response = $.post("/gallery-admin/image/".concat(id), {
           '_method': 'delete'
         }, function (response) {});
         console.log(response);

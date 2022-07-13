@@ -65,7 +65,7 @@ $(document).ready(function () {
             showLoaderOnConfirm: true,
             preConfirm: () => {
 
-                let response = $.post(`/gallery-admin/image/${ ids }`, { '_method': 'delete' }, function (response) {
+                let response = $.post(`/gallery-admin/image/${ id }`, { '_method': 'delete' }, function (response) {
 
                 });
 
