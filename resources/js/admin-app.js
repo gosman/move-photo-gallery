@@ -63,7 +63,7 @@ $(document).ready(function () {
             allowEscapeKey: false,
             allowEnterKey: false,
             preConfirm: () => {
-
+                Swal.showLoading();
                 return false;
             }
         });

@@ -61,6 +61,7 @@ $(document).ready(function () {
       allowEscapeKey: false,
       allowEnterKey: false,
       preConfirm: function preConfirm() {
+        Swal.showLoading();
         return false;
       }
     });
