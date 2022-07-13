@@ -47,18 +47,19 @@ $(document).ready(function () {
     e.preventDefault();
     var id = $(this).data('id');
     var approve = $(this).data('approve');
+    console.log(approve);
+    /*
     $.ajax({
-      type: 'PATCH',
-      url: "/gallery-admin/image/".concat(id, "/approval"),
-      data: {
-        approved: approve
-      },
-      success: function success(response) {
-        if (response.success) {
-          window.location.reload();
+        type: 'PATCH',
+        url: `/gallery-admin/image/${ id }/approval`,
+        data: { approved: approve },
+        success: function (response) {
+            if ( response.success ) {
+                window.location.reload();
+            }
         }
-      }
     });
+       */
   });
 
   function updateApproval(id, status) {} //Image preview
