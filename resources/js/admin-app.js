@@ -72,7 +72,7 @@ $(document).ready(function () {
                         if ( !response.ok ) {
                             throw new Error(response.statusText)
                         }
-                        return response.json()
+                        window.location.reload();
                     })
                     .catch(error => {
                         Swal.showValidationMessage(
