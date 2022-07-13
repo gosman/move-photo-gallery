@@ -106,9 +106,10 @@
                                 <label for="make" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Make/Model/Year </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-1">
                                     <select data-selected="{{$submission->make}}" id="truckMake" name="make" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
+                                    <select data-selected="{{$submission->model}}" id="truckModel" name="model" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
+
                                 </div>
                                 <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                    <select data-selected="{{$submission->model}}" id="truckModel" name="model" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
                                 </div>
                                 <div class="mt-1 sm:mt-0 sm:col-span-1">
                                     <select data-selected="{{$submission->year}}" id="truckYear" name="year" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
