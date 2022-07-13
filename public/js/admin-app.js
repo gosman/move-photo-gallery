@@ -62,11 +62,16 @@ $(document).ready(function () {
       allowEnterKey: false,
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
-        $.post("/gallery-admin/image/".concat(id), {
-          '_method': 'delete'
-        }, function (response) {}).done(function () {
-          console.log();
-          return false;
+        return fetch("/gallery-admin/image/".concat(id), {
+          'method': 'DELETE'
+        }).then(function (response) {
+          if (!response.ok) {
+            throw new Error(response.statusText);
+          }
+
+          return response.json();
+        })["catch"](function (error) {
+          Swal.showValidationMessage("Request failed: ".concat(error));
         });
       }
     });

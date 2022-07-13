@@ -65,12 +65,20 @@ $(document).ready(function () {
             showLoaderOnConfirm: true,
             preConfirm: () => {
 
-                $.post(`/gallery-admin/image/${ id }`, { '_method': 'delete' }, function (response) {
-
-                }).done(function () {
-                    console.log()
-                    return false;
-                });
+                return fetch(`/gallery-admin/image/${ id }`, {
+                    'method': 'DELETE'
+                })
+                    .then(response => {
+                        if ( !response.ok ) {
+                            throw new Error(response.statusText)
+                        }
+                        return response.json()
+                    })
+                    .catch(error => {
+                        Swal.showValidationMessage(
+                            `Request failed: ${ error }`
+                        )
+                    })
             }
         });
     });
