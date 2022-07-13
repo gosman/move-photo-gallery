@@ -114,7 +114,7 @@
                             <div class="sm:grid sm:grid-cols-4 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                                 <label for="bumper_position" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Bumper Configuration </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                    <select name="bumper_position" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                    <select name="bumper_position" class="mb-1 max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                                         <option @if($submission->bumper_position ==="Front") selected @endif value="Front">Front</option>
                                         <option @if($submission->bumper_position ==="Rear") selected @endif value="Rear">Rear</option>
                                     </select>
