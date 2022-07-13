@@ -47,7 +47,7 @@ class GalleryManagementController extends Controller
 
         if ($this->isAllowed()) {
 
-            SubmissionImage::find($imageId)->delete();
+            //SubmissionImage::find($imageId)->delete();
             sleep(100);
 
             return response()->json(['success' => true]);
