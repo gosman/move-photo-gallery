@@ -37,7 +37,9 @@ $(document).ready(function () {
       url: action,
       data: data,
       success: function success(response) {
-        console.log(response);
+        if (response.success) {
+          window.location.reload();
+        }
       }
     });
   }); //Image preview
