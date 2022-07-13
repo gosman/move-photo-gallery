@@ -67,6 +67,7 @@ $(document).ready(function () {
 
                 let response = $.post(`/gallery-admin/image/${ id }`, { '_method': 'delete' }, function (response) {
 
+                    return false;
                 });
 
                 console.log(response);
