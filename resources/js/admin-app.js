@@ -25,7 +25,7 @@ $(document).ready(function () {
         e.preventDefault();
         let action = $(this).attr('action');
         let method = $(this).attr('method');
-        let data = $(this).serialize();
+        let data = $(this).serializeArray();
 
         console.log(action);
         console.log(method);
