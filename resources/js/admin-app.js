@@ -52,6 +52,7 @@ $(document).ready(function () {
             showCancelButton: true,
             confirmButtonColor: '#d33',
             confirmButtonText: 'Delete',
+            position: 'top',
             preConfirm: () => {
 
             }
