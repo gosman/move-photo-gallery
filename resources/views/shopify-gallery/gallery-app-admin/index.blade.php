@@ -15,17 +15,10 @@
         </div>
 
         <div>
-            <div class="sm:hidden">
-                <label for="tabs" class="sr-only">Select a tab</label>
-                <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-                <select id="tabs" name="tabs" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                    <option>My Account</option>
-
-                    <option>Company</option>
-
-                    <option selected>Team Members</option>
-
-                    <option>Billing</option>
+            <div class="sm:hidden mt-2">
+                <select id="tabs" name="tabs" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-move-500 focus:border-move-500 sm:text-sm rounded-md">
+                    <option>New Submissions</option>
+                    <option>Approved</option>
                 </select>
             </div>
             <div class="hidden sm:block">
