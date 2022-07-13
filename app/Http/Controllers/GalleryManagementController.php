@@ -44,10 +44,7 @@ class GalleryManagementController extends Controller
     public function deleteImage($imageId)
     {
 
-        sleep(10);
-
-        print_r(request()->all());
-
+        print_r(request()->header());
         echo $imageId;
     }
 
