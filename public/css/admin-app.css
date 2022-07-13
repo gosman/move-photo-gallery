@@ -1311,12 +1311,10 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*
-.swal2-container.swal2-top > .swal2-popup {
+.swal2-styled.swal2-default-outline:focus {
 
-    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: none;
 }
-*/
 
 .hover\:bg-move-700:hover {
   --tw-bg-opacity: 1;

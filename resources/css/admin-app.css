@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-.swal2-container.swal2-top > .swal2-popup {
+.swal2-styled.swal2-default-outline:focus {
 
-    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: none;
 }
-*/
