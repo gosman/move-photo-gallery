@@ -43,26 +43,15 @@ $(document).ready(function () {
     });
   }); //Image preview
 
-  $(".image-approve, .image-unapprove").on('click', function (e) {
+  $(".image-approve").on('click', function (e) {
     e.preventDefault();
-    var className = $(this).attr('class');
     var id = $(this).data('id');
-    var status;
-
-    if (className === 'image-approve') {
-      var _status = 1;
-    } else {
-      var _status2 = 0;
-    } //updateApproval(id, status)
-
-  });
-
-  function updateApproval(id, status) {
+    var approve = $(this).data('approve');
     $.ajax({
       type: 'PATCH',
       url: "/gallery-admin/image/".concat(id, "/approval"),
       data: {
-        approved: status
+        approved: approve
       },
       success: function success(response) {
         if (response.success) {
@@ -70,7 +59,9 @@ $(document).ready(function () {
         }
       }
     });
-  } //Image preview
+  });
+
+  function updateApproval(id, status) {} //Image preview
 
 
   $(".image-delete").on('click', function (e) {
