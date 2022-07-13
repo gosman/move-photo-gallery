@@ -72,6 +72,7 @@ $(document).ready(function () {
                         if ( !response.ok ) {
                             throw new Error(response.statusText)
                         }
+                        return false;
                         window.location.reload();
                     })
                     .catch(error => {
