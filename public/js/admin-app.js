@@ -26,7 +26,10 @@ $(document).ready(function () {
   });
   $(".image-preview").on('click', function () {
     var imageUrl = $(this).attr('src');
-    console.log(imageUrl);
+    Swal.fire({
+      imageUrl: imageUrl,
+      imageWidth: '100%'
+    });
   }); //Initialise dropdowns
 
   getMakes($("#truckMake").data('selected'));

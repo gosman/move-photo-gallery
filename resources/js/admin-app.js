@@ -23,7 +23,11 @@ $(document).ready(function () {
     $(".image-preview").on('click', function () {
 
         let imageUrl = $(this).attr('src');
-        console.log(imageUrl);
+
+        Swal.fire({
+            imageUrl: imageUrl,
+            imageWidth: '100%',
+        })
     });
 
 
