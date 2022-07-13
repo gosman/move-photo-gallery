@@ -68,7 +68,7 @@ $(document).ready(function () {
                 return fetch(`/gallery-admin/image/${ id }`, {
                     'method': 'POST',
                     body: JSON.stringify({
-                        method: '_delete',
+                        '_method': 'DELETE',
                     }),
                 })
                     .then(response => {
