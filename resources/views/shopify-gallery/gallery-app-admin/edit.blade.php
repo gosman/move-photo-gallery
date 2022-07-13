@@ -21,37 +21,47 @@
                         </div>
 
 
-                        <div class="mt-8 flex flex-col">
-                            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                <div class="inline-block min-w-fit py-2 align-middle md:px-6 lg:px-8">
-                                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                                        <table class="min-w-fit divide-y divide-gray-300">
-                                            <tbody class="divide-y divide-gray-200 bg-white">
-                                            <tr>
-                                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-                                                    <div class="flex items-center">
-                                                        <div class="h-10 w-10 flex-shrink-0">
-                                                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                                        </div>
-                                                        <div class="ml-4">
-                                                            <div class="font-medium text-gray-900">Lindsay Walton</div>
-                                                            <div class="text-gray-500">lindsay.walton@example.com</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-                                                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <!-- More people... -->
-                                            </tbody>
-                                        </table>
+                        <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                            <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+                                <div class="flex-1 flex flex-col p-8">
+                                    <img class="w-32 h-32 flex-shrink-0 mx-auto rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
+                                    <h3 class="mt-6 text-gray-900 text-sm font-medium">Jane Cooper</h3>
+                                    <dl class="mt-1 flex-grow flex flex-col justify-between">
+                                        <dt class="sr-only">Title</dt>
+                                        <dd class="text-gray-500 text-sm">Paradigm Representative</dd>
+                                        <dt class="sr-only">Role</dt>
+                                        <dd class="mt-3">
+                                            <span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div>
+                                    <div class="-mt-px flex divide-x divide-gray-200">
+                                        <div class="w-0 flex-1 flex">
+                                            <a href="mailto:janecooper@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                                                <!-- Heroicon name: solid/mail -->
+                                                <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                                </svg>
+                                                <span class="ml-3">Email</span>
+                                            </a>
+                                        </div>
+                                        <div class="-ml-px w-0 flex-1 flex">
+                                            <a href="tel:+1-202-555-0170" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                                                <!-- Heroicon name: solid/phone -->
+                                                <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                                </svg>
+                                                <span class="ml-3">Call</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+
+                            <!-- More people... -->
+                        </ul>
 
 
                         <div class="space-y-6 sm:space-y-5">
