@@ -1316,6 +1316,10 @@ select {
     box-shadow: none !important;
 }
 
+.swal2-loader {
+    border-color: #d33 transparent #d33 transparent !important;
+}
+
 .hover\:bg-move-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 128 110 / var(--tw-bg-opacity));

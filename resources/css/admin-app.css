@@ -6,3 +6,7 @@
 
     box-shadow: none !important;
 }
+
+.swal2-loader {
+    border-color: #d33 transparent #d33 transparent !important;
+}
