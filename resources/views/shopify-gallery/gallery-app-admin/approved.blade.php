@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-        {{ $submissions->links('pagination.tailwind') }}
+        {{ $submissions->links('vendor.pagination.tailwind') }}
     </div>
 
 @endsection
