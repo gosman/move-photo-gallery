@@ -55,7 +55,7 @@ Route::middleware(['verify.shopify'])->group(function () {
     ]);
 });
 
-Route::delete('/gallery-admin/submission/{submissionId}', [
+Route::put('/gallery-admin/submission/{submissionId}', [
     GalleryManagementController::class,
     'update',
 ]);
