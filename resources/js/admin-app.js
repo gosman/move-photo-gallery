@@ -47,7 +47,19 @@ $(document).ready(function () {
 
         e.preventDefault();
         let id = $(this).data('id');
+        let approved = 1;
         console.log(id);
+
+        $.ajax({
+            type: 'PATCH',
+            url: `/gallery-admin/image/${ id }/approval`,
+            data: JSON.stringify({ approved: approved }),
+            processData: false,
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
     });
 
 

@@ -46,7 +46,19 @@ $(document).ready(function () {
   $(".image-approve").on('click', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
+    var approved = 1;
     console.log(id);
+    $.ajax({
+      type: 'PATCH',
+      url: "/gallery-admin/image/".concat(id, "/approval"),
+      data: JSON.stringify({
+        approved: approved
+      }),
+      processData: false,
+      success: function success(response) {
+        console.log(response);
+      }
+    });
   }); //Image preview
 
   $(".image-delete").on('click', function (e) {
