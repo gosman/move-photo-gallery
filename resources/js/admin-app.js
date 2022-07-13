@@ -66,7 +66,6 @@ $(document).ready(function () {
             preConfirm: () => {
 
                 return fetch(`/gallery-admin/image/${ id }`, {
-                    'method': 'POST',
                     body: JSON.stringify({
                         '_method': 'DELETE',
                     }),
