@@ -66,7 +66,10 @@ $(document).ready(function () {
             preConfirm: () => {
 
                 return fetch(`/gallery-admin/image/${ id }`, {
-                    'method': 'POST'
+                    'method': 'POST',
+                    body: JSON.stringify({
+                        method: '_delete',
+                    }),
                 })
                     .then(response => {
                         if ( !response.ok ) {
