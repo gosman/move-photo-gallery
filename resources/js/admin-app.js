@@ -20,6 +20,7 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
+    //Image preview
     $(".image-preview").on('click', function () {
 
         let imageUrl = $(this).attr('src');
@@ -37,6 +38,13 @@ $(document).ready(function () {
         })
     });
 
+
+    //Image preview
+    $(".image-delete").on('click', function () {
+
+        let id = $(this).data('id');
+        console.log(id);
+    });
 
     //Initialise dropdowns
     getMakes($("#truckMake").data('selected'));

@@ -23,7 +23,8 @@ $(document).ready(function () {
     e.preventDefault();
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
-  });
+  }); //Image preview
+
   $(".image-preview").on('click', function () {
     var imageUrl = $(this).attr('src');
     Swal.fire({
@@ -31,13 +32,17 @@ $(document).ready(function () {
       position: 'top',
       showConfirmButton: false,
       showCloseButton: true,
-      height: "50%",
       didOpen: function didOpen() {
         $(".swal2-popup").css("background-color", "transparent");
         $(".swal2-close").css("background-color", "black");
         $(".swal2-close:focus").css("box-shadow", "none");
       }
     });
+  }); //Image preview
+
+  $(".image-delete").on('click', function () {
+    var id = $(this).data('id');
+    console.log(id);
   }); //Initialise dropdowns
 
   getMakes($("#truckMake").data('selected'));
