@@ -49,10 +49,10 @@ Route::middleware(['verify.shopify'])->group(function () {
         'index',
     ])->name('home');
 
-    Route::get('/gallery-admin', [
+    Route::get('/gallery-admin/approve', [
         GalleryManagementController::class,
         'index',
-    ])->name('home');
+    ])->name('approve');
 
     Route::get('/gallery-admin/{submissionId}/edit', [
         GalleryManagementController::class,
