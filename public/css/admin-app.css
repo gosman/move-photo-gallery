@@ -1473,6 +1473,11 @@ select {
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
+.focus\:border-move-300:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 168 150 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
