@@ -29,7 +29,7 @@ $(document).ready(function () {
             position: 'top',
             showConfirmButton: false,
             showCloseButton: true,
-            height: "70%",
+            height: "50%",
             didOpen: () => {
                 $(".swal2-popup").css("background-color", "transparent");
                 $(".swal2-close").css("background-color", "black");
