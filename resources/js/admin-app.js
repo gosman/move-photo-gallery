@@ -30,6 +30,9 @@ $(document).ready(function () {
             position: 'top',
             showConfirmButton: false,
             showCloseButton: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
             didOpen: () => {
                 $(".swal2-popup").css("background-color", "transparent");
                 $(".swal2-close").css("background-color", "black");
@@ -56,8 +59,12 @@ $(document).ready(function () {
             confirmButtonColor: '#d33',
             confirmButtonText: 'Delete',
             position: 'top',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
             preConfirm: () => {
 
+                return false;
             }
         });
     });
