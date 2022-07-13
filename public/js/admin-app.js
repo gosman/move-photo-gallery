@@ -40,9 +40,19 @@ $(document).ready(function () {
     });
   }); //Image preview
 
-  $(".image-delete").on('click', function () {
+  $(".image-delete").on('click', function (e) {
+    e.preventDefault();
     var id = $(this).data('id');
-    console.log(id);
+    Swal.fire({
+      title: 'Delete Image',
+      text: "Are you sure?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Delete',
+      preConfirm: function preConfirm() {}
+    });
   }); //Initialise dropdowns
 
   getMakes($("#truckMake").data('selected'));
