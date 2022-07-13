@@ -28,7 +28,10 @@ $(document).ready(function () {
     e.preventDefault();
     var action = $(this).attr('action');
     var method = $(this).attr('method');
-    var data = $(this).serializeArray();
+    var data = {};
+    $(this).serializeArray().map(function (attr) {
+      data[attr.name] = attr.value;
+    });
     console.log(action);
     console.log(method);
     console.log(data);
