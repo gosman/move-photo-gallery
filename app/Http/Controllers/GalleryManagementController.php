@@ -41,11 +41,14 @@ class GalleryManagementController extends Controller
         ]);
     }
 
-    public function update($imageId){
+
+    public function update($imageId)
+    {
 
         if ($this->isAllowed()) {
 
-
+            print_r($imageId);
+            print_r(request()->all());
         }
     }
 
