@@ -69,8 +69,8 @@ $(document).ready(function () {
             throw new Error(response.statusText);
           }
 
-          return false;
           window.location.reload();
+          return false;
         })["catch"](function (error) {
           Swal.showValidationMessage("Request failed: ".concat(error));
         });
