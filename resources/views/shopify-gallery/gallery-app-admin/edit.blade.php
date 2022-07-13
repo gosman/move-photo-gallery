@@ -37,8 +37,8 @@
 
                                                 @if($image->approved)
                                                     <a href="#" data-id="{{$image->id}}" class="image-unapprove relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-move-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                                                         </svg>
                                                         <span class="ml-3">Unapprove</span>
                                                     </a>
