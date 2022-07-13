@@ -69,7 +69,7 @@ $(document).ready(function () {
             throw new Error(response.statusText);
           }
 
-          return response.json();
+          window.location.reload();
         })["catch"](function (error) {
           Swal.showValidationMessage("Request failed: ".concat(error));
         });
