@@ -41,4 +41,11 @@ class GalleryManagementController extends Controller
     }
 
 
+    public function deleteImage($imageId)
+    {
+
+        echo $imageId;
+    }
+
+
 }

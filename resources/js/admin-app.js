@@ -64,7 +64,7 @@ $(document).ready(function () {
             allowEnterKey: false,
             showLoaderOnConfirm: true,
             preConfirm: () => {
-                Swal.showLoading();
+               $.post('/')
             }
         });
     });
