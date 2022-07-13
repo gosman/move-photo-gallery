@@ -23,13 +23,16 @@ $(document).ready(function () {
 
     $("form").on('submit', function (e) {
 
-        $("input[type=submit]").html("test");
-
 
         e.preventDefault();
         let action = $(this).attr('action');
         let method = $(this).attr('method');
         let data = {};
+        let button = e.originalEvent.submitter;
+        console.log(button);
+
+        $(button).html("Test");
+
         $(this).serializeArray().map(function (attr) {
             data[attr.name] = attr.value;
         });
