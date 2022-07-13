@@ -63,9 +63,7 @@ $(document).ready(function () {
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
         return fetch("/gallery-admin/image/".concat(id), {
-          body: JSON.stringify({
-            '_method': 'DELETE'
-          })
+          'method': 'DELETE'
         }).then(function (response) {
           if (!response.ok) {
             throw new Error(response.statusText);
