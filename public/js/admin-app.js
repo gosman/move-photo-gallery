@@ -28,8 +28,8 @@ $(document).ready(function () {
     var imageUrl = $(this).attr('src');
     Swal.fire({
       imageUrl: imageUrl,
-      imageWidth: '100%',
-      width: '90%',
+      imageWidth: 800,
+      width: 800,
       position: 'top'
     });
   }); //Initialise dropdowns
