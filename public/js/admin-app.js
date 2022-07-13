@@ -70,7 +70,6 @@ $(document).ready(function () {
           }
 
           window.location.reload();
-          return false;
         })["catch"](function (error) {
           Swal.showValidationMessage("Request failed: ".concat(error));
         });

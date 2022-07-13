@@ -74,7 +74,6 @@ $(document).ready(function () {
                         }
 
                         window.location.reload();
-                        return false;
                     })
                     .catch(error => {
                         Swal.showValidationMessage(
