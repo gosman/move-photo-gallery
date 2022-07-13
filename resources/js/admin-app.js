@@ -23,7 +23,7 @@ $(document).ready(function () {
     $(".image-preview").on('click', function () {
 
         let imageUrl = $(this).attr('src');
-        console.log('src');
+        console.log(imageUrl);
     });
 
 
