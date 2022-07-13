@@ -43,6 +43,12 @@ $(document).ready(function () {
     });
   }); //Image preview
 
+  $(".image-approve").on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    console.log(id);
+  }); //Image preview
+
   $(".image-delete").on('click', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
