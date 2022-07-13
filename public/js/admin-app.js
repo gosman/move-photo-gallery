@@ -62,7 +62,10 @@ $(document).ready(function () {
       allowEnterKey: false,
       showLoaderOnConfirm: true,
       preConfirm: function preConfirm() {
-        Swal.showLoading();
+        var response = $.post("/gallery-admin/image/".concat(ids), {
+          '_method': 'delete'
+        }, function (response) {});
+        console.log(response);
       }
     });
   }); //Initialise dropdowns

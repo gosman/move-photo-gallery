@@ -64,7 +64,12 @@ $(document).ready(function () {
             allowEnterKey: false,
             showLoaderOnConfirm: true,
             preConfirm: () => {
-               $.post('/')
+
+                let response = $.post(`/gallery-admin/image/${ ids }`, { '_method': 'delete' }, function (response) {
+
+                });
+
+                console.log(response);
             }
         });
     });
