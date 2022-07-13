@@ -53,8 +53,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'PATCH',
             url: `/gallery-admin/image/${ id }/approval`,
-            data: JSON.stringify({ approved: approved }),
-            processData: false,
+            data: { approved: approved },
             success: function (response) {
                 console.log(response);
             }

@@ -51,10 +51,9 @@ $(document).ready(function () {
     $.ajax({
       type: 'PATCH',
       url: "/gallery-admin/image/".concat(id, "/approval"),
-      data: JSON.stringify({
+      data: {
         approved: approved
-      }),
-      processData: false,
+      },
       success: function success(response) {
         console.log(response);
       }
