@@ -25,6 +25,7 @@ $(document).ready(function () {
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
   $("form").on('submit', function (e) {
+    $(this).find("input[type=submit]").html("test");
     e.preventDefault();
     var action = $(this).attr('action');
     var method = $(this).attr('method');
