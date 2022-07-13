@@ -6,7 +6,7 @@
     <div class="px-4 sm:px-6 lg:px-8">
 
         <div class="flex flex-col">
-            <form class="space-y-8 divide-y divide-gray-200" action="/gallery-admin/submission/{{$submission->id}}">
+            <form class="space-y-8 divide-y divide-gray-200" action="/gallery-admin/submission/{{$submission->id}}" method="PUT">
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
 
                     <div class="space-y-6 sm:pt-6 sm:space-y-5">
