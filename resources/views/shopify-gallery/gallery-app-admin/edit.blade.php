@@ -55,84 +55,83 @@
                         <div class="space-y-6 sm:space-y-5">
                             <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Name</label>
-                                <div class="mt-1 sm:mt-0 sm:col-span-1>
-                                    <input type=" text
-                                " name="name" value="{{$submission->name}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <input type="text" name="name" value="{{$submission->name}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                            <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Email address </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <input name="email" type="email" value="{{$submission->email}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                            <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Email address </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <input name="email" type="email" value="{{$submission->email}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                            <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Instagram Handle </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <input name="instagram" type="text" value="{{$submission->instagram}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                            <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Instagram Handle </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <input name="instagram" type="text" value="{{$submission->instagram}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                            <label for="make" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Make/Model/Year </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <select data-selected="{{$submission->make}}" id="truckMake" name="make" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
+                            <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="make" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Make/Model/Year </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <select data-selected="{{$submission->make}}" id="truckMake" name="make" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
+                                </div>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <select data-selected="{{$submission->model}}" id="truckModel" name="model" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
+                                </div>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <select data-selected="{{$submission->year}}" id="truckYear" name="year" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
+                                </div>
                             </div>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <select data-selected="{{$submission->model}}" id="truckModel" name="model" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
-                            </div>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <select data-selected="{{$submission->year}}" id="truckYear" name="year" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"></select>
-                            </div>
-                        </div>
 
-                        <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                            <label for="bumper_position" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Bumper Configuration </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <select name="bumper_position" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                    <option @if($submission->bumper_position ==="Front") selected @endif value="Front">Front</option>
-                                    <option @if($submission->bumper_position ==="Rear") selected @endif value="Rear">Rear</option>
-                                </select>
+                            <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="bumper_position" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Bumper Configuration </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <select name="bumper_position" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                        <option @if($submission->bumper_position ==="Front") selected @endif value="Front">Front</option>
+                                        <option @if($submission->bumper_position ==="Rear") selected @endif value="Rear">Rear</option>
+                                    </select>
+                                </div>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <select name="bumper_type" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                        <option @if($submission->bumper_type ==="Series Classic") selected @endif value="Series Classic">Series Classic</option>
+                                        <option @if($submission->bumper_type ==="Series Precision") selected @endif value="Series Precision">Series Precision</option>
+                                        <option @if($submission->bumper_type ==="Series Embark") selected @endif value="Series Embark">Series Embark</option>
+                                        <option @if($submission->bumper_type ==="Series Bolt") selected @endif value="Series Bolt">Series Bolt</option>
+                                        <option @if($submission->bumper_type ==="Series Moab") selected @endif value="Series Moab">Series Moab</option>
+                                        <option @if($submission->bumper_type ==="Series Trail") selected @endif value="Series Trail">Series Trail</option>
+                                        <option @if($submission->bumper_type ==="Series Overland") selected @endif value="Series Overland">Series Overland</option>
+                                        <option @if($submission->bumper_type ==="Series Heritage") selected @endif value="Series Heritage">Series Heritage</option>
+                                        <option @if($submission->bumper_type ==="Series Switchback") selected @endif value="Series Switchback">Series Switchback</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <select name="bumper_type" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                    <option @if($submission->bumper_type ==="Series Classic") selected @endif value="Series Classic">Series Classic</option>
-                                    <option @if($submission->bumper_type ==="Series Precision") selected @endif value="Series Precision">Series Precision</option>
-                                    <option @if($submission->bumper_type ==="Series Embark") selected @endif value="Series Embark">Series Embark</option>
-                                    <option @if($submission->bumper_type ==="Series Bolt") selected @endif value="Series Bolt">Series Bolt</option>
-                                    <option @if($submission->bumper_type ==="Series Moab") selected @endif value="Series Moab">Series Moab</option>
-                                    <option @if($submission->bumper_type ==="Series Trail") selected @endif value="Series Trail">Series Trail</option>
-                                    <option @if($submission->bumper_type ==="Series Overland") selected @endif value="Series Overland">Series Overland</option>
-                                    <option @if($submission->bumper_type ==="Series Heritage") selected @endif value="Series Heritage">Series Heritage</option>
-                                    <option @if($submission->bumper_type ==="Series Switchback") selected @endif value="Series Switchback">Series Switchback</option>
-                                </select>
-                            </div>
-                        </div>
 
-                        <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                            <label for="engine_type" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Engine Type </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-1">
-                                <select name="engine_type" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                    <option @if($submission->engine_type ==="Diesel") selected @endif value="Diesel">Diesel</option>
-                                    <option @if($submission->engine_type ==="Gas") selected @endif value="Gas">Gas</option>
-                                </select>
+                            <div class="sm:grid sm:grid-cols-4 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="engine_type" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Engine Type </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                    <select name="engine_type" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                                        <option @if($submission->engine_type ==="Diesel") selected @endif value="Diesel">Diesel</option>
+                                        <option @if($submission->engine_type ==="Gas") selected @endif value="Gas">Gas</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-        </div>
 
-        <div class="pt-5">
-            <div class="flex justify-start">
-                <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-move-500">Cancel</button>
-                <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-move-600 hover:bg-move-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-move-500">Save</button>
-            </div>
+                <div class="pt-5">
+                    <div class="flex justify-start">
+                        <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-move-500">Cancel</button>
+                        <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-move-600 hover:bg-move-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-move-500">Save</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        </form>
-    </div>
     </div>
 
     <input id="makeModelYear" type="hidden" value='{!! json_encode($makeModelYear) !!}'>
