@@ -1141,6 +1141,9 @@ select {
 .stroke-red-500 {
   stroke: #ef4444;
 }
+.stroke-move-500 {
+  stroke: #009482;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
