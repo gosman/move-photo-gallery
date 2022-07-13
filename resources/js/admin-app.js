@@ -28,6 +28,7 @@ $(document).ready(function () {
             imageUrl: imageUrl,
             imageWidth: '100%',
             width: '100%',
+            position: 'top'
         })
     });
 
