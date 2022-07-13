@@ -28,8 +28,10 @@ $(document).ready(function () {
     e.preventDefault();
     var action = $(this).attr('action');
     var method = $(this).attr('method');
+    var data = $(this).serialize();
     console.log(action);
     console.log(method);
+    console.log(data);
   }); //Image preview
 
   $(".image-preview").on('click', function () {

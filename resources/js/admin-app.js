@@ -25,9 +25,11 @@ $(document).ready(function () {
         e.preventDefault();
         let action = $(this).attr('action');
         let method = $(this).attr('method');
+        let data = $(this).serialize();
 
         console.log(action);
         console.log(method);
+        console.log(data);
 
     });
 
