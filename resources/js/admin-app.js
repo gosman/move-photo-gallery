@@ -43,26 +43,39 @@ $(document).ready(function () {
 
 
     //Image preview
-    $(".image-approve").on('click', function (e) {
+    $(".image-approve, .image-unapprove").on('click', function (e) {
 
         e.preventDefault();
+
+        let className = $(this).attr('class');
         let id = $(this).data('id');
-        let approved = 1;
-        console.log(id);
+        let status;
+
+        if ( className === 'image-approve' ) {
+            let status = 1;
+        } else {
+
+            let status = 0;
+        }
+
+        //updateApproval(id, status)
+    });
+
+
+    function updateApproval(id, status) {
+
 
         $.ajax({
             type: 'PATCH',
             url: `/gallery-admin/image/${ id }/approval`,
-            data: { approved: approved },
+            data: { approved: status },
             success: function (response) {
                 if ( response.success ) {
                     window.location.reload();
                 }
             }
         });
-
-    });
-
+    }
 
     //Image preview
     $(".image-delete").on('click', function (e) {
