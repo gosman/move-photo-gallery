@@ -31,7 +31,7 @@ $(document).ready(function () {
     var method = $(this).attr('method');
     var data = {};
     var button = e.originalEvent.submitter;
-    $(button).html(spinner);
+    $(button).html(spinner).prop('disabled', true);
     $(this).serializeArray().map(function (attr) {
       data[attr.name] = attr.value;
     });
