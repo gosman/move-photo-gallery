@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     $("form").on('submit', function (e) {
 
-        $(this).find("input[type=submit]").html("test");
+        $("input[type=submit]").html("test");
 
 
         e.preventDefault();
