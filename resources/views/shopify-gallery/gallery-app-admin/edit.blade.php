@@ -81,9 +81,9 @@
 
 
                         <div class="space-y-6 sm:space-y-5">
-                            <div class="sm:grid sm:grid-cols-3 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                            <div class="sm:grid sm:grid-cols-4 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Name</label>
-                                <div class="mt-1 sm:mt-0 sm:col-span-1">
+                                <div class="mt-1 sm:mt-0 sm:col-span-3">
                                     <input type="text" name="name" value="{{$submission->name}}" class="max-w-lg block w-full shadow-sm focus:ring-move-500 focus:border-move-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>

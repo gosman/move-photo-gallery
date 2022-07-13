@@ -1497,6 +1497,10 @@ select {
     grid-column: span 2 / span 2;
   }
 
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .sm\:-mx-6 {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -1572,6 +1576,10 @@ select {
 
   .sm\:gap-4 {
     gap: 1rem;
+  }
+
+  .sm\:gap-2 {
+    gap: 0.5rem;
   }
 
   .sm\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
