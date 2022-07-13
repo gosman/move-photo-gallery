@@ -30,7 +30,8 @@ $(document).ready(function () {
       imageUrl: imageUrl,
       imageHeight: 700,
       position: 'top',
-      showConfirmButton: false
+      showConfirmButton: false,
+      showCloseButton: true
     });
   }); //Initialise dropdowns
 
