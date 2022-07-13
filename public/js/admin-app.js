@@ -24,7 +24,10 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
-  $(); //Initialise dropdowns
+  $(".image-preview").on('click', function () {
+    var imageUrl = $(this).attr('src');
+    console.log('src');
+  }); //Initialise dropdowns
 
   getMakes($("#truckMake").data('selected'));
   getModels($("#truckModel").data('selected'));

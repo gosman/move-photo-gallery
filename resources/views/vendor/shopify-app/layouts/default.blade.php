@@ -38,7 +38,7 @@
             @include('shopify-app::partials.token_handler')
             @include('shopify-app::partials.flash_messages')
         @endif
-
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="{{ mix('js/admin-app.js') }}"></script>
         @yield('scripts')
     </body>

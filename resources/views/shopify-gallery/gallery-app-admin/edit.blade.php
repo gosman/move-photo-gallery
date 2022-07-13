@@ -21,7 +21,7 @@
 
                                 <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
                                     <div class="flex-1 flex flex-col p-8">
-                                        <img class="h-32 flex-shrink-0 mx-auto cursor-pointer" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}" alt="">
+                                        <img class="h-32 flex-shrink-0 mx-auto cursor-pointer image-preview" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}" alt="">
                                         <dl class="mt-1 flex-grow flex flex-col justify-between">
                                             @if($image->approved)
                                                 <dd class="mt-3">

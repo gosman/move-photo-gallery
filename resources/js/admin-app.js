@@ -20,7 +20,11 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
-    $()
+    $(".image-preview").on('click', function () {
+
+        let imageUrl = $(this).attr('src');
+        console.log('src');
+    });
 
 
     //Initialise dropdowns
