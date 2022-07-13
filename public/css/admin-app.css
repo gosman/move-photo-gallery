@@ -1313,7 +1313,7 @@ select {
 
 .swal2-styled.swal2-default-outline:focus {
 
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .hover\:bg-move-700:hover {
