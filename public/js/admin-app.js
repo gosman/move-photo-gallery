@@ -48,8 +48,7 @@ $(document).ready(function () {
       text: "Are you sure?",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#d33',
       confirmButtonText: 'Delete',
       preConfirm: function preConfirm() {}
     });
