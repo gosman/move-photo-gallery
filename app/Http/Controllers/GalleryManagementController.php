@@ -54,6 +54,10 @@ class GalleryManagementController extends Controller
     private function isAllowed()
     {
 
+        echo request()->header('origin');
+        echo "\n";
+        echo config('app.url');
+
         if (request()->header('origin') === config('app.url')) {
 
             return true;
