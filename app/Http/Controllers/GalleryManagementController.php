@@ -40,7 +40,7 @@ class GalleryManagementController extends Controller
     public function search()
     {
 
-        console.log(request()->all());
+        print_r(request()->all());
     }
 
 
