@@ -1142,6 +1142,9 @@ select {
 .stroke-move-500 {
   stroke: #009482;
 }
+.stroke-gray-300 {
+  stroke: #d1d5db;
+}
 .p-6 {
   padding: 1.5rem;
 }
