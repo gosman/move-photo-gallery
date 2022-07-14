@@ -126,7 +126,7 @@ class GalleryManagementController extends Controller
             $this->items[] = [
                 'id' => $item->$column,
                 'value' => $column,
-                'label' => Str::title($column).': '.$item->make,
+                'label' => Str::title($column).': '.$item->$column,
             ];
         });
     }
