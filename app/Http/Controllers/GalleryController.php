@@ -87,10 +87,10 @@ class GalleryController extends Controller
             ];
 
             try {
-                $image = Image::make($imageDataUrl)->encode('jpg', 100)->stream()->detach();
+                $image = Image::make($imageDataUrl)->stream('jpg', 100)->detach();
                 Storage::disk('images')->put($originalImageName, $image, $options);
 
-                $optimised = Image::make($imageDataUrl)->encode('jpg', 70)->stream()->detach();
+                $optimised = Image::make($imageDataUrl)->stream('jpg', 70)->detach();
                 Storage::disk('images')->put($imageName, $optimised, $options);
 
             } catch (\Exception $e) {
