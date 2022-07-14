@@ -10,13 +10,16 @@ use Illuminate\Support\Str;
 class GalleryManagementController extends Controller
 {
 
+    private $perPage = 10;
+
+
     public function index()
     {
 
         $submissions = Submission::with('images')->orderBy('created_at')->whereHas('images', function ($query) {
 
             $query->where('approved', 0);
-        })->paginate(5);
+        })->paginate($this->perPage);
 
         return view('shopify-gallery.gallery-app-admin.index')->with(['submissions' => $submissions]);
     }
@@ -36,7 +39,7 @@ class GalleryManagementController extends Controller
             $value = strtolower($parts[1]);
             $query->where($column, $value);
 
-        })->paginate(5);
+        })->paginate($this->perPage);
 
         return view('shopify-gallery.gallery-app-admin.approved')->with(['submissions' => $submissions]);
     }
