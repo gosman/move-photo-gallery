@@ -43,7 +43,7 @@ class GalleryManagementController extends Controller
         $items = [];
         $term = request()->term;
 
-        Submission::where('make', 'like', "%{$term}%")->each(function ($item) use ($items) {
+        Submission::where('make', 'like', "%{$term}%")->each(function ($item) use (&$items) {
 
             $items[] = [
                 'id' => $item->make,
