@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '~jquery-ui/themes/base/all.css';
 
 .swal2-styled.swal2-default-outline:focus {
 
