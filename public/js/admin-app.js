@@ -102,7 +102,8 @@ $(document).ready(function () {
         approved: approve
       },
       success: function success(response) {
-        if (response.success) {//window.location.reload();
+        if (response.success) {
+          window.location.reload();
         }
       }
     });

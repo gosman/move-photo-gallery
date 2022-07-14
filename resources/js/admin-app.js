@@ -121,7 +121,7 @@ $(document).ready(function () {
             data: { approved: approve },
             success: function (response) {
                 if ( response.success ) {
-                    //window.location.reload();
+                    window.location.reload();
                 }
             }
         });
