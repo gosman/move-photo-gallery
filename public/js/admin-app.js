@@ -31,7 +31,9 @@ $(document).ready(function () {
     minLength: 2,
     appendTo: null,
     select: function select(event, ui) {
-      console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+      $(this).val(ui.item.label);
+      var filter = ui.item.value + '|' + ui.item.value;
+      console.log(filter);
     }
   }); //Update submission
 

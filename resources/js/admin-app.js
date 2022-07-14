@@ -31,7 +31,10 @@ $(document).ready(function () {
         minLength: 2,
         appendTo: null,
         select: function (event, ui) {
-            console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+
+            $(this).val(ui.item.label)
+            let filter = ui.item.value + '|' + ui.item.value;
+            console.log(filter);
         }
     });
 
