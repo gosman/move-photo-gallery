@@ -30,7 +30,7 @@ $(document).ready(function () {
         source: "/gallery-admin/search",
         minLength: 2,
         select: function (event, ui) {
-            console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+            //console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
         }
     });
 

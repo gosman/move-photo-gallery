@@ -29,8 +29,7 @@ $(document).ready(function () {
   $("#search").autocomplete({
     source: "/gallery-admin/search",
     minLength: 2,
-    select: function select(event, ui) {
-      console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+    select: function select(event, ui) {//console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
     }
   }); //Update submission
 
