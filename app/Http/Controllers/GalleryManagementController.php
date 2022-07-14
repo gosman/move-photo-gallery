@@ -110,6 +110,8 @@ class GalleryManagementController extends Controller
             Storage::disk('images')->copy($image->image_name, $originalImageName);
         }
 
+        echo Storage::disk('images')->path($image->image_name);
+
         echo "Copied";
         exit;
     }
