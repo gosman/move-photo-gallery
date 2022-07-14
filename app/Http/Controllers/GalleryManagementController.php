@@ -40,8 +40,12 @@ class GalleryManagementController extends Controller
     public function search()
     {
 
-        $this->find('make')->find('model');
-
+        $this->find('make');
+        $this->find('model');
+        $this->find('bumper_type');
+        $this->find('name');
+        $this->find('email');
+        $this->find('instagram');
 
         return response()->json($this->items);
     }
