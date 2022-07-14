@@ -129,7 +129,7 @@ class GalleryManagementController extends Controller
 
                 $items[] = [
                     'id' => $item->$column,
-                    'value' => $column,
+                    'value' => Str::title($column).': '.$item->$column,
                     'label' => Str::title($column).': '.$item->$column,
                 ];
             });
