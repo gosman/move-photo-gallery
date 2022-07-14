@@ -25,6 +25,14 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
+  $("#search").autocomplete({
+    source: "search.php",
+    minLength: 2,
+    select: function select(event, ui) {
+      log("Selected: " + ui.item.value + " aka " + ui.item.id);
+    }
+  }); //Update submission
+
   $("form").on('submit', function (e) {
     e.preventDefault();
     var action = $(this).attr('action');

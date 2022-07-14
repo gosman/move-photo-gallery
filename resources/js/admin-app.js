@@ -24,6 +24,16 @@ $(document).ready(function () {
         redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
     });
 
+    $("#search").autocomplete({
+        source: "search.php",
+        minLength: 2,
+        select: function (event, ui) {
+            log("Selected: " + ui.item.value + " aka " + ui.item.id);
+        }
+    });
+
+
+    //Update submission
     $("form").on('submit', function (e) {
 
         e.preventDefault();
@@ -245,7 +255,6 @@ $(document).ready(function () {
 
             $('#truckYear').val(year).trigger('change');
         }
-
     }
 
 });
