@@ -32,8 +32,10 @@ class GalleryManagementController extends Controller
         })->when(request()->has('filter'), function ($query) {
 
             $parts = explode(': ', request()->filter);
-            print_r($parts);
-            exit;
+            $column = strtolower($parts[0]);
+            $value = strtolower($parts[0]);
+            $query->where($column, $value);
+
         })->paginate(5);
 
         return view('shopify-gallery.gallery-app-admin.approved')->with(['submissions' => $submissions]);
