@@ -17,7 +17,6 @@ $(document).ready(function () {
   $('.app-link').on('click', function (e) {
     e.preventDefault();
     var url = $(this).attr('href');
-    console.log(url);
     redirect.dispatch(actions.Redirect.Action.APP, url);
   });
   $('.shopify-link').on('click', function (e) {
@@ -32,7 +31,7 @@ $(document).ready(function () {
     appendTo: null,
     select: function select(event, ui) {
       $(this).val(ui.item.label);
-      var filter = ui.item.value + '|' + ui.item.value;
+      var filter = ui.item.value;
       console.log(filter);
     }
   }); //Update submission

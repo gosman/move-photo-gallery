@@ -14,7 +14,6 @@ $(document).ready(function () {
     $('.app-link').on('click', function (e) {
         e.preventDefault();
         let url = $(this).attr('href');
-        console.log(url);
         redirect.dispatch(actions.Redirect.Action.APP, url);
     });
 
