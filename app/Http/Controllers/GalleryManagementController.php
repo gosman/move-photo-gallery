@@ -86,41 +86,10 @@ class GalleryManagementController extends Controller
 
         if ($this->isAllowed()) {
 
-            $image = SubmissionImage::find($imageId);
-
-            if (request()->approved) {
-
-                $this->optimiseImage($image);
-            }
-
-            $image->update(request()->all());
+            SubmissionImage::find($imageId)->update(request()->all());
 
             return response()->json(['success' => true]);
         }
-    }
-
-
-    private function optimiseImage($image)
-    {
-
-        $originalImageName = Str::replace('.jpg', '-original.jpg', $image->image_name);
-
-        if (!Storage::disk('images')->exists($originalImageName)) {
-
-            Storage::disk('images')->copy($image->image_name, $originalImageName);
-            $url = config('filesystems.disks.images.cdn').$image->image_name;
-
-            $options = [
-                'visibility' => 'public',
-                'CacheControl' => 'max-age=31536000',
-            ];
-
-            $image = Image::make($url)->encode('jpg', 70)->stream()->detach();
-            Storage::disk('images')->put($image->image_name, $image, $options);
-        }
-
-
-        exit;
     }
 
 
