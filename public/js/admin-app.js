@@ -32,8 +32,8 @@ $(document).ready(function () {
     select: function select(event, ui) {
       $(this).val(ui.item.label);
       var filter = ui.item.value;
-      console.log(filter);
-      window.location.href = "/gallery-admin/approved?filter=".concat(filter);
+      var url = "/gallery-admin/approved?filter=".concat(filter);
+      redirect.dispatch(actions.Redirect.Action.APP, url);
     }
   }); //Update submission
 
