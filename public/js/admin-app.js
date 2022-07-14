@@ -149,11 +149,7 @@ $(document).ready(function () {
       });
       makes.sort();
       $.each(makes, function (key, val) {
-        if (val.toLowerCase() == make) {
-          $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckMake');
-        } else {
-          $('<option/>').val(val).html(val).appendTo('#truckMake');
-        }
+        $('<option/>').val(val).html(val).appendTo('#truckMake');
       });
       $('#truckMake').val(make).trigger('change');
     }
@@ -175,11 +171,7 @@ $(document).ready(function () {
     });
     models.sort();
     $.each(models, function (key, val) {
-      if (val.toLowerCase() == model) {
-        $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckModel');
-      } else {
-        $('<option/>').val(val).html(val).appendTo('#truckModel');
-      }
+      $('<option/>').val(val).html(val).appendTo('#truckModel');
     });
 
     if (selectedModel) {
@@ -202,12 +194,12 @@ $(document).ready(function () {
     });
     years.sort();
     $.each(years, function (key, val) {
-      if (val.toLowerCase() == year) {
-        $('<option/>').val(val).html(val).attr('selected', true).appendTo('#truckYear');
-      } else {
-        $('<option/>').val(val).html(val).appendTo('#truckYear');
-      }
+      $('<option/>').val(val).html(val).appendTo('#truckYear');
     });
+
+    if (selectedYear) {
+      $('#truckYear').val(year).trigger('change');
+    }
   }
 });
 
