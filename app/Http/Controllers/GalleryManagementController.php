@@ -40,71 +40,19 @@ class GalleryManagementController extends Controller
     public function search()
     {
 
-        $json = '[
-    {
-        "id": "Podiceps nigricollis",
-        "label": "Black-necked Grebe",
-        "value": "Black-necked Grebe"
-    },
-    {
-        "id": "Nycticorax nycticorax",
-        "label": "Black-crowned Night Heron",
-        "value": "Black-crowned Night Heron"
-    },
-    {
-        "id": "Tetrao tetrix",
-        "label": "Black Grouse",
-        "value": "Black Grouse"
-    },
-    {
-        "id": "Limosa limosa",
-        "label": "Black-tailed Godwit",
-        "value": "Black-tailed Godwit"
-    },
-    {
-        "id": "Chlidonias niger",
-        "label": "Black Tern",
-        "value": "Black Tern"
-    },
-    {
-        "id": "Larus marinus",
-        "label": "Great Black-backed Gull",
-        "value": "Great Black-backed Gull"
-    },
-    {
-        "id": "Larus fuscus",
-        "label": "Lesser Black-backed Gull",
-        "value": "Lesser Black-backed Gull"
-    },
-    {
-        "id": "Larus ridibundus",
-        "label": "Black-headed Gull",
-        "value": "Black-headed Gull"
-    },
-    {
-        "id": "Turdus merula",
-        "label": "Common Blackbird",
-        "value": "Common Blackbird"
-    },
-    {
-        "id": "Sylvia atricapilla",
-        "label": "Blackcap",
-        "value": "Blackcap"
-    },
-    {
-        "id": "Rissa tridactyla",
-        "label": "Black-legged Kittiwake",
-        "value": "Black-legged Kittiwake"
-    },
-    {
-        "id": "Aegypius monachus",
-        "label": "Eurasian Black Vulture",
-        "value": "Eurasian Black Vulture"
-    }
-]';
+        $items = [];
+        $term = request()->term;
 
+        Submission::where('make', 'like', "%{$term}%")->each(function ($item) use ($items) {
 
-        return response()->json(json_decode($json));
+            $items[] = [
+                'id' => $item->make,
+                'value' => 'Make: '.$item->make,
+                'label' => 'make',
+            ];
+        });
+
+        return response()->json($items);
     }
 
 
