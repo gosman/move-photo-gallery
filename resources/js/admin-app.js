@@ -26,15 +26,14 @@ $(document).ready(function () {
 
 
     //Search Gallery
-    /*
     $("#search").autocomplete({
         source: "/gallery-admin/search",
         minLength: 2,
+        appendTo: null,
         select: function (event, ui) {
-            //console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+            console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
         }
     });
-    */
 
     //Update submission
     $("form").on('submit', function (e) {
