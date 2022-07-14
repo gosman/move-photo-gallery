@@ -52,6 +52,16 @@ class GalleryManagementController extends Controller
             ];
         });
 
+        Submission::where('model', 'like', "%{$term}%")->each(function ($item) use (&$items) {
+
+            $items[] = [
+                'id' => $item->make,
+                'value' => 'model',
+                'label' => 'Model: '.$item->model,
+            ];
+        });
+
+
         return response()->json($items);
     }
 
