@@ -25,6 +25,11 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
+  $('.download').click(function (e) {
+    e.preventDefault();
+    var location = $(this).attr('href');
+    window.location.href = location;
+  });
   $("form").on('submit', function (e) {
     e.preventDefault();
     var action = $(this).attr('action');

@@ -25,6 +25,14 @@ $(document).ready(function () {
     });
 
 
+    $('.download').click(function (e) {
+        e.preventDefault();
+        let location = $(this).attr('href')
+
+        window.location.href = location;
+    });
+
+
     $("form").on('submit', function (e) {
 
 
