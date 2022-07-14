@@ -2934,6 +2934,12 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.ui-state-active, .ui-widget-content .ui-state-active {
+
+    background: #009482;
+    border: solid 1px #009482;
+}
+
 .swal2-styled.swal2-default-outline:focus {
 
     box-shadow: none !important;

@@ -3,6 +3,12 @@
 @tailwind utilities;
 @import '~jquery-ui/themes/base/all.css';
 
+.ui-state-active, .ui-widget-content .ui-state-active {
+
+    background: #009482;
+    border: solid 1px #009482;
+}
+
 .swal2-styled.swal2-default-outline:focus {
 
     box-shadow: none !important;
