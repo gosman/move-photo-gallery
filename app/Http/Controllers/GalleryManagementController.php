@@ -143,7 +143,7 @@ class GalleryManagementController extends Controller
             });
         }
 
-        return $items;
+        return array_map("unserialize", array_unique(array_map("serialize", $items)));;
     }
 
 
