@@ -6,6 +6,8 @@ use App\Models\Submission;
 use App\Models\SubmissionImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class GalleryManagementController extends Controller
 {
@@ -83,10 +85,33 @@ class GalleryManagementController extends Controller
 
         if ($this->isAllowed()) {
 
-            SubmissionImage::find($imageId)->update(request()->all());
+            $image = SubmissionImage::find($imageId);
+
+            if (request()->approved) {
+
+                $this->optimiseImage($image);
+            }
+
+            $image->update(request()->all());
 
             return response()->json(['success' => true]);
         }
+    }
+
+
+    private function optimiseImage($image)
+    {
+
+        $url = $image->image_name;
+        $originalUrl = Str::replace('.jpg', '-original.jp', $url);
+
+        if (!Storage::disk('images')->exists($originalUrl)) {
+
+            echo "Here";
+            exit;
+        }
+
+
     }
 
 
