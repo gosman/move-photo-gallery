@@ -103,16 +103,23 @@ class GalleryManagementController extends Controller
     private function optimiseImage($image)
     {
 
-        $originalImageName = Str::replace('.jpg', '-original.jp', $image->image_name);
+        $originalImageName = Str::replace('.jpg', '-original.jpg', $image->image_name);
 
         if (!Storage::disk('images')->exists($originalImageName)) {
 
             Storage::disk('images')->copy($image->image_name, $originalImageName);
+            $url = config('filesystems.disks.images.cdn').$image->image_name;
+
+            $options = [
+                'visibility' => 'public',
+                'CacheControl' => 'max-age=31536000',
+            ];
+
+            $image = Image::make($url)->encode('jpg', 70)->stream()->detach();
+            Storage::disk('images')->put($image->image_name, $image, $options);
         }
 
-        echo config('filesystems.disks.images.cdn').$image->image_name;
 
-        echo "Copied";
         exit;
     }
 
