@@ -28,10 +28,30 @@ $(document).ready(function () {
     $('.download').click(function (e) {
         e.preventDefault();
         let location = $(this).attr('href')
-        console.log(location);
 
+        getDataUri(location, function (dataUri) {
+            console.log(dataUri);
+        });
+
+
+        //console.log(location);
         //window.location.href = location;
     });
+
+    function getDataUri(url, callback) {
+        var image = new Image();
+
+        image.onload = function () {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
+            canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+
+            canvas.getContext('2d').drawImage(this, 0, 0);
+            callback(canvas.toDataURL('image/jpeg'));
+        };
+
+        image.src = url;
+    }
 
 
     $("form").on('submit', function (e) {
