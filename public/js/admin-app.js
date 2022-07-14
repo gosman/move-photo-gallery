@@ -28,7 +28,7 @@ $(document).ready(function () {
   $('.download').click(function (e) {
     e.preventDefault();
     var location = $(this).attr('href');
-    window.location.href = location;
+    console.log(location); //window.location.href = location;
   });
   $("form").on('submit', function (e) {
     e.preventDefault();

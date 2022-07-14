@@ -28,8 +28,9 @@ $(document).ready(function () {
     $('.download').click(function (e) {
         e.preventDefault();
         let location = $(this).attr('href')
+        console.log(location);
 
-        window.location.href = location;
+        //window.location.href = location;
     });
 
 
