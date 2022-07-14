@@ -11,7 +11,7 @@
                 <div class="mt-1">
                     <input type="text" id="search" class="shadow-sm focus:ring-move-500 focus:border-move-500 block w-full sm:text-sm border-gray-300 px-4 rounded-full" placeholder="Search" value="{{request()->filter}}">
                     @if(request()->has('filter'))
-                        <a class="app-link" href="/gallery-admin/approved">Clear Filters</a>
+                        <a class="app-link text-sm text-move-500 underline" href="/gallery-admin/approved">Clear Filters</a>
                     @endif
                 </div>
             </div>
