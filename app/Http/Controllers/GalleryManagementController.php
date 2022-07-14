@@ -125,7 +125,7 @@ class GalleryManagementController extends Controller
         $items = [];
 
         foreach ($columns as $column) {
-            Submission::where($column, 'like', "%{$term}%")->each(function ($item) use ($column, $items) {
+            Submission::where($column, 'like', "%{$term}%")->each(function ($item) use ($column, &$items) {
 
                 $items[] = [
                     'id' => $item->$column,
