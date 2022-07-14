@@ -33,8 +33,8 @@ $(document).ready(function () {
 
             $(this).val(ui.item.label)
             let filter = ui.item.value;
-            console.log(filter);
-            window.location.href = `/gallery-admin/approved?filter=${ filter }`;
+            let url = `/gallery-admin/approved?filter=${ filter }`;
+            redirect.dispatch(actions.Redirect.Action.APP, url);
         }
     });
 
