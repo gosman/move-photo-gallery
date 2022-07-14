@@ -33,7 +33,7 @@ class GalleryManagementController extends Controller
 
             $parts = explode(': ', request()->filter);
             $column = strtolower($parts[0]);
-            $value = strtolower($parts[0]);
+            $value = strtolower($parts[1]);
             $query->where($column, $value);
 
         })->paginate(5);
