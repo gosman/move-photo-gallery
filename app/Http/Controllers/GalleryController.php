@@ -30,6 +30,7 @@ class GalleryController extends Controller
                     $query->where('make', $make);
                 }
             })
+            ->latest()
             ->paginate(9);
         $images->withPath('/community/client-gallery');
 
