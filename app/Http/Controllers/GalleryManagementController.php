@@ -25,9 +25,15 @@ class GalleryManagementController extends Controller
     public function approved()
     {
 
+
         $submissions = Submission::with('images')->orderBy('created_at')->whereHas('images', function ($query) {
 
             $query->where('approved', 1);
+        })->when(request()->has('filter'), function ($query) {
+
+            $parts = explode(': ', request()->filter);
+            print_r($parts);
+            exit;
         })->paginate(5);
 
         return view('shopify-gallery.gallery-app-admin.approved')->with(['submissions' => $submissions]);
