@@ -25,31 +25,6 @@ $(document).ready(function () {
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   });
-  $('.download').click(function (e) {
-    e.preventDefault();
-    var location = $(this).attr('href');
-    getDataUri(location, function (dataUri) {
-      console.log(dataUri);
-    }); //console.log(location);
-    //window.location.href = location;
-  });
-
-  function getDataUri(url, callback) {
-    var image = new Image();
-
-    image.onload = function () {
-      var canvas = document.createElement('canvas');
-      canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
-
-      canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
-
-      canvas.getContext('2d').drawImage(this, 0, 0);
-      callback(canvas.toDataURL('image/jpeg'));
-    };
-
-    image.src = url;
-  }
-
   $("form").on('submit', function (e) {
     e.preventDefault();
     var action = $(this).attr('action');
@@ -180,7 +155,7 @@ $(document).ready(function () {
           $('<option/>').val(val).html(val).appendTo('#truckMake');
         }
       });
-      $('#truckMake').trigger('change');
+      $('#truckMake').val(make).trigger('change');
     }
   } //Get models by make
 
@@ -206,6 +181,10 @@ $(document).ready(function () {
         $('<option/>').val(val).html(val).appendTo('#truckModel');
       }
     });
+
+    if (selectedModel) {
+      $('#truckModel').val(model).trigger('change');
+    }
   } //Get years by model by make
 
 
