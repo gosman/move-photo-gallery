@@ -1145,6 +1145,9 @@ select {
 .stroke-gray-300 {
   stroke: #d1d5db;
 }
+.stroke-gray-500 {
+  stroke: #6b7280;
+}
 .p-6 {
   padding: 1.5rem;
 }
