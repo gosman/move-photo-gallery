@@ -3,6 +3,12 @@
 @tailwind utilities;
 @import '~jquery-ui/themes/base/all.css';
 
+.ui-autocomplete {
+    top: 55px !important;
+    border-radius: 5px;
+}
+
+
 .ui-state-active, .ui-widget-content .ui-state-active {
 
     background: #009482;
