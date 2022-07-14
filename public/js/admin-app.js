@@ -26,12 +26,16 @@ $(document).ready(function () {
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
   }); //Search Gallery
 
+  /*
   $("#search").autocomplete({
-    source: "/gallery-admin/search",
-    minLength: 2,
-    select: function select(event, ui) {//console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
-    }
-  }); //Update submission
+      source: "/gallery-admin/search",
+      minLength: 2,
+      select: function (event, ui) {
+          //console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+      }
+  });
+  */
+  //Update submission
 
   $("form").on('submit', function (e) {
     e.preventDefault();
