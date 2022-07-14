@@ -87,17 +87,17 @@ class GalleryController extends Controller
             ];
 
             try {
-                $original = Image::make($imageDataUrl)->encode('jpg', 100)->stream()->detach();
-                $optimised = Image::make($imageDataUrl)->encode('jpg', 70)->stream()->detach();
+                $image = Image::make($imageDataUrl)->encode('jpg', 100)->stream()->detach();
+                Storage::disk('images')->put($originalImageName, $image, $options);
 
-                Storage::disk('images')->put($originalImageName, $original, $options);
+                $optimised = Image::make($imageDataUrl)->encode('jpg', 70)->stream()->detach();
                 Storage::disk('images')->put($imageName, $optimised, $options);
 
             } catch (\Exception $e) {
                 unset($e);
             }
 
-            if (isset($image)) {
+            if (isset($image) && isset($optimised)) {
 
                 $this->submission->images()->create([
                     'image_name' => $imageName,
