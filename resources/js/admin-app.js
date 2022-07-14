@@ -33,7 +33,7 @@ $(document).ready(function () {
         select: function (event, ui) {
 
             $(this).val(ui.item.label)
-            let filter = ui.item.value + '|' + ui.item.value;
+            let filter = ui.item.value;
             console.log(filter);
         }
     });
