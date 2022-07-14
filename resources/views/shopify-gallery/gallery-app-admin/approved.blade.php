@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        {{ $submissions->links('vendor.pagination.tailwind') }}
+        {{ $submissions->withQueryString()->links('vendor.pagination.tailwind') }}
     </div>
 
 @endsection
