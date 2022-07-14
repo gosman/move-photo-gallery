@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Submission;
 use App\Models\SubmissionImage;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
 
 class GalleryManagementController extends Controller
 {
+
+    private $items;
+
 
     public function index()
     {
@@ -40,29 +40,11 @@ class GalleryManagementController extends Controller
     public function search()
     {
 
-        $items = [];
-        $term = request()->term;
-
-        Submission::where('make', 'like', "%{$term}%")->each(function ($item) use (&$items) {
-
-            $items[] = [
-                'id' => $item->make,
-                'value' => 'make',
-                'label' => 'Make: '.$item->make,
-            ];
-        });
-
-        Submission::where('model', 'like', "%{$term}%")->each(function ($item) use (&$items) {
-
-            $items[] = [
-                'id' => $item->model,
-                'value' => 'model',
-                'label' => 'Model: '.$item->model,
-            ];
-        });
+        $this->find('make');
+        $this->find('model');
 
 
-        return response()->json($items);
+        return response()->json($this->items);
     }
 
 
@@ -131,6 +113,22 @@ class GalleryManagementController extends Controller
         }
 
         return false;
+    }
+
+
+    private function find($column)
+    {
+
+        $term = request()->term;
+
+        Submission::where($column, 'like', "%{$term}%")->each(function ($item) use ($column) {
+
+            $this->items[] = [
+                'id' => $item->$column,
+                'value' => $column,
+                'label' => Str::title($column).': '.$item->make,
+            ];
+        });
     }
 
 
