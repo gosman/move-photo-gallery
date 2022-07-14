@@ -87,10 +87,9 @@ class GalleryController extends Controller
             ];
 
             try {
-                $image = Image::make($imageDataUrl);
+                $original = Image::make($imageDataUrl)->encode('jpg', 100)->stream()->detach();
+                $optimised = Image::make($imageDataUrl)->encode('jpg', 70)->stream()->detach();
 
-                $original = $image->encode('jpg', 100)->stream()->detach();
-                $optimised = $image->encode('jpg', 70)->stream()->detach();
                 Storage::disk('images')->put($originalImageName, $original, $options);
                 Storage::disk('images')->put($imageName, $optimised, $options);
 
