@@ -55,7 +55,7 @@ class GalleryManagementController extends Controller
         Submission::where('model', 'like', "%{$term}%")->each(function ($item) use (&$items) {
 
             $items[] = [
-                'id' => $item->make,
+                'id' => $item->model,
                 'value' => 'model',
                 'label' => 'Model: '.$item->model,
             ];
