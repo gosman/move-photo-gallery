@@ -24,12 +24,13 @@ $(document).ready(function () {
     e.preventDefault();
     var url = $(this).attr('href');
     redirect.dispatch(actions.Redirect.Action.ADMIN_PATH, url);
-  });
+  }); //Search Gallery
+
   $("#search").autocomplete({
-    source: "search.php",
+    source: "/gallery-admin/search",
     minLength: 2,
     select: function select(event, ui) {
-      log("Selected: " + ui.item.value + " aka " + ui.item.id);
+      console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
     }
   }); //Update submission
 

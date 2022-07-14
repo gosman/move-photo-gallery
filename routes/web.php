@@ -74,3 +74,8 @@ Route::patch('/gallery-admin/image/{imageId}/approval', [
     GalleryManagementController::class,
     'updateApproval',
 ]);
+
+Route::get('/gallery-admin/image/{imageId}/approval', [
+    GalleryManagementController::class,
+    'search',
+]);

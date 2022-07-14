@@ -37,6 +37,13 @@ class GalleryManagementController extends Controller
     }
 
 
+    public function search()
+    {
+
+        console.log(request()->all());
+    }
+
+
     public function edit($submissionId)
     {
 
