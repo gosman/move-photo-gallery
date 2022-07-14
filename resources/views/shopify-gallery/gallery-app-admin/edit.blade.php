@@ -30,7 +30,7 @@
 
                                 <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
                                     <div class="flex-1 flex flex-col p-8">
-                                        <img class="h-32 flex-shrink-0 mx-auto cursor-pointer image-preview" src="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}" alt="">
+                                        <img class="h-32 flex-shrink-0 mx-auto cursor-pointer image-preview" src="{{cdnPath($image->image_name)}}" alt="">
                                         <dl class="mt-1 flex-grow flex flex-col justify-between">
                                             @if($image->approved)
                                                 <dd class="mt-3">
@@ -39,7 +39,7 @@
                                             @else
                                                 <dd class="mt-3">
                                                     <span class="px-2 py-1 text-gray-600 text-xs font-medium bg-red-100 rounded-full">Unapproved</span>
-                                                    <a target="_blank" class="flex justify-center items-center mt-2" href="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}" download>
+                                                    <a target="_blank" class="flex justify-center items-center mt-2" href="" download>
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
                                                         </svg>
@@ -51,7 +51,7 @@
                                     <div>
                                         <div class="-mt-px flex divide-x divide-gray-200">
                                             <div class="w-0 flex-1 flex">
-                                                <a href="#" data-image="{{config('filesystems.disks.images.cdn')}}{{$image->image_name}}" data-id="{{$image->id}}" class="image-delete relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                                                <a href="#" data-image="{{cdnPath($image->image_name)}}" data-id="{{$image->id}}" class="image-delete relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                                                     </svg>
