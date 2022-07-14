@@ -78,6 +78,7 @@ class GalleryController extends Controller
 
         foreach (request()->images as $key => $imageDataUrl) {
 
+            $originalImageName = $fileName.'-'.$key.'-original.jpg';
             $imageName = $fileName.'-'.$key.'.jpg';
 
             $options = [
@@ -86,9 +87,12 @@ class GalleryController extends Controller
             ];
 
             try {
-                $image = Image::make($imageDataUrl)->encode('jpg', 100)->stream()->detach();
-                Storage::disk('images')->put($imageName, $image, $options);
+                $image = Image::make($imageDataUrl);
 
+                $original = $image->encode('jpg', 100)->stream()->detach();
+                $optimised = $image->encode('jpg', 70)->stream()->detach();
+                Storage::disk('images')->put($originalImageName, $original, $options);
+                Storage::disk('images')->put($imageName, $optimised, $options);
 
             } catch (\Exception $e) {
                 unset($e);
