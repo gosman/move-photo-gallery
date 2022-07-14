@@ -47,8 +47,8 @@ class GalleryManagementController extends Controller
 
             $items[] = [
                 'id' => $item->make,
-                'value' => 'Make: '.$item->make,
-                'label' => 'make',
+                'value' => 'make',
+                'label' => 'Make: '.$item->make,
             ];
         });
 
