@@ -11,7 +11,12 @@
                 <div class="mt-1">
                     <input type="text" id="search" class="shadow-sm focus:ring-move-500 focus:border-move-500 block w-full sm:text-sm border-gray-300 px-4 rounded-full" placeholder="Search" value="{{request()->filter}}">
                     @if(request()->has('filter'))
-                        <a class="app-link text-sm text-move-500 underline" href="/gallery-admin/approved">Clear Filters</a>
+                        <a class="app-link text-sm text-move-500 underline" href="/gallery-admin/approved">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            Clear Filters
+                        </a>
                     @endif
                 </div>
             </div>
