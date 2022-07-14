@@ -33,6 +33,7 @@ $(document).ready(function () {
       $(this).val(ui.item.label);
       var filter = ui.item.value;
       console.log(filter);
+      window.location.href = "/gallery-admin/approved?filter=".concat(filter);
     }
   }); //Update submission
 

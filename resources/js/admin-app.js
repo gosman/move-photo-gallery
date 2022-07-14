@@ -34,6 +34,7 @@ $(document).ready(function () {
             $(this).val(ui.item.label)
             let filter = ui.item.value;
             console.log(filter);
+            window.location.href = `/gallery-admin/approved?filter=${ filter }`;
         }
     });
 
