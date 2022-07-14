@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 
 class GalleryManagementController extends Controller
 {
@@ -102,16 +103,15 @@ class GalleryManagementController extends Controller
     private function optimiseImage($image)
     {
 
-        $url = $image->image_name;
-        $originalUrl = Str::replace('.jpg', '-original.jp', $url);
+        $originalImageName = Str::replace('.jpg', '-original.jp', $image->image_name);
 
-        if (!Storage::disk('images')->exists($originalUrl)) {
+        if (!Storage::disk('images')->exists($originalImageName)) {
 
-            echo "Here";
-            exit;
+            Storage::disk('images')->copy($image->image_name, $originalImageName);
         }
 
-
+        echo "Copied";
+        exit;
     }
 
 
