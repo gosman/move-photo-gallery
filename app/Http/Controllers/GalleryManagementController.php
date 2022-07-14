@@ -10,9 +10,6 @@ use Illuminate\Support\Str;
 class GalleryManagementController extends Controller
 {
 
-    private $items;
-
-
     public function index()
     {
 
@@ -40,14 +37,16 @@ class GalleryManagementController extends Controller
     public function search()
     {
 
-        $this->find('make');
-        $this->find('model');
-        $this->find('bumper_type');
-        $this->find('name');
-        $this->find('email');
-        $this->find('instagram');
+        $items = $this->find([
+            'make',
+            'model',
+            'bumper_type',
+            'name',
+            'email',
+            'instagram',
+        ]);
 
-        return response()->json($this->items);
+        return response()->json($items);
     }
 
 
@@ -119,19 +118,24 @@ class GalleryManagementController extends Controller
     }
 
 
-    private function find($column)
+    private function find($columns)
     {
 
         $term = request()->term;
+        $items = [];
 
-        Submission::where($column, 'like', "%{$term}%")->each(function ($item) use ($column) {
+        foreach ($columns as $column) {
+            Submission::where($column, 'like', "%{$term}%")->each(function ($item) use ($column, $items) {
 
-            $this->items[] = [
-                'id' => $item->$column,
-                'value' => $column,
-                'label' => Str::title($column).': '.$item->$column,
-            ];
-        });
+                $items[] = [
+                    'id' => $item->$column,
+                    'value' => $column,
+                    'label' => Str::title($column).': '.$item->$column,
+                ];
+            });
+        }
+
+        return $items;
     }
 
 
