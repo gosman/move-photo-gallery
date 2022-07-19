@@ -163,9 +163,6 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
-        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-
-
         //Handle ajax errors
         $(document).ajaxError(function () {
             Swal.fire({
