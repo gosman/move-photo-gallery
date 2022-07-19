@@ -418,6 +418,7 @@
 
             Swal.fire({
                 imageUrl: file.dataURL,
+                imageWidth: 300,
                 title: 'Image Details',
                 html: '',
                 confirmButtonText: 'Submit',
