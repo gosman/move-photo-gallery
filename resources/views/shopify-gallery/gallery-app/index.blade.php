@@ -125,7 +125,7 @@
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        Launch
     </button>
 
     <!-- Modal -->
@@ -173,6 +173,9 @@
 
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
+
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        console.log(myModal);
 
         //Handle ajax errors
         $(document).ajaxError(function () {
