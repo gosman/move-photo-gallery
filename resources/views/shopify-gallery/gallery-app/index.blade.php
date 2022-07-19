@@ -1,40 +1,5 @@
 <div class="gallery-app">
 
-    <div class="container mt-3">
-        <h3>Modal Example</h3>
-        <p>Click on the button to open the modal.</p>
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-            Open modal
-        </button>
-    </div>
-
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    Modal body..
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
     <div class="loader">
         <div class="container d-flex align-items-center justify-content-center p-3">
             <svg width="100px" height="100px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
@@ -157,6 +122,27 @@
             </div>
         </div>
     </div>
+
+    <div id="dialog-form" title="Create new user">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+
+    <button id="create-user">Create new user</button>
+
 </div>
 
 @include('shopify-gallery.gallery-app.photoswipe')
@@ -183,15 +169,27 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
-        //var galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'))
-
-        /*
-        $("#openModal").on("click touch", function () {
-            galleryModal.show();
-            console.log('modal');
+        dialog = $("#dialog-form").dialog({
+            autoOpen: false,
+            height: 400,
+            width: 350,
+            modal: true,
+            buttons: {
+                "Create an account": 'Test',
+                Cancel: function () {
+                    dialog.dialog("close");
+                }
+            },
+            close: function () {
+                //form[0].reset();
+                //allFields.removeClass("ui-state-error");
+            }
         });
 
-         */
+        $("#create-user").button().on("click", function () {
+            dialog.dialog("open");
+        });
+
 
         //Handle ajax errors
         $(document).ajaxError(function () {
