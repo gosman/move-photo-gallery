@@ -123,7 +123,6 @@
     </div>
 </div>
 
-
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <!--
@@ -150,7 +149,7 @@
                 From: "opacity-100 translate-y-0 sm:scale-100"
                 To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             -->
-            <div class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-sm sm:w-full sm:p-6">
+            <div class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full sm:p-6">
                 <div>
                     <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
                         <!-- Heroicon name: outline/check -->
@@ -161,12 +160,13 @@
                     <div class="mt-3 text-center sm:mt-5">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Payment successful</h3>
                         <div class="mt-2">
-                            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.</p>
+                            <p class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.</p>
                         </div>
                     </div>
                 </div>
-                <div class="mt-5 sm:mt-6">
-                    <button type="button" class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">Go back to dashboard</button>
+                <div class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
+                    <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm">Deactivate</button>
+                    <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm">Cancel</button>
                 </div>
             </div>
         </div>
