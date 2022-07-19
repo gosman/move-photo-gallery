@@ -129,7 +129,7 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 10000000 !important;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -176,6 +176,8 @@
 
         var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
         console.log(myModal);
+        myModal.show();
+
 
         //Handle ajax errors
         $(document).ajaxError(function () {
