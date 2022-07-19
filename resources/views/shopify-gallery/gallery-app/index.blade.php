@@ -162,6 +162,8 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
+        initiliaseDropzone();
+
         //Handle ajax errors
         $(document).ajaxError(function () {
             Swal.fire({
