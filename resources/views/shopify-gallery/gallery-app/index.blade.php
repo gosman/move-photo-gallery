@@ -177,8 +177,6 @@
     window.onload = function () {
 
         var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-        console.log(myModal);
-        myModal.show();
 
 
         //Handle ajax errors
