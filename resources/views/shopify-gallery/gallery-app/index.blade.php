@@ -1,7 +1,7 @@
 <div class="gallery-app">
 
     <!-- Button trigger modal -->
-    <button id="openModal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <button id="openModal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#galleryModal">
         Launch static backdrop modal
     </button>
 
@@ -173,12 +173,15 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
-        var galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'))
+        //var galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'))
 
+        /*
         $("#openModal").on("click touch", function () {
             galleryModal.show();
             console.log('modal');
         });
+
+         */
 
         //Handle ajax errors
         $(document).ajaxError(function () {
