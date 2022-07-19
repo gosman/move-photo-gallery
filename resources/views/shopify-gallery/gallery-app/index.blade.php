@@ -6,15 +6,6 @@
         Launch demo modal
     </button>
 
-    <script>
-        $('#openModal').on('click', function () {
-            console.log("here");
-            $('#exampleModalCenter').modal('show');
-        });
-
-    </script>
-
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -186,6 +177,12 @@
 
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
+
+        $('#openModal').on('click', function () {
+            console.log("here");
+            $('#exampleModalCenter').modal('show');
+        });
+
 
         //Handle ajax errors
         $(document).ajaxError(function () {
