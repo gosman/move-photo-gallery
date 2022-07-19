@@ -221,11 +221,10 @@
     //Global variables
     var makeModelYear, makes = [], models = [], years = [], make, model, year, uMake, uModel, drop, images = [];
 
-    var galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'))
-
-
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
+
+        var galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'))
 
         $("#openModal").on("click touch", function () {
             galleryModal.show();
