@@ -387,6 +387,7 @@
 
         drop.on("addedfile", function (file) {
 
+
             Swal.resetValidationMessage();
             setTimeout(function () {
 
@@ -414,13 +415,27 @@
 
         } else {
 
-            var imageIndex = images.push(file.dataURL) - 1;
 
-            if ( images.length === 4 ) {
-                $("#dropzone").hide();
-            }
+            Swal.fire({
+                imageUrl: file.dataURL,
+                title: 'Image Details',
+                html: '',
+                confirmButtonText: 'Submit',
+                confirmButtonColor: '#F27474',
+                position: 'top',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false
+            }).then((result) => {
+                if ( result.isConfirmed ) {
 
-            var html = `<div id="imagePreview${ imageIndex }" class="container d-flex align-items-center justify-content-center mt-3">
+                    var imageIndex = images.push(file.dataURL) - 1;
+
+                    if ( images.length === 4 ) {
+                        $("#dropzone").hide();
+                    }
+
+                    var html = `<div id="imagePreview${ imageIndex }" class="container d-flex align-items-center justify-content-center mt-3">
                                 <div class="preview">
                                     <div class="row">
                                         <div class="col-sm-12 p-0"><small>${ file.name }</small></div>
@@ -432,7 +447,9 @@
                                 </div>
                             </div>`;
 
-            $(".previews").append(html);
+                    $(".previews").append(html);
+                }
+            })
 
         }
 
