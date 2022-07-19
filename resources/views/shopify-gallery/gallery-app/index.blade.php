@@ -152,28 +152,6 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
-        $("#dialog").dialog({
-            autoOpen: false,
-            height: 400,
-            width: 350,
-            modal: true,
-            buttons: {
-                "Create an account": 'Test',
-                Cancel: function () {
-                    dialog.dialog("close");
-                }
-            },
-            close: function () {
-                //form[0].reset();
-                //allFields.removeClass("ui-state-error");
-            }
-        });
-
-        $("#opener").click(function () {
-            $("#dialog").dialog('open');
-        });
-
-
         //Handle ajax errors
         $(document).ajaxError(function () {
             Swal.fire({
