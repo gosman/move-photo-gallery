@@ -123,25 +123,8 @@
         </div>
     </div>
 
-    <div id="dialog-form" title="Create new user">
-        <p class="validateTips">All form fields are required.</p>
-
-        <form>
-            <fieldset>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
-
-                <!-- Allow form submission with keyboard without duplicating the dialog button -->
-                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-            </fieldset>
-        </form>
-    </div>
-
-    <button id="create-user">Create new user</button>
+    <button id="opener">open the dialog</button>
+    <div id="dialog" title="Dialog Title" hidden="hidden">I'm a dialog</div>
 
 </div>
 
@@ -169,7 +152,7 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
-        dialog = $("#dialog-form").dialog({
+        $("#dialog").dialog({
             autoOpen: false,
             height: 400,
             width: 350,
@@ -186,8 +169,8 @@
             }
         });
 
-        $("#create-user").button().on("click", function () {
-            dialog.dialog("open");
+        $("#opener").click(function () {
+            $("#dialog").dialog('open');
         });
 
 
