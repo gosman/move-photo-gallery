@@ -140,7 +140,8 @@
 
     //Add js assets
     addJs("//unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js");
-    addJs("//cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js");
+    addJs("//cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js");
+    addJs("//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js");
     addJs("//cdn.jsdelivr.net/npm/sweetalert2@11");
     addJs("//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js");
     addJs("//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js");
