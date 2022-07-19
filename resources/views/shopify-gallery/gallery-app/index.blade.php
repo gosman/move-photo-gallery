@@ -124,7 +124,7 @@
 
 
         <a href="#openModal-about">Modal</a>
-        <!--modals-->
+
         <div id="openModal-about" class="modalDialog">
             <div>
                 <a href="#close" title="Close" class="close">X</a>

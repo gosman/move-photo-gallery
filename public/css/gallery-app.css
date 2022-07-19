@@ -437,7 +437,7 @@ element.style {
 }
 
 .modalDialog > div {
-    max-width: 800px;
+    max-width: 1150px;
     width: 90%;
     position: relative;
     margin: 10% auto;
