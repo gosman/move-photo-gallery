@@ -8,7 +8,7 @@
 
     <script>
         $('#openModal').on('click', function () {
-
+            console.log("here");
             $('#exampleModalCenter').modal('show');
         });
 
