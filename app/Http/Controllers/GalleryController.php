@@ -50,12 +50,7 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
 
-        return response()->json($request->all());
 
-
-        print_r($request->all());
-
-        exit;
         $submission = $request->except([
             'timestamp',
             'signature',
@@ -83,7 +78,7 @@ class GalleryController extends Controller
 
         $fileName = Str::lower($this->submission->id.'-'.request()->make.'-'.request()->model.'-'.request()->year.'-'.request()->engine_type);
 
-        foreach (request()->images as $key => $imageDataUrl) {
+        foreach (request()->images as $key => $imageData) {
 
             $originalImageName = $fileName.'-'.$key.'-original.jpg';
             $imageName = $fileName.'-'.$key.'.jpg';
@@ -94,10 +89,10 @@ class GalleryController extends Controller
             ];
 
             try {
-                $image = Image::make($imageDataUrl)->stream('jpg', 100)->detach();
+                $image = Image::make($imageData->image)->stream('jpg', 100)->detach();
                 Storage::disk('images')->put($originalImageName, $image, $options);
 
-                $optimised = Image::make($imageDataUrl)->resize(1000, null, function ($constraint) {
+                $optimised = Image::make($imageData->image)->resize(1000, null, function ($constraint) {
 
                     $constraint->aspectRatio();
                 })->stream('jpg', 70)->detach();
@@ -111,6 +106,8 @@ class GalleryController extends Controller
 
                 $this->submission->images()->create([
                     'image_name' => $imageName,
+                    'bumper_position' => $imageData->bumper_position,
+                    'bumper_type' => $imageData->bumper_type,
                     'approved' => 0,
                 ]);
             }

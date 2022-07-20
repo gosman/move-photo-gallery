@@ -20,6 +20,8 @@ class CreateSubmissionImagesTable extends Migration
             $table->id();
             $table->foreignId('submission_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('image_name');
+            $table->string('bumper_position');
+            $table->string('bumper_type');
             $table->smallInteger('approved')->index();
             $table->timestamps();
         });

@@ -10,6 +10,8 @@ class SubmissionImage extends Model
     protected $fillable = [
         'submission_id',
         'image_name',
+        'bumper_position',
+        'bumper_type',
         'approved',
     ];
 
