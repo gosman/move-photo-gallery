@@ -25,8 +25,6 @@ class CreateSubmissionsTable extends Migration
             $table->string('model')->index();
             $table->string('year')->index();
             $table->string('engine_type')->index();
-            $table->string('bumper_position')->index();
-            $table->string('bumper_type')->index();
             $table->timestamps();
         });
     }
