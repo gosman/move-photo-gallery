@@ -467,6 +467,8 @@
                             'bumper_type': bumperType,
                             'bumper_position': bumperPosition
                         }
+
+                        return true;
                     }
                     swal.showValidationMessage('Select bumper type & position');
                     return false;
