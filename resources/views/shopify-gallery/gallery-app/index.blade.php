@@ -229,6 +229,12 @@
             submitPhotos();
         });
 
+        $("#cancelPhotosForm").on('click', function () {
+
+            $('body').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+            $('.modalDialog').css({ 'opacity': 0, 'pointer-events': 'none', 'overflow': 'none' });
+        });
+
         $(document).on('click touch', ".progress-delete", function () {
 
             var id = $(this).data('delete-id');
@@ -331,11 +337,6 @@
                 return false;
             }
 
-        });
-
-        $("#cancelPhotosForm").on('click', function () {
-
-            window.location.reload();
         });
 
         function showValidationMessage(message) {
