@@ -121,12 +121,13 @@
                 <p><a class="btn btn--secondary" href="/pages/buy-diy-bumper-kits">Build your own DIY Bumper</a></p>
             </div>
         </div>
-    </div>
 
-    <div id="galleryModal" class="modalDialog">
-        <div>
-            @include('shopify-gallery.gallery-app.submit-photos-form')
+        <div id="galleryModal" class="modalDialog">
+            <div>
+                @include('shopify-gallery.gallery-app.submit-photos-form')
+            </div>
         </div>
+
     </div>
 
 </div>
