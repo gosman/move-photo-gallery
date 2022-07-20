@@ -334,7 +334,7 @@
 
         function showValidationMessage(message) {
 
-            $('#validationMessage').show();
+            $('#validationMessage').css('display', 'block');
         }
 
 
