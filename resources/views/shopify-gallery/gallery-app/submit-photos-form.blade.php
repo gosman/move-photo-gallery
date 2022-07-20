@@ -122,8 +122,8 @@
 
         <div class="swal2-actions" style="display: flex;">
             <div class="swal2-loader"></div>
-            <button id="submitPhotosForm" type="button" class="swal2-confirm swal2-styled swal2-default-outline" aria-label="" style="display: inline-block; background-color: rgb(238, 118, 35);">Submit Photos</button>
-            <button style="margin-left:8px" type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: inline-block;">Cancel</button>
+            <button id="submitPhotosForm" type="button" class="swal2-confirm swal2-styled swal2-default-outline" aria-label="" style="display: inline-block; background-color: rgb(238, 118, 35);cursor: pointer">Submit Photos</button>
+            <button id="cancelPhotosForm" style="margin-left:8px" type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: inline-block;cursor: pointer">Cancel</button>
         </div>
 
     </div>

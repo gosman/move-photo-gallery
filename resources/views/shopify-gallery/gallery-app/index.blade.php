@@ -333,6 +333,11 @@
 
         });
 
+        $("#cancelPhotosForm").on('click', function () {
+
+            window.location.reload();
+        });
+
         function showValidationMessage(message) {
 
             $('#validationMessage').css('display', 'flex').html(message);
@@ -342,94 +347,6 @@
 
             $('#validationMessage').css('display', 'none').html('');
         }
-
-
-        {{--
-        Swal.fire({
-            title: 'Submit Your MOVE Photos',
-            html: `@include('shopify-gallery.gallery-app.submit-photos-form')`,
-            confirmButtonText: 'Submit Photos',
-            confirmButtonColor: '#ee7623',
-            showCancelButton: true,
-            width: '95%',
-            position: 'top',
-            allowOutsideClick: false,
-            allowEscapeKey: false,
-            allowEnterKey: false,
-            didOpen: () => {
-                $('#yotpo_testimonials_btn').css('visibility', 'hidden');
-                initiliaseDropzone();
-                $('#uMake').html($('#truckMake').html());
-                $(".required").on('click touch', function () {
-
-                    $(this).css('border-color', '#ced4da');
-                    Swal.resetValidationMessage();
-                });
-                $("input:checkbox").on('change', function () {
-                    if ( this.checked ) {
-                        $(this).css('border-color', '#ced4da');
-                        Swal.resetValidationMessage();
-                    }
-                });
-            },
-            didClose: () => {
-                $('#yotpo_testimonials_btn').css('visibility', 'visible');
-                images = [];
-            },
-            preConfirm: function () {
-
-                var valid = true;
-
-                $(".required").each(function () {
-
-                    if ( !$(this).val() ) {
-                        $(this).css('border-color', '#F27474');
-                        valid = false;
-                    }
-                });
-
-                if ( !valid ) {
-                    Swal.showValidationMessage(`Please complete all fields marked in red`);
-                    return false;
-                }
-
-                if ( !validateEmail($("#uEmail").val()) ) {
-
-                    $("#uEmail").css('border-color', '#F27474');
-                    Swal.showValidationMessage(`Please provide a valid e-mail address`);
-                    return false;
-                }
-
-                if ( !images.length ) {
-                    Swal.showValidationMessage(`Please upload at least 1 image`);
-                    return false;
-                }
-
-                $(".check").each(function () {
-                    if ( $(this).is(":not(:checked)") ) {
-                        $(this).css('border-color', '#F27474');
-                        valid = false;
-                    }
-                });
-
-                if ( !valid ) {
-                    Swal.showValidationMessage(`Please check items marked in red`);
-                    return false;
-                }
-
-                if ( valid ) {
-
-                    $(".swal2-confirm,.swal2-cancel").hide();
-                    setTimeout(function () {
-
-                        $(".swal2-loader,.swal2-actions").show();
-                    }, 100);
-                    submitForApproval();
-                    return false;
-                }
-            }
-        })
-       --}}
     }
 
     function submitForApproval() {
@@ -523,8 +440,13 @@
                 allowEscapeKey: false,
                 allowEnterKey: false,
                 didOpen: function () {
-                    $('.modalDialog').css({ 'opacity': 1, 'pointer-events': 'none', 'overflow': 'none' });
+                    $('.modalDialog').css({ 'pointer-events': 'none', 'overflow': 'none' });
                     $('.swal2-container').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                },
+                didClose: function () {
+
+                    $('.modalDialog').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                    $('.swal2-container').css({ 'pointer-events': 'none', 'overflow': 'none' });
                 }
             }).then((result) => {
                 if ( result.isConfirmed ) {
