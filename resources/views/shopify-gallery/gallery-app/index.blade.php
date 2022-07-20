@@ -491,7 +491,7 @@
                                                     </div>
                                                     <div data-delete-id="${ imageIndex }" class="col-sm-1 progress-delete"></div>
                                                 </div>
-                                                <div class="col-sm-12 p-0"><small>${ imageDetails.bumper_type } ${ imageDetails.bumper_position } Bumper</small></div>
+                                                <div class="col-sm-12 p-0 m-0"><small>${ imageDetails.bumper_type } ${ imageDetails.bumper_position } Bumper</small></div>
                                             </div>
                                         </div>`;
 
