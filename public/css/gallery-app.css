@@ -443,6 +443,6 @@ element.style {
 }
 
 #validationMessage {
-    display: none;
+    display: none !important;
 }
 
