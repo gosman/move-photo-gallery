@@ -123,6 +123,15 @@
         </div>
     </div>
 
+    <a href="#openModal-about">Modal</a>
+
+    <div id="openModal-about" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            @include('shopify-gallery.gallery-app.submit-photos-form')
+        </div>
+    </div>
+
 </div>
 
 @include('shopify-gallery.gallery-app.photoswipe')
