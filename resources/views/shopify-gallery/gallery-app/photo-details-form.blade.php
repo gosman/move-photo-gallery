@@ -1,5 +1,5 @@
 <div class="gallery-app">
-    <div class="col-lg-4">
+    <div class="col-12">
         <div class="input-group mt-2">
             <select class="form-select" id="bumperType">
                 <option value="" disabled selected>Select bumper type</option>
@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="col-lg-4">
+    <div class="col-12">
         <div class="input-group mt-2">
             <select class="form-select" id="bumperPosition">
                 <option value="" disabled selected>Select bumper position</option>
