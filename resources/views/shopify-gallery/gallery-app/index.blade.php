@@ -441,6 +441,11 @@
                 allowEscapeKey: false,
                 allowEnterKey: false,
                 didOpen: function () {
+
+                    $('select').on('change', function () {
+                        swal.resetValidationMessage();
+                    });
+
                     $('.modalDialog').css({ 'pointer-events': 'none', 'overflow': 'none' });
                     $('.swal2-container').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
                 },
@@ -452,6 +457,8 @@
 
                     let bumperType = $('#bumperType').val();
                     let bumperPosition = $('#bumperPosition').val();
+                    console.log(bumperType);
+                    console.log(bumperPosition);
 
                     if ( bumperType && bumperPosition ) {
 
