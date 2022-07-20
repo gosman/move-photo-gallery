@@ -487,10 +487,10 @@
                                         <div class="preview">
                                                 <div class="row justify-content-center">
                                                     <div class="col-12"><small>${ file.name }</small></div>
-                                                    <div class="col-10">
+                                                    <div class="col-11">
                                                         <div id="progress1" class="progressbar"></div>
                                                     </div>
-                                                    <div data-delete-id="${ imageIndex }" class="col-2 progress-delete"></div>
+                                                    <div data-delete-id="${ imageIndex }" class="col-1 progress-delete"></div>
                                                     </div>
 </div>
                                             </div>

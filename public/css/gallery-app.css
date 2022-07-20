@@ -229,7 +229,7 @@ input[type=checkbox]:not(:checked), input[type=checkbox]:checked {
 .preview {
     width: 100%;
     background-color: #E0E0E0;
-    padding: 10px 0;
+    padding: 10px 10px;
     display: block
 }
 
