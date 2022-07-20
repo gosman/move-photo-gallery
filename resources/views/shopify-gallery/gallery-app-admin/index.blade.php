@@ -63,7 +63,12 @@
                                         <div class="text-gray-900">{{$submission->make}} {{$submission->model}}</div>
                                         <div class="text-gray-500">{{$submission->year}} | {{$submission->engine_type}}</div>
                                     </td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$submission->bumper_position}} {{$submission->bumper_type}} </td>
+
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                        @foreach($submission->images as $image)
+                                            {{$image->bumper_position}} {{$image->bumper_type}}<br>
+                                        @endforeach
+                                    </td>
 
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         @if($submission->images->where('approved',1)->count() > 0)
