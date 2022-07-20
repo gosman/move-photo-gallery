@@ -524,6 +524,7 @@
                 allowEnterKey: false,
                 didOpen: function () {
                     $('.modalDialog').css({ 'opacity': 1, 'pointer-events': 'none', 'overflow': 'none' });
+                    $('.swal2-container').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
                 }
             }).then((result) => {
                 if ( result.isConfirmed ) {
