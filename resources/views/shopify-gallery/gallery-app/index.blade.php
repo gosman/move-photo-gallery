@@ -457,7 +457,7 @@
 
                         imageDetails = {
                             'image': file.dataURL,
-                            'bumper_type': bumperType
+                            'bumper_type': bumperType,
                             'bumper_position': bumperPosition
                         }
                     }
