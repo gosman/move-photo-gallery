@@ -36,7 +36,7 @@
                             <tr>
                                 <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-move-500 sm:pl-6">Submitter</th>
                                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Vehicle</th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Bumper</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Bumper Details</th>
                                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-move-500">Image Status</th>
                                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                                     <span class="sr-only">Edit</span>
