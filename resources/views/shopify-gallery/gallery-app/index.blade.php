@@ -484,12 +484,13 @@
 
                     var html = `<div id="imagePreview${ imageIndex }" class="container d-flex align-items-center justify-content-center mt-3">
                                             <div class="preview">
+
                                                     <div class="col-12"><small>${ file.name }</small></div>
                                                     <div class="col-10">
                                                         <div id="progress1" class="progressbar"></div>
                                                     </div>
                                                     <div data-delete-id="${ imageIndex }" class="col-2 progress-delete"></div>
-                                                    <div class="col-12"><small>${ imageDetails.bumper_type } ${ imageDetails.bumper_position } Bumper</small></div>
+
                                             </div>
                                         </div>`;
 
