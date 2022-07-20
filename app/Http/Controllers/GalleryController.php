@@ -61,7 +61,7 @@ class GalleryController extends Controller
 
         $this->submission = Submission::create($submission);
 
-        return $this->makeImages();
+        $this->makeImages();
 
 
         if (Submission::find($this->submission->id)->images->count()) {
