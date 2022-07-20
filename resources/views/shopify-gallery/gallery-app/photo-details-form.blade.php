@@ -1,8 +1,7 @@
 <div class="gallery-app">
     <div class="col-lg-4">
-        <div class="input-group has-validation mt-2">
-            <span class="input-group-text">Bumper</span>
-            <select class="form-select required" id="uBumperType">
+        <div class="input-group mt-2">
+            <select class="form-select" id="bumperType">
                 <option value="" disabled selected>Select bumper type</option>
                 <option value="Series Classic">Series Classic</option>
                 <option value="Series Precision">Series Precision</option>
@@ -19,9 +18,8 @@
 
 
     <div class="col-lg-4">
-        <div class="input-group has-validation mt-2">
-            <span class="input-group-text">Bumper</span>
-            <select class="form-select required" id="uBumperPosition">
+        <div class="input-group mt-2">
+            <select class="form-select" id="bumperPosition">
                 <option value="" disabled selected>Select bumper position</option>
                 <option value="Front">Front</option>
                 <option value="Rear">Rear</option>
