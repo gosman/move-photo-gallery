@@ -90,7 +90,9 @@ class GalleryController extends Controller
             ];
 
             try {
-                $image = Image::make($imageData->image)->stream('jpg', 100)->detach();
+                return $image = Image::make($imageData->image)->stream('jpg', 100)->detach();
+
+                /*
                 Storage::disk('images')->put($originalImageName, $image, $options);
 
                 $optimised = Image::make($imageData->image)->resize(1000, null, function ($constraint) {
@@ -98,6 +100,7 @@ class GalleryController extends Controller
                     $constraint->aspectRatio();
                 })->stream('jpg', 70)->detach();
                 Storage::disk('images')->put($imageName, $optimised, $options);
+                */
 
             } catch (\Exception $e) {
 
