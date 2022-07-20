@@ -265,16 +265,17 @@
         $('#uMake').html($('#truckMake').html());
         $('#yotpo_testimonials_btn').css('visibility', 'hidden');
         initiliaseDropzone();
-        $('#uMake').html($('#truckMake').html());
+
         $(".required").on('click touch', function () {
 
             $(this).css('border-color', '#ced4da');
-            Swal.resetValidationMessage();
+            resetValidationMessage();
         });
+
         $("input:checkbox").on('change', function () {
             if ( this.checked ) {
                 $(this).css('border-color', '#ced4da');
-                Swal.resetValidationMessage();
+                resetValidationMessage();
             }
         });
 
@@ -337,7 +338,10 @@
             $('#validationMessage').css('display', 'flex').html(message);
         }
 
+        function resetValidationMessage() {
 
+            $('#validationMessage').css('display', 'none').html('');
+        }
 
 
         {{--
