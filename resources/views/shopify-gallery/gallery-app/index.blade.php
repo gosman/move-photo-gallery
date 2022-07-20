@@ -168,7 +168,16 @@
                 position: 'top',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                allowEnterKey: false
+                allowEnterKey: false,
+                didOpen: function () {
+                    $('.modalDialog').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                    $('.swal2-container').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                },
+                didClose: function () {
+
+                    $('.modalDialog').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                    $('.swal2-container').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                }
             }).then(() => {
                 window.location.reaload();
             })
@@ -368,9 +377,6 @@
 
         $.post('{{config("app.url")}}/client-gallery', data, function (response) {
 
-            console.log("here");
-            console.log(response);
-            /*
             if ( response.success ) {
 
                 Swal.fire({
@@ -382,13 +388,20 @@
                     position: 'top',
                     allowOutsideClick: false,
                     allowEscapeKey: false,
-                    allowEnterKey: false
+                    allowEnterKey: false,
+                    didOpen: function () {
+                        $('.modalDialog').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                        $('.swal2-container').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                    },
+                    didClose: function () {
+
+                        $('.modalDialog').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                        $('.swal2-container').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                    }
                 }).then(() => {
                     window.location.reload();
                 })
             }
-
-             */
         });
     }
 
@@ -427,7 +440,16 @@
                 position: 'top',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                allowEnterKey: false
+                allowEnterKey: false,
+                didOpen: function () {
+                    $('.modalDialog').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                    $('.swal2-container').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                },
+                didClose: function () {
+
+                    $('.modalDialog').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
+                    $('.swal2-container').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                }
             });
 
         } else {
