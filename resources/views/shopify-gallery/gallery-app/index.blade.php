@@ -278,8 +278,14 @@
             }
         });
 
+        $('#submitPhotosForm').on('click', function () {
 
-        /*
+            console.log('here')
+        });
+
+
+
+        {{--
         Swal.fire({
             title: 'Submit Your MOVE Photos',
             html: `@include('shopify-gallery.gallery-app.submit-photos-form')`,
@@ -364,7 +370,7 @@
                 }
             }
         })
-        */
+       --}}
     }
 
     function submitForApproval() {
