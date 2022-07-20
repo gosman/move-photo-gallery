@@ -117,5 +117,12 @@
             </label>
         </div>
 
+        <div class="swal2-actions" style="display: flex;">
+            <div class="swal2-loader"></div>
+            <button type="button" class="swal2-confirm swal2-styled swal2-default-outline" aria-label="" style="display: inline-block; background-color: rgb(238, 118, 35);">Submit Photos</button>
+            <button type="button" class="swal2-deny swal2-styled" aria-label="" style="display: none;">No</button>
+            <button type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: inline-block;">Cancel</button>
+        </div>
+
     </div>
 </div>
