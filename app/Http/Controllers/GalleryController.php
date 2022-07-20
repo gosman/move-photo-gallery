@@ -60,7 +60,8 @@ class GalleryController extends Controller
         $submission['instagram'] = ltrim($submission['instagram'], '@');
 
         $this->submission = Submission::create($submission);
-        $this->makeImages();
+
+        return $this->makeImages();
 
 
         if (Submission::find($this->submission->id)->images->count()) {
