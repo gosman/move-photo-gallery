@@ -63,6 +63,34 @@
                 </div>
             </div>
 
+            <div class="col-lg-4">
+                <div class="input-group has-validation mt-2">
+                    <span class="input-group-text">Bumper</span>
+                    <select class="form-select required" id="uBumperPosition">
+                        <option value="" disabled selected>Select bumper position</option>
+                        <option value="Front">Front</option>
+                        <option value="Rear">Rear</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="input-group has-validation mt-2">
+                    <span class="input-group-text">Bumper</span>
+                    <select class="form-select required" id="uBumperType">
+                        <option value="" disabled selected>Select bumper type</option>
+                        <option value="Series Classic">Series Classic</option>
+                        <option value="Series Precision">Series Precision</option>
+                        <option value="Series Embark">Series Embark</option>
+                        <option value="Series Bolt">Series Bolt</option>
+                        <option value="Series Moab">Series Moab</option>
+                        <option value="Series Trail">Series Trail</option>
+                        <option value="Series Overland">Series Overland</option>
+                        <option value="Series Heritage">Series Heritage</option>
+                        <option value="Series Switchback">Series Switchback</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         <form action="/target" class="fileuploader" id="dropzone">
@@ -116,14 +144,6 @@
                 I agree to my photos being published and claim no copyright over them.
             </label>
         </div>
-
-        {{--
-        <div class="swal2-actions" style="display: flex;">
-            <div class="swal2-loader"></div>
-            <button type="button" class="swal2-confirm swal2-styled swal2-default-outline" aria-label="" style="display: inline-block; background-color: rgb(238, 118, 35);">Submit Photos</button>
-            <button style="margin-left:8px" type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: inline-block;">Cancel</button>
-        </div>
-        --}}
 
     </div>
 </div>
