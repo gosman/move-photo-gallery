@@ -125,7 +125,6 @@
 
     <div id="galleryModal" class="modalDialog">
         <div>
-            <a href="#close" title="Close" class="close">X</a>
             @include('shopify-gallery.gallery-app.submit-photos-form')
         </div>
     </div>
