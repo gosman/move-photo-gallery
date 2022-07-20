@@ -152,7 +152,7 @@
     addJs("//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js");
 
     //Global variables
-    var makeModelYear, makes = [], models = [], years = [], make, model, year, uMake, uModel, drop, images = [];
+    var makeModelYear, makes = [], models = [], years = [], make, model, year, uMake, uModel, drop, images = [], imageDetails;
 
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
@@ -455,16 +455,20 @@
 
                     if ( bumperType && bumperPosition ) {
 
-
+                        imageDetails = {
+                            'image': file.dataURL,
+                            'bumper_type': bumperType
+                            'bumper_position': bumperPosition
+                        }
                     }
-                    swal.showValidationMessage('test');
+                    swal.showValidationMessage('Select bumper type & position');
                     return false;
                 }
             }).then((result) => {
                 if ( result.isConfirmed ) {
 
-                    var imageIndex = images.push(file.dataURL) - 1;
-
+                    var imageIndex = images.push(imageDetails) - 1;
+                    console.log(images);
                     if ( images.length === 4 ) {
                         $("#dropzone").hide();
                     }
