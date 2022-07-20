@@ -117,27 +117,6 @@
                             </div>
 
                             <div class="sm:grid sm:grid-cols-4 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="bumper_position" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Bumper Configuration </label>
-                                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <select name="bumper_position" class="mb-1 max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                        <option @if($submission->bumper_position ==="Front") selected @endif value="Front">Front</option>
-                                        <option @if($submission->bumper_position ==="Rear") selected @endif value="Rear">Rear</option>
-                                    </select>
-                                    <select name="bumper_type" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                        <option @if($submission->bumper_type ==="Series Classic") selected @endif value="Series Classic">Series Classic</option>
-                                        <option @if($submission->bumper_type ==="Series Precision") selected @endif value="Series Precision">Series Precision</option>
-                                        <option @if($submission->bumper_type ==="Series Embark") selected @endif value="Series Embark">Series Embark</option>
-                                        <option @if($submission->bumper_type ==="Series Bolt") selected @endif value="Series Bolt">Series Bolt</option>
-                                        <option @if($submission->bumper_type ==="Series Moab") selected @endif value="Series Moab">Series Moab</option>
-                                        <option @if($submission->bumper_type ==="Series Trail") selected @endif value="Series Trail">Series Trail</option>
-                                        <option @if($submission->bumper_type ==="Series Overland") selected @endif value="Series Overland">Series Overland</option>
-                                        <option @if($submission->bumper_type ==="Series Heritage") selected @endif value="Series Heritage">Series Heritage</option>
-                                        <option @if($submission->bumper_type ==="Series Switchback") selected @endif value="Series Switchback">Series Switchback</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="sm:grid sm:grid-cols-4 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                                 <label for="engine_type" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Engine Type </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                                     <select name="engine_type" class="max-w-lg block focus:ring-move-500 focus:border-move-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
