@@ -224,8 +224,8 @@
         //Submit photos clicked
         $('.submit-photos').on('click touch', function () {
 
-            $('body').css({ 'pointer-events': 'none' });
-            $('.modalDialog').css({ 'opacity': 1, 'pointer-events': 'auto' });
+            $('body').css({ 'pointer-events': 'none', 'overflow': 'hidden' });
+            $('.modalDialog').css({ 'opacity': 1, 'pointer-events': 'auto', 'overflow': 'scroll' });
             submitPhotos();
         });
 
