@@ -280,8 +280,63 @@
 
         $('#submitPhotosForm').on('click', function () {
 
-            console.log('here')
+            var valid = true;
+
+            $(".required").each(function () {
+
+                if ( !$(this).val() ) {
+                    $(this).css('border-color', '#F27474');
+                    valid = false;
+                }
+            });
+
+            if ( !valid ) {
+                Swal.showValidationMessage(`Please complete all fields marked in red`);
+                return false;
+            }
+
+            if ( !validateEmail($("#uEmail").val()) ) {
+
+                $("#uEmail").css('border-color', '#F27474');
+                showValidationMessage(`Please provide a valid e-mail address`);
+                return false;
+            }
+
+            if ( !images.length ) {
+                showValidationMessage(`Please upload at least 1 image`);
+                return false;
+            }
+
+            $(".check").each(function () {
+                if ( $(this).is(":not(:checked)") ) {
+                    $(this).css('border-color', '#F27474');
+                    valid = false;
+                }
+            });
+
+            if ( !valid ) {
+                showValidationMessage(`Please check items marked in red`);
+                return false;
+            }
+
+            if ( valid ) {
+
+                $(".swal2-confirm,.swal2-cancel").hide();
+                setTimeout(function () {
+
+                    $(".swal2-loader,.swal2-actions").show();
+                }, 100);
+                submitForApproval();
+                return false;
+            }
+
         });
+
+        function showValidationMessage(message) {
+
+            $('#validationMessage').show().html(message);
+        }
+
 
 
 

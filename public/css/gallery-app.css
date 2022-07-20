@@ -442,3 +442,7 @@ element.style {
     background: #fff;
 }
 
+#validationMessage {
+    display: none;
+}
+

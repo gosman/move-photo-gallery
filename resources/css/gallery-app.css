@@ -443,3 +443,7 @@ element.style {
     border-radius: 3px;
     background: #fff;
 }
+
+#validationMessage {
+    display: none;
+}

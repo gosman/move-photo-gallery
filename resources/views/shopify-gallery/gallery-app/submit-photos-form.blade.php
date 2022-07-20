@@ -146,7 +146,7 @@
         </div>
 
 
-        <div class="swal2-validation-message" id="swal2-validation-message" style="display: flex;">Please complete all fields marked in red</div>
+        <div id="validationMessage" class="swal2-validation-message" id="swal2-validation-message" style="display: flex;">Please complete all fields marked in red</div>
 
 
         <div class="swal2-actions" style="display: flex;">
