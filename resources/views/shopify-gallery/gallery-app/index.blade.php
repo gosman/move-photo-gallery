@@ -485,7 +485,7 @@
                     var html = `<div id="imagePreview${ imageIndex }" class="container d-flex align-items-center justify-content-center mt-3">
                                     <div class="row" style="width:100%">
                                         <div class="preview">
-                                                <div class="row">
+                                                <div class="row justify-content-center">
                                                     <div class="col-12"><small>${ file.name }</small></div>
                                                     <div class="col-10">
                                                         <div id="progress1" class="progressbar"></div>
