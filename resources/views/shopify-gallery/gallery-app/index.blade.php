@@ -334,6 +334,7 @@
 
         function showValidationMessage(message) {
 
+            console.log("here val");
             $('#validationMessage').show().html(message);
         }
 
