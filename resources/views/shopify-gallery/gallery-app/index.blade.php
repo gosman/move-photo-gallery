@@ -399,8 +399,6 @@
 
         drop.on("addedfile", function (file) {
 
-
-            Swal.resetValidationMessage();
             setTimeout(function () {
 
                 waitForAccepted(file);
