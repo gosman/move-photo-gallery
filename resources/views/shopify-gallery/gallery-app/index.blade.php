@@ -112,9 +112,11 @@
             {{ $images->links() }}
         </div>
 
-        <div class="container d-flex align-items-center justify-content-center p-3">
-            <button type="button" class="btn btn-success submit-photos">Submit Your MOVE Bumper Photos</button>
-        </div>
+        <a href="#galleryModal">
+            <div class="container d-flex align-items-center justify-content-center p-3">
+                <button type="button" class="btn btn-success submit-photos">Submit Your MOVE Bumper Photos</button>
+            </div>
+        </a>
 
         <div class="gallery-hero-footer">
             <div class="wrapper"><h1 class="gallery-hero__header-title">MOVE Bumpers Customer Gallery</h1>
@@ -123,9 +125,7 @@
         </div>
     </div>
 
-    <a href="#openModal-about">Modal</a>
-
-    <div id="openModal-about" class="modalDialog">
+    <div id="galleryModal" class="modalDialog">
         <div>
             <a href="#close" title="Close" class="close">X</a>
             @include('shopify-gallery.gallery-app.submit-photos-form')
@@ -224,7 +224,7 @@
         });
 
         //Submit photos clicked
-        $('.submit-photos').on('click touch', function () {
+        $('#galleryModal').on('click touch', function () {
 
             submitPhotos();
         });
@@ -262,6 +262,24 @@
     //Submit photos function
     function submitPhotos() {
 
+        $('#uMake').html($('#truckMake').html());
+        $('#yotpo_testimonials_btn').css('visibility', 'hidden');
+        initiliaseDropzone();
+        $('#uMake').html($('#truckMake').html());
+        $(".required").on('click touch', function () {
+
+            $(this).css('border-color', '#ced4da');
+            Swal.resetValidationMessage();
+        });
+        $("input:checkbox").on('change', function () {
+            if ( this.checked ) {
+                $(this).css('border-color', '#ced4da');
+                Swal.resetValidationMessage();
+            }
+        });
+
+
+        /*
         Swal.fire({
             title: 'Submit Your MOVE Photos',
             html: `@include('shopify-gallery.gallery-app.submit-photos-form')`,
@@ -346,6 +364,7 @@
                 }
             }
         })
+        */
     }
 
     function submitForApproval() {
