@@ -399,6 +399,7 @@
 
         drop.on("addedfile", function (file) {
 
+            resetValidationMessage();
             setTimeout(function () {
 
                 waitForAccepted(file);
