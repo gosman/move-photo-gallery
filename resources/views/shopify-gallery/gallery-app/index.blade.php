@@ -338,16 +338,16 @@
             }
 
         });
+    }
 
-        function showValidationMessage(message) {
+    function showValidationMessage(message) {
 
-            $('#validationMessage').css('display', 'flex').html(message);
-        }
+        $('#validationMessage').css('display', 'flex').html(message);
+    }
 
-        function resetValidationMessage() {
+    function resetValidationMessage() {
 
-            $('#validationMessage').css('display', 'none').html('');
-        }
+        $('#validationMessage').css('display', 'none').html('');
     }
 
     function submitForApproval() {
