@@ -445,5 +445,5 @@ element.style {
 }
 
 #validationMessage {
-    display: none !important;
+    display: none;
 }
