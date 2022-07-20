@@ -435,7 +435,7 @@
                 html: `@include('shopify-gallery.gallery-app.photo-details-form')`,
                 confirmButtonText: 'Add Image',
                 confirmButtonColor: '#ee7623',
-                showCancelButton: true;
+                showCancelButton: true,
                 position: 'top',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
