@@ -368,8 +368,8 @@
 
         $.post('{{config("app.url")}}/client-gallery', data, function (response) {
 
-            console.log(response)
-
+            console.log(response);
+            /*
             if ( response.success ) {
 
                 Swal.fire({
@@ -386,6 +386,8 @@
                     window.location.reload();
                 })
             }
+
+             */
         });
     }
 
