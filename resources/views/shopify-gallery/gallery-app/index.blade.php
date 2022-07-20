@@ -162,7 +162,7 @@
     //Wait until page loaded and jQuery initialised
     window.onload = function () {
 
-        initiliaseDropzone();
+        //initiliaseDropzone();
 
         //Handle ajax errors
         $(document).ajaxError(function () {
