@@ -79,6 +79,8 @@ class GalleryController extends Controller
 
         foreach (request()->images as $key => $imageData) {
 
+            return $imageData;
+            exit;
             $originalImageName = $fileName.'-'.$key.'-original.jpg';
             $imageName = $fileName.'-'.$key.'.jpg';
 
