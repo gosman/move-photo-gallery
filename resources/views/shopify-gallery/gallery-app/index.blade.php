@@ -448,6 +448,17 @@
 
                     $('.modalDialog').css({ 'pointer-events': 'auto', 'overflow': 'auto' });
                     $('.swal2-container').css({ 'pointer-events': 'none', 'overflow': 'none' });
+                }, preConfirm: function () {
+
+                    let bumperType = $('#bumperType').val();
+                    let bumperPosition = $('#bumperPosition').val();
+
+                    if ( bumperType && bumperPosition ) {
+
+
+                    }
+                    swal.showValidationMessage('test');
+                    return false;
                 }
             }).then((result) => {
                 if ( result.isConfirmed ) {
