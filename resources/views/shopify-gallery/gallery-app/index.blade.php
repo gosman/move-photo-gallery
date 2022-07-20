@@ -267,8 +267,6 @@
     //Submit photos function
     function submitPhotos() {
 
-
-        /*
         Swal.fire({
             title: 'Submit Your MOVE Photos',
             html: `@include('shopify-gallery.gallery-app.submit-photos-form')`,
@@ -353,7 +351,6 @@
                 }
             }
         })
-        */
     }
 
     function submitForApproval() {
