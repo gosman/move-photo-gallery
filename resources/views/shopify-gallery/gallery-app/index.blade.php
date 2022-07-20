@@ -112,11 +112,9 @@
             {{ $images->links() }}
         </div>
 
-        <a href="#galleryModal">
-            <div class="container d-flex align-items-center justify-content-center p-3">
-                <button type="button" class="btn btn-success submit-photos">Submit Your MOVE Bumper Photos</button>
-            </div>
-        </a>
+        <div class="container d-flex align-items-center justify-content-center p-3">
+            <button type="button" class="btn btn-success submit-photos">Submit Your MOVE Bumper Photos</button>
+        </div>
 
         <div class="gallery-hero-footer">
             <div class="wrapper"><h1 class="gallery-hero__header-title">MOVE Bumpers Customer Gallery</h1>
@@ -224,8 +222,9 @@
         });
 
         //Submit photos clicked
-        $('#galleryModal').on('click touch', function () {
+        $('.submit-photos').on('click touch', function () {
 
+            $('.modalDialog').css('opacity', 1);
             submitPhotos();
         });
 
