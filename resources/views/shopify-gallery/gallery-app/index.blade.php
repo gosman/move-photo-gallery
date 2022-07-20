@@ -225,7 +225,7 @@
         $('.submit-photos').on('click touch', function () {
 
             $('body').css({ 'pointer-events': 'none', 'overflow': 'hidden' });
-            $('.modalDialog').css({ 'opacity': 1, 'overflow': 'scroll' });
+            $('.modalDialog').css({ 'opacity': 1, 'pointer-events': 'auto', 'overflow': 'scroll' });
             submitPhotos();
         });
 
@@ -521,13 +521,7 @@
                 position: 'top',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                allowEnterKey: false,
-                didOpen: function () {
-                    $('.modalDialog').css({ 'pointer-events': 'none' });
-                },
-                didClose: function () {
-                    $('.modalDialog').css({ 'pointer-events': 'auto' });
-                }
+                allowEnterKey: false
             }).then((result) => {
                 if ( result.isConfirmed ) {
 
