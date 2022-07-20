@@ -521,7 +521,10 @@
                 position: 'top',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                allowEnterKey: false
+                allowEnterKey: false,
+                didOpen: function () {
+                    $('.modalDialog').css({ 'opacity': 1, 'pointer-events': 'none', 'overflow': 'none' });
+                }
             }).then((result) => {
                 if ( result.isConfirmed ) {
 
