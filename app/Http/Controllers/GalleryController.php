@@ -80,8 +80,7 @@ class GalleryController extends Controller
 
         foreach (request()->images as $key => $imageData) {
 
-            return $imageData;
-            exit;
+
             $originalImageName = $fileName.'-'.$key.'-original.jpg';
             $imageName = $fileName.'-'.$key.'.jpg';
 
@@ -101,6 +100,8 @@ class GalleryController extends Controller
                 Storage::disk('images')->put($imageName, $optimised, $options);
 
             } catch (\Exception $e) {
+
+                return $e->getMessage();
                 unset($e);
             }
 
