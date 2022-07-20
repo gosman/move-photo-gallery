@@ -291,7 +291,7 @@
             });
 
             if ( !valid ) {
-                Swal.showValidationMessage(`Please complete all fields marked in red`);
+                showValidationMessage(`Please complete all fields marked in red`);
                 return false;
             }
 
