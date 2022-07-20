@@ -368,6 +368,7 @@
 
         $.post('{{config("app.url")}}/client-gallery', data, function (response) {
 
+            console.log("here");
             console.log(response);
             /*
             if ( response.success ) {
