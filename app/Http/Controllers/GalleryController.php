@@ -90,21 +90,16 @@ class GalleryController extends Controller
             ];
 
             try {
-                return $image = Image::make($imageData->image)->stream('jpg', 100)->detach();
-
-                /*
+                $image = Image::make($imageData['image'])->stream('jpg', 100)->detach();
                 Storage::disk('images')->put($originalImageName, $image, $options);
 
-                $optimised = Image::make($imageData->image)->resize(1000, null, function ($constraint) {
+                $optimised = Image::make($imageData['image'])->resize(1000, null, function ($constraint) {
 
                     $constraint->aspectRatio();
                 })->stream('jpg', 70)->detach();
                 Storage::disk('images')->put($imageName, $optimised, $options);
-                */
-
             } catch (\Exception $e) {
 
-                return $e->getMessage();
                 unset($e);
             }
 
@@ -112,8 +107,8 @@ class GalleryController extends Controller
 
                 $this->submission->images()->create([
                     'image_name' => $imageName,
-                    'bumper_position' => $imageData->bumper_position,
-                    'bumper_type' => $imageData->bumper_type,
+                    'bumper_position' => $imageData['bumper_position'],
+                    'bumper_type' => $imageData['bumper_type'],
                     'approved' => 0,
                 ]);
             }
