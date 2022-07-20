@@ -381,7 +381,7 @@
                     allowEscapeKey: false,
                     allowEnterKey: false
                 }).then(() => {
-                    images = [];
+                    window.location.reload();
                 })
             }
         });
