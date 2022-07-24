@@ -81,7 +81,7 @@ class ImportGallery extends Command
                     'email' => $image[1],
                     'instagram' => $image[2],
                     'name' => $image[3],
-                    'url' => $image[5],
+                    'url' => $image[4],
                     'created_at' => $image[7],
                     'updated_at' => $image[8],
                     'updated_at' => $image[8],
