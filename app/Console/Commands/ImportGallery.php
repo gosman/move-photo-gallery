@@ -120,6 +120,8 @@ class ImportGallery extends Command
                 'model' => $img['model'],
                 'year' => $img['year'],
                 'engine_type' => '',
+                'created_at' => $img['created_at'],
+                'updated_at' => $img['updated_at'],
             ];
 
             $submission = Submission::create($data);

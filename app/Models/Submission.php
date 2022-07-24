@@ -8,6 +8,7 @@ class Submission extends Model
 {
 
     protected $fillable = [
+        'id',
         'name',
         'email',
         'instagram',
@@ -17,6 +18,8 @@ class Submission extends Model
         'engine_type',
         'bumper_position',
         'bumper_type',
+        'updated_at',
+        'created_at',
     ];
 
 
