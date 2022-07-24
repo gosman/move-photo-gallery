@@ -102,11 +102,7 @@ class ImportGallery extends Command
         ];
 
         foreach ($imageData as $img) {
-
-            $submission = false;
-            $urls = [];
-            $data = [];
-
+            
             $data = [
                 'id' => $img['id'],
                 'name' => $img['name'] ? $img['name'] : 'Anonymous',
@@ -119,61 +115,39 @@ class ImportGallery extends Command
                 'updated_at' => $img['updated_at'],
             ];
 
-            $email = $img['email'];
-
-            if ($email) {
-                $urls = $imageCollection->where('email', $email)->pluck('url')->toArray();
-
-                if (!Submission::where('email', $email)->count()) {
-
-                    $submission = Submission::create($data);
-                }
-
-            } else {
-
-                $urls[0] = $img['url'];
-                print_r($urls);
-                exit;
-                $submission = Submission::create($data);
-            }
-
+            $submission = Submission::create($data);
 
             if ($submission) {
 
-                foreach ($urls as $key => $url) {
+                $file = str_replace([
+                    '.',
+                    ' ',
+                ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
 
-                    $file = str_replace([
-                        '.',
-                        ' ',
-                    ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
+                $originalImageName = $file.'-'.$key.'-original.jpg';
+                $imageName = $file.'-'.$key.'.jpg';
 
-                    $originalImageName = $file.'-'.$key.'-original.jpg';
-                    $imageName = $file.'-'.$key.'.jpg';
+                $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($img['url']));
 
-                    $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($url));
+                $image = Image::make($imageLocation)->encode('jpg', 100);
+                Storage::disk('images')->put($originalImageName, $image, $options);
 
-                    $image = Image::make($imageLocation)->encode('jpg', 100);
-                    Storage::disk('images')->put($originalImageName, $image, $options);
+                $optimised = Image::make($imageLocation)->resize(1000, null, function ($constraint) {
 
-                    $optimised = Image::make($imageLocation)->resize(1000, null, function ($constraint) {
-
-                        $constraint->aspectRatio();
-                    })->encode('jpg', 70);
-                    Storage::disk('images')->put($imageName, $optimised, $options);
+                    $constraint->aspectRatio();
+                })->encode('jpg', 70);
+                Storage::disk('images')->put($imageName, $optimised, $options);
 
 
-                    if (isset($image) && isset($optimised)) {
+                if (isset($image) && isset($optimised)) {
 
-                        $submission->images()->create([
-                            'image_name' => $imageName,
-                            'bumper_position' => $img['position'],
-                            'bumper_type' => $img['type'],
-                            'approved' => 1,
-                        ]);
-                    }
-
+                    $submission->images()->create([
+                        'image_name' => $imageName,
+                        'bumper_position' => $img['position'],
+                        'bumper_type' => $img['type'],
+                        'approved' => 1,
+                    ]);
                 }
-
                 echo $img['id']."\n";
 
             }
