@@ -132,6 +132,8 @@ class ImportGallery extends Command
             } else {
 
                 $urls[0] = $img['url'];
+                print_r($urls);
+                exit;
                 $submission = Submission::create($data);
             }
 
