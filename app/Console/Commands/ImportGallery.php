@@ -103,15 +103,6 @@ class ImportGallery extends Command
 
         foreach ($imageData as $img) {
 
-            $email = $img['email'];
-
-            if ($email !== '') {
-                $urls = $imageCollection->where('email', $email)->pluck('url')->toArray();
-            } else {
-
-                $urls[] = $img['url'];
-            }
-
             $data = [
                 'id' => $img['id'],
                 'name' => $img['name'] ? $img['name'] : 'Anonymous',
@@ -124,47 +115,66 @@ class ImportGallery extends Command
                 'updated_at' => $img['updated_at'],
             ];
 
-            $submission = Submission::create($data);
+            $email = $img['email'];
 
+            if ($email !== '') {
+                $urls = $imageCollection->where('email', $email)->pluck('url', 'id')->toArray();
 
-            foreach ($urls as $key => $url) {
+                if (!Submission::where('email', $email)->count()) {
 
-                $file = str_replace([
-                    '.',
-                    ' ',
-                ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
+                    $submission = Submission::create($data);
+                } else {
 
-                $originalImageName = $file.'-'.$key.'-original.jpg';
-                $imageName = $file.'-'.$key.'.jpg';
-
-                $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($url));
-
-                $image = Image::make($imageLocation)->encode('jpg', 100);
-                Storage::disk('images')->put($originalImageName, $image, $options);
-
-                $optimised = Image::make($imageLocation)->resize(1000, null, function ($constraint) {
-
-                    $constraint->aspectRatio();
-                })->encode('jpg', 70);
-                Storage::disk('images')->put($imageName, $optimised, $options);
-
-
-                if (isset($image) && isset($optimised)) {
-
-                    $submission->images()->create([
-                        'image_name' => $imageName,
-                        'bumper_position' => $img['position'],
-                        'bumper_type' => $img['type'],
-                        'approved' => 1,
-                    ]);
+                    $submission = false;
                 }
 
+            } else {
+
+                $urls[] = $img['url'];
+                $submission = Submission::create($data);
             }
 
-            echo $img['id']."\N";
 
+            if ($submission) {
+
+                foreach ($urls as $key => $url) {
+
+                    $file = str_replace([
+                        '.',
+                        ' ',
+                    ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
+
+                    $originalImageName = $file.'-'.$key.'-original.jpg';
+                    $imageName = $file.'-'.$key.'.jpg';
+
+                    $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($url));
+
+                    $image = Image::make($imageLocation)->encode('jpg', 100);
+                    Storage::disk('images')->put($originalImageName, $image, $options);
+
+                    $optimised = Image::make($imageLocation)->resize(1000, null, function ($constraint) {
+
+                        $constraint->aspectRatio();
+                    })->encode('jpg', 70);
+                    Storage::disk('images')->put($imageName, $optimised, $options);
+
+
+                    if (isset($image) && isset($optimised)) {
+
+                        $submission->images()->create([
+                            'image_name' => $imageName,
+                            'bumper_position' => $img['position'],
+                            'bumper_type' => $img['type'],
+                            'approved' => 1,
+                        ]);
+                    }
+
+                }
+
+                echo $img['id']."\n";
+
+            }
         }
-
 
     }
 
