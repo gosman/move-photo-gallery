@@ -78,7 +78,7 @@ class ImportGallery extends Command
             if ($image[6] === 'TRUE') {
                 $imageData[] = [
                     'id' => $image[0],
-                    'email' => $image[1],
+                    'email' => $image[1] ?? null,
                     'instagram' => $image[2],
                     'name' => $image[3],
                     'url' => $image[4],
@@ -120,8 +120,8 @@ class ImportGallery extends Command
 
             $email = $img['email'];
 
-            if ($email !== '') {
-                $urls = $imageCollection->where('email', $email)->pluck('url', 'id')->toArray();
+            if ($email) {
+                $urls = $imageCollection->where('email', $email)->pluck('url')->toArray();
 
                 if (!Submission::where('email', $email)->count()) {
 
@@ -130,7 +130,7 @@ class ImportGallery extends Command
 
             } else {
 
-                $urls[] = $img['url'];
+                $urls[0] = $img['url'];
                 $submission = Submission::create($data);
             }
 
