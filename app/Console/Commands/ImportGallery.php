@@ -157,8 +157,6 @@ class ImportGallery extends Command
                         'bumper_type' => $img['type'],
                         'approved' => 1,
                     ]);
-
-                    exit;
                 }
 
             }
