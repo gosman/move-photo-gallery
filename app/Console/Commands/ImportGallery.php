@@ -76,6 +76,7 @@ class ImportGallery extends Command
         foreach ($imageRows as $image) {
 
             if ($image[6] === 'TRUE') {
+
                 $imageData[] = [
                     'id' => $image[0],
                     'email' => $image[1] ?? null,
@@ -93,8 +94,6 @@ class ImportGallery extends Command
                 ];
             }
         }
-
-        $imageCollection = collect($imageData);
 
         $options = [
             'visibility' => 'public',
