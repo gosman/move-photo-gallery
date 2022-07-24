@@ -103,6 +103,8 @@ class ImportGallery extends Command
 
         foreach ($imageData as $img) {
 
+            $submission = false;
+
             $data = [
                 'id' => $img['id'],
                 'name' => $img['name'] ? $img['name'] : 'Anonymous',
@@ -123,9 +125,6 @@ class ImportGallery extends Command
                 if (!Submission::where('email', $email)->count()) {
 
                     $submission = Submission::create($data);
-                } else {
-
-                    $submission = false;
                 }
 
             } else {
