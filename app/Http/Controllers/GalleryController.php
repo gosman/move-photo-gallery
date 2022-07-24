@@ -31,7 +31,7 @@ class GalleryController extends Controller
                 }
             })
             ->latest()
-            ->paginate(9);
+            ->paginate(15);
         $images->withPath('/community/client-gallery');
 
         $data = [
