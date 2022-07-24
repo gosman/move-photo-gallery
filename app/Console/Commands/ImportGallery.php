@@ -104,6 +104,7 @@ class ImportGallery extends Command
         foreach ($imageData as $img) {
 
             $submission = false;
+            $urls = [];
 
             $data = [
                 'id' => $img['id'],
