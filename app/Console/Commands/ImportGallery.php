@@ -81,7 +81,7 @@ class ImportGallery extends Command
                     'email' => $image[1],
                     'instagram' => $image[2],
                     'name' => $image[3],
-                    'url' => $image[4],
+                    'url' => $image[5],
                     'created_at' => $image[7],
                     'updated_at' => $image[8],
                     'updated_at' => $image[8],
@@ -94,56 +94,71 @@ class ImportGallery extends Command
             }
         }
 
+        $imageCollection = collect($imageData);
+
         $options = [
             'visibility' => 'public',
             'CacheControl' => 'max-age=31536000',
         ];
 
         foreach ($imageData as $img) {
-            
-            $file = str_replace([
-                '.',
-                ' ',
-            ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
 
-            $originalImageName = $file.'-original.jpg';
-            $imageName = $file.'.jpg';
+            $email = $img['email'];
 
-            $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($img['url']));
+            if ($email !== '') {
+                $urls = $imageCollection->where('email', $email)->pluck('url')->toArray();
+            } else {
 
-            $image = Image::make($imageLocation)->encode('jpg', 100);
-            Storage::disk('images')->put($originalImageName, $image, $options);
+                $urls[] = $img['url'];
+            }
 
-            $optimised = Image::make($imageLocation)->resize(1000, null, function ($constraint) {
+            $data = [
+                'id' => $img['id'],
+                'name' => $img['name'] ? $img['name'] : 'Anonymous',
+                'email' => $img['email'] ?? '',
+                'make' => $img['make'],
+                'model' => $img['model'],
+                'year' => $img['year'],
+                'engine_type' => '',
+            ];
 
-                $constraint->aspectRatio();
-            })->encode('jpg', 70);
-            Storage::disk('images')->put($imageName, $optimised, $options);
+            $submission = Submission::create($data);
 
 
-            if (isset($image) && isset($optimised)) {
+            foreach ($urls as $key => $url) {
+
+                $file = str_replace([
+                    '.',
+                    ' ',
+                ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
+
+                $originalImageName = $file.'-'.$key.'-original.jpg';
+                $imageName = $file.'-'.$key.'.jpg';
+
+                $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($url));
+
+                $image = Image::make($imageLocation)->encode('jpg', 100);
+                Storage::disk('images')->put($originalImageName, $image, $options);
+
+                $optimised = Image::make($imageLocation)->resize(1000, null, function ($constraint) {
+
+                    $constraint->aspectRatio();
+                })->encode('jpg', 70);
+                Storage::disk('images')->put($imageName, $optimised, $options);
 
 
-                $data = [
-                    'id' => $img['id'],
-                    'name' => $img['name'] ? $img['name'] : 'Anonymous',
-                    'email' => $img['email'] ?? '',
-                    'make' => $img['make'],
-                    'model' => $img['model'],
-                    'year' => $img['year'],
-                    'engine_type' => '',
-                ];
+                if (isset($image) && isset($optimised)) {
 
-                $submission = Submission::create($data);
+                    $submission->images()->create([
+                        'image_name' => $imageName,
+                        'bumper_position' => $img['position'],
+                        'bumper_type' => $img['type'],
+                        'approved' => 1,
+                    ]);
 
-                $submission->images()->create([
-                    'image_name' => $imageName,
-                    'bumper_position' => $img['position'],
-                    'bumper_type' => $img['type'],
-                    'approved' => 1,
-                ]);
+                    exit;
+                }
 
-                exit;
             }
 
         }
