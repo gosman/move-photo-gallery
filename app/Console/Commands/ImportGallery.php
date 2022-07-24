@@ -102,7 +102,7 @@ class ImportGallery extends Command
         ];
 
         foreach ($imageData as $img) {
-            
+
             $data = [
                 'id' => $img['id'],
                 'name' => $img['name'] ? $img['name'] : 'Anonymous',
@@ -124,8 +124,8 @@ class ImportGallery extends Command
                     ' ',
                 ], '-', Str::lower($img['id'].'-'.$img['make'].'-'.$img['model'].'-'.$img['year']));
 
-                $originalImageName = $file.'-'.$key.'-original.jpg';
-                $imageName = $file.'-'.$key.'.jpg';
+                $originalImageName = $file.'-'.'0'.'-original.jpg';
+                $imageName = $file.'-'.'0'.'.jpg';
 
                 $imageLocation = 'https://move-gallery.s3.us-east-2.amazonaws.com/'.trim(urlencode($img['url']));
 
