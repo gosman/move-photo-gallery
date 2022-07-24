@@ -100,10 +100,7 @@ class ImportGallery extends Command
         ];
 
         foreach ($imageData as $img) {
-
-            print_r($img);
-
-            exit;
+            
             $file = str_replace([
                 '.',
                 ' ',
