@@ -161,6 +161,8 @@ class ImportGallery extends Command
 
             }
 
+            echo $img['id']."\N";
+
         }
 
 
