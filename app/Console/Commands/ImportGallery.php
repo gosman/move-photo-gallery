@@ -105,6 +105,7 @@ class ImportGallery extends Command
 
             $submission = false;
             $urls = [];
+            $data = [];
 
             $data = [
                 'id' => $img['id'],
